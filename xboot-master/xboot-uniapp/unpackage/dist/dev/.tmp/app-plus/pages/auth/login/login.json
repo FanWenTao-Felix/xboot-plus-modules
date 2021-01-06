@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "titleNView": false,
+  "animationType": "slide-in-bottom",
+  "usingComponents": {
+    "icon": "/components/libs/thor/icon",
+    "t-button": "/components/libs/thor/button",
+    "tips": "/components/libs/thor/tips"
+  }
+}

@@ -1,0 +1,1 @@
+<view class="vant-tag-index"><view class="{{['van-tag van-tag--'+type+' van-tag--'+size+' '+(mark?'van-tag--mark':'')+' '+(round?'van-tag--round':'')+' '+(plain?'van-hairline--surround':'')]}}" style="{{((color&&!plain?'background-color: '+color+';':'')+(textColor||color&&plain?'color: '+(textColor||color):''))}}"><slot></slot></view></view>

@@ -1,0 +1,36 @@
+{
+  "softinputNavBar": "none",
+  "titleNView": {
+    "type": "transparent",
+    "searchInput": {
+      "backgroundColor": "#ededed",
+      "borderRadius": "16px",
+      "placeholder": "搜索喜欢的商品",
+      "disabled": true,
+      "placeholderColor": "#777"
+    },
+    "buttons": [
+      {
+        "fontSrc": "/static/iconfont.ttf",
+        "text": "",
+        "fontSize": "26",
+        "color": "#191919",
+        "background": "rgba(255, 255, 255, 0)",
+        "redDot": true
+      },
+      {
+        "fontSrc": "/static/iconfont.ttf",
+        "text": "",
+        "fontSize": "26",
+        "color": "#191919",
+        "background": "rgba(255, 255, 255, 0)"
+      }
+    ]
+  },
+  "usingComponents": {
+    "count-down": "/components/libs/thor/countdown",
+    "icon": "/components/libs/thor/icon",
+    "product-hot": "/components/product-hot",
+    "product-big": "/components/product-big"
+  }
+}

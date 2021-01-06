@@ -1,0 +1,29 @@
+{
+  "navigationBarTitleText": "个人中心",
+  "titleNView": {
+    "type": "transparent",
+    "buttons": [
+      {
+        "fontSrc": "/static/iconfont.ttf",
+        "text": "",
+        "fontSize": "26",
+        "color": "#191919",
+        "width": "90rpx",
+        "background": "rgba(0,0,0,0)"
+      },
+      {
+        "fontSrc": "/static/iconfont.ttf",
+        "text": "",
+        "fontSize": "26",
+        "color": "#191919",
+        "background": "rgba(0,0,0,0)",
+        "redDot": true
+      }
+    ]
+  },
+  "usingComponents": {
+    "badge": "/components/libs/iview/badge",
+    "icon": "/components/libs/thor/icon",
+    "recommend": "/components/recommend"
+  }
+}

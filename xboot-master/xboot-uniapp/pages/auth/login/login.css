@@ -1,0 +1,115 @@
+.container {
+	padding-top: 115px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #fff;
+}
+
+.close {
+	position: absolute;
+	left: 40rpx;
+	z-index: 9999;
+	padding-top: var(--status-bar-height);
+	top: 40rpx;
+}
+
+.wrap {
+	display: flex;
+	flex-direction: column;
+	padding: 0 80rpx 0 80rpx;
+}
+
+.title {
+	font-size: 50rpx;
+	font-weight: 500;
+	padding-top: 60rpx;
+}
+
+.sub-title {
+	font-size: 28rpx;
+	color: #adacaf;
+	padding-top: 10rpx;
+}
+
+.login-from {
+	padding-top: 100rpx;
+	padding-bottom: 100rpx;
+}
+
+.input {
+	font-size: 32rpx;
+	flex: 1;
+	display: inline-block;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.line-cell {
+	padding: 27rpx 0;
+	display: -webkit-flex;
+	display: flex;
+	-webkiit-align-items: center;
+	align-items: center;
+	position: relative;
+	box-sizing: border-box;
+	overflow: hidden;
+	border-bottom: 1rpx solid #c5cddb;
+}
+
+.top28 {
+	margin-top: 28rpx;
+	margin-bottom: 80rpx;
+}
+
+.bottom {
+	position: fixed;
+	z-index: 9999;
+	/* #ifdef H5 */
+	bottom: 30rpx;
+	/* #endif */
+	/* #ifndef H5 */
+	bottom: env(safe-area-inset-bottom);
+	/* #endif */
+	text-align: center;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.social {
+	display: flex;
+	align-items: center;
+	margin-bottom: 40rpx;
+}
+
+.social image {
+	width: 60rpx;
+	height: 60rpx;
+}
+
+.right {
+	margin-right: 60rpx;
+}
+
+.check {
+	display: inline-block;
+}
+
+.tui-checkbox {
+	margin-right: 10rpx;
+}
+
+.protocol {
+	color: #333;
+	font-size: 24rpx;
+	text-align: center;
+	width: 100%;
+	margin-bottom: 10rpx;
+}
+
+.protocol-red {
+	color: #C81816;
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "购物车",
+  "usingComponents": {
+    "recommend": "/components/recommend",
+    "t-button": "/components/libs/thor/button"
+  }
+}

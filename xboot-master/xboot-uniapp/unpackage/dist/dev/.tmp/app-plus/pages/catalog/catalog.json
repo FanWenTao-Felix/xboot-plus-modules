@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "分类",
+  "titleNView": {
+    "searchInput": {
+      "backgroundColor": "#ededed",
+      "borderRadius": "16px",
+      "placeholder": "搜索喜欢的商品",
+      "disabled": true,
+      "placeholderColor": "#777"
+    }
+  },
+  "usingComponents": {}
+}

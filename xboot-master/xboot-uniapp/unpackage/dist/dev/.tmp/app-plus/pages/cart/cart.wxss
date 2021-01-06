@@ -1,0 +1,70 @@
+page {
+	background: #f4f4f4;
+}
+.service-policy {
+	height: 75rpx;
+	background: #eee;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-justify-content: space-around;
+	        justify-content: space-around;
+}
+.service-policy .red-point {
+	width: 10rpx;
+	height: 10rpx;
+	margin-right: 10rpx;
+}
+.service-policy .item {
+	padding-left: 20rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	font-size: 25rpx;
+	color: #666;
+}
+.empty-cart {
+	margin-top: 300rpx;
+	margin-bottom: 50rpx;
+}
+
+/* 无列表 */
+.add {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+}
+.add .image {
+	width: 305rpx;
+	height: 200rpx;
+}
+.add .txt {
+	margin-top: 30rpx;
+	font-size: 29rpx;
+	color: #999;
+}
+.login-wrap {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+}
+

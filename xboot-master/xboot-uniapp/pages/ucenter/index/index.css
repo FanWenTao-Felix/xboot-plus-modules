@@ -1,0 +1,186 @@
+page {
+	background: #f4f4f4;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+}
+
+/* 用户头像信息 */
+.user-section {
+	position: relative;
+	height: 380rpx;
+	overflow: hidden;
+	border-radius: 0 0 600rpx 600rpx/0 0 40rpx 40rpx;
+}
+
+.bg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.black{
+	/* background: linear-gradient(90deg, #515151, #6a6a6a); */
+	background: linear-gradient(90deg, #d4a865, #efc172);
+}
+
+.user-info-box {
+	margin-top: 100rpx;
+	padding: 0 30rpx;
+	height: 180rpx;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.avatar {
+	width: 130rpx;
+	height: 130rpx;
+	border: 5rpx solid #fff;
+	border-radius: 50%;
+}
+
+.username {
+	font-size: 30rpx;
+	font-weight: 500;
+	color: #fff;
+	margin-left: 20upx;
+}
+
+.vip-wrap {
+	display: flex;
+	justify-content: center;
+	padding: 0 40rpx;
+	margin-top: 15rpx;
+}
+
+.vip-card-box {
+	width: 100%;
+	color: #f7d680;
+	height: 70rpx;
+	background: linear-gradient(left, rgba(0, 0, 0, .7), rgba(0, 0, 0, .8));
+	border-radius: 16rpx 16rpx 0 0;
+	overflow: hidden;
+	position: relative;
+	padding: 15rpx 24rpx 20rpx 24rpx;
+}
+
+.vip-title-wrap {
+	display: flex;
+	align-items: center;
+	height: 50rpx;
+	width: 100%;
+}
+
+.vip-icon {
+	width: 40rpx;
+	height: 40rpx;
+}
+
+.vip-title {
+	font-size: 24rpx;
+	color: #f7d680;
+}
+
+.b-btn {
+	width: 132rpx;
+	height: 40rpx;
+	text-align: center;
+	line-height: 40rpx;
+	font-size: 22rpx;
+	color: #36343c;
+	border-radius: 20px;
+	background: linear-gradient(left, #f9e6af, #ffd465);
+}
+
+.tui-swiper {
+	font-size: 28upx;
+	height: 50upx;
+	flex: 1;
+}
+
+.tui-swiper-item {
+	display: flex;
+	align-items: center
+}
+
+/* 订单功能按钮 */
+.order-wrap {
+  margin-top: 20rpx;
+  height: 240rpx;
+  background: #fff;
+}
+
+.order-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90rpx;
+  padding: 0 30rpx;
+}
+
+.order-header .right {
+  display: flex;
+  align-items: center;
+}
+
+.order-header .txt {
+  color: #333;
+  font-size: 32rpx;
+  font-weight: 500;
+}
+
+.order-header .all {
+  color: #666;
+  font-size: 25rpx;
+  margin-right: 10rpx;
+}
+
+.order-header .arrow {
+  width: 13rpx;
+  height: 25rpx;
+}
+
+.order-icon {
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.order-icon .icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 120rpx;
+}
+
+/* 菜单功能按钮 */
+.icon-wrap .icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-bottom: 10rpx;
+}
+
+.icon-wrap .txt {
+  color: #666;
+  font-size: 25rpx;
+}
+
+.icon-wrap .num {
+  color: #333;
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.service-wrap {
+  margin: 20rpx 0;
+  background: #fff;
+  padding-bottom: 20rpx;
+}

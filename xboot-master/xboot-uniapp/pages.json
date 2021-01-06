@@ -1,0 +1,138 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				// #ifdef MP
+				"navigationBarTitleText": "XBoot APP",
+				// #endif
+				"app-plus": {
+					"softinputNavBar": "none",
+					"titleNView": {
+						"type": "transparent",
+						"searchInput": {
+							"backgroundColor": "#ededed",
+							"borderRadius": "16px",
+							"placeholder": "搜索喜欢的商品",
+							"disabled": true,
+							"placeholderColor": "#777"
+						},
+						"buttons": [{
+								"fontSrc": "/static/iconfont.ttf",
+								"text": "\ue61e",
+								"fontSize": "26",
+								"color": "#191919",
+								"background": "rgba(255, 255, 255, 0)",
+								"redDot": true
+							},
+							{
+								"fontSrc": "/static/iconfont.ttf",
+								"text": "\ue61d",
+								"fontSize": "26",
+								"color": "#191919",
+								"background": "rgba(255, 255, 255, 0)"
+							}
+						]
+					}
+				}
+			}
+		}, {
+			"path": "pages/catalog/catalog",
+			"style": {
+				"navigationBarTitleText": "分类",
+				"app-plus": {
+					"titleNView": {
+						"searchInput": {
+							"backgroundColor": "#ededed",
+							"borderRadius": "16px",
+							"placeholder": "搜索喜欢的商品",
+							"disabled": true,
+							"placeholderColor": "#777"
+						}
+					}
+				}
+			}
+		}, {
+			"path": "pages/cart/cart",
+			"style": {
+				"navigationBarTitleText": "购物车"
+			}
+		}, {
+			"path": "pages/ucenter/index/index",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent",
+						"buttons": [{
+								"fontSrc": "/static/iconfont.ttf",
+								"text": "\ue62d",
+								"fontSize": "26",
+								"color": "#191919",
+								"width": "90rpx",
+								"background": "rgba(0,0,0,0)"
+							},
+							{
+								"fontSrc": "/static/iconfont.ttf",
+								"text": "\ue61e",
+								"fontSize": "26",
+								"color": "#191919",
+								"background": "rgba(0,0,0,0)",
+								"redDot": true
+							}
+						]
+					}
+				}
+			}
+		}
+	    ,{
+            "path" : "pages/auth/login/login",
+            "style": {
+            	"navigationBarTitleText": "",
+            	"navigationStyle": "custom",
+            	"app-plus": {
+            		"titleNView": false,
+            		"animationType": "slide-in-bottom"
+            	}
+            }
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "XBoot",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		// 页面背景色 仅微信小程序支持
+		"backgroundColor": "#f4f4f4"
+	},
+	"tabBar": {
+		"color": "#9a9a9a",
+		"selectedColor": "#C81816",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/index.png",
+				"selectedIconPath": "static/indexSelected.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/catalog/catalog",
+				"iconPath": "static/all.png",
+				"selectedIconPath": "static/allSelected.png",
+				"text": "分类"
+			},
+			{
+				"pagePath": "pages/cart/cart",
+				"iconPath": "static/cart.png",
+				"selectedIconPath": "static/cartSelected.png",
+				"text": "购物车"
+			},
+			{
+				"pagePath": "pages/ucenter/index/index",
+				"iconPath": "static/me.png",
+				"selectedIconPath": "static/meSelected.png",
+				"text": "我的"
+			}
+		]
+	}
+}

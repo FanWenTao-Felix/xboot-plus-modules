@@ -1,0 +1,213 @@
+page {
+	background: #f4f4f4;
+}
+.content {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+}
+
+/* 用户头像信息 */
+.user-section {
+	position: relative;
+	height: 380rpx;
+	overflow: hidden;
+	border-radius: 0 0 600rpx 600rpx/0 0 40rpx 40rpx;
+}
+.bg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.black{
+	/* background: linear-gradient(90deg, #515151, #6a6a6a); */
+	background: -webkit-linear-gradient(left, #d4a865, #efc172);
+	background: linear-gradient(90deg, #d4a865, #efc172);
+}
+.user-info-box {
+	margin-top: 100rpx;
+	padding: 0 30rpx;
+	height: 180rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	position: relative;
+}
+.avatar {
+	width: 130rpx;
+	height: 130rpx;
+	border: 5rpx solid #fff;
+	border-radius: 50%;
+}
+.username {
+	font-size: 30rpx;
+	font-weight: 500;
+	color: #fff;
+	margin-left: 20rpx;
+}
+.vip-wrap {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	padding: 0 40rpx;
+	margin-top: 15rpx;
+}
+.vip-card-box {
+	width: 100%;
+	color: #f7d680;
+	height: 70rpx;
+	background: -webkit-linear-gradient(left, rgba(0, 0, 0, .7), rgba(0, 0, 0, .8));
+	background: linear-gradient(left, rgba(0, 0, 0, .7), rgba(0, 0, 0, .8));
+	border-radius: 16rpx 16rpx 0 0;
+	overflow: hidden;
+	position: relative;
+	padding: 15rpx 24rpx 20rpx 24rpx;
+}
+.vip-title-wrap {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	height: 50rpx;
+	width: 100%;
+}
+.vip-icon {
+	width: 40rpx;
+	height: 40rpx;
+}
+.vip-title {
+	font-size: 24rpx;
+	color: #f7d680;
+}
+.b-btn {
+	width: 132rpx;
+	height: 40rpx;
+	text-align: center;
+	line-height: 40rpx;
+	font-size: 22rpx;
+	color: #36343c;
+	border-radius: 20px;
+	background: -webkit-linear-gradient(left, #f9e6af, #ffd465);
+	background: linear-gradient(left, #f9e6af, #ffd465);
+}
+.tui-swiper {
+	font-size: 28rpx;
+	height: 50rpx;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+}
+.tui-swiper-item {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center
+}
+
+/* 订单功能按钮 */
+.order-wrap {
+  margin-top: 20rpx;
+  height: 240rpx;
+  background: #fff;
+}
+.order-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  height: 90rpx;
+  padding: 0 30rpx;
+}
+.order-header .right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.order-header .txt {
+  color: #333;
+  font-size: 32rpx;
+  font-weight: 500;
+}
+.order-header .all {
+  color: #666;
+  font-size: 25rpx;
+  margin-right: 10rpx;
+}
+.order-header .arrow {
+  width: 13rpx;
+  height: 25rpx;
+}
+.order-icon {
+  height: 150rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+}
+.order-icon .icon-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  width: 120rpx;
+}
+
+/* 菜单功能按钮 */
+.icon-wrap .icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-bottom: 10rpx;
+}
+.icon-wrap .txt {
+  color: #666;
+  font-size: 25rpx;
+}
+.icon-wrap .num {
+  color: #333;
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+.service-wrap {
+  margin: 20rpx 0;
+  background: #fff;
+  padding-bottom: 20rpx;
+}
+
