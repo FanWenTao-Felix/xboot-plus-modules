@@ -1,5 +1,6 @@
 package cn.exrick.xboot;
 
+import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure;
 import de.codecentric.boot.admin.server.config.EnableAdminServer;
 import org.activiti.spring.boot.SecurityAutoConfiguration;
 import org.springframework.boot.SpringApplication;
@@ -25,9 +26,8 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 @EnableScheduling
 // 启用Admin监控
 @EnableAdminServer
-@SpringBootApplication(exclude = SecurityAutoConfiguration.class)
+@SpringBootApplication(exclude = {SecurityAutoConfiguration.class, DruidDataSourceAutoConfigure.class})
 public class XbootApplication {
-
     @Primary
     @Bean
     public TaskExecutor primaryTaskExecutor() {

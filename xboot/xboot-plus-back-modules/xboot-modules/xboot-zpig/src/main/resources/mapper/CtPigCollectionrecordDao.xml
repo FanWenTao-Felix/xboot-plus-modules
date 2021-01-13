@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.CtPigCollectionrecordDao">
+  <resultMap id="BaseResultMap" type="entity.CtPigCollectionrecord">
+    <!--@mbg.generated-->
+    <id column="FID" jdbcType="VARCHAR" property="fid" />
+    <result column="FCREATORID" jdbcType="VARCHAR" property="fcreatorid" />
+    <result column="FCREATETIME" jdbcType="TIMESTAMP" property="fcreatetime" />
+    <result column="FLASTUPDATEUSERID" jdbcType="VARCHAR" property="flastupdateuserid" />
+    <result column="FLASTUPDATETIME" jdbcType="TIMESTAMP" property="flastupdatetime" />
+    <result column="FCONTROLUNITID" jdbcType="VARCHAR" property="fcontrolunitid" />
+    <result column="FNUMBER" jdbcType="VARCHAR" property="fnumber" />
+    <result column="FBIZDATE" jdbcType="TIMESTAMP" property="fbizdate" />
+    <result column="FHANDLERID" jdbcType="VARCHAR" property="fhandlerid" />
+    <result column="FDESCRIPTION" jdbcType="VARCHAR" property="fdescription" />
+    <result column="FHASEFFECTED" jdbcType="DECIMAL" property="fhaseffected" />
+    <result column="FAUDITORID" jdbcType="VARCHAR" property="fauditorid" />
+    <result column="FSOURCEBILLID" jdbcType="VARCHAR" property="fsourcebillid" />
+    <result column="FSOURCEFUNCTION" jdbcType="VARCHAR" property="fsourcefunction" />
+    <result column="FFIVOUCHERED" jdbcType="DECIMAL" property="ffivouchered" />
+    <result column="CFDESIGNNUMBERID" jdbcType="VARCHAR" property="cfdesignnumberid" />
+    <result column="CFORGUNITID" jdbcType="VARCHAR" property="cforgunitid" />
+    <result column="CFSHCHANLINEID" jdbcType="VARCHAR" property="cfshchanlineid" />
+    <result column="CFZHUSHEID" jdbcType="VARCHAR" property="cfzhusheid" />
+    <result column="CFFIELD" jdbcType="VARCHAR" property="cffield" />
+    <result column="CFEARNUMBERID" jdbcType="VARCHAR" property="cfearnumberid" />
+    <result column="CFGENETICSID" jdbcType="VARCHAR" property="cfgeneticsid" />
+    <result column="CFCOLLECTORID" jdbcType="VARCHAR" property="cfcollectorid" />
+    <result column="CFCOLLECTIONTIME" jdbcType="TIMESTAMP" property="cfcollectiontime" />
+    <result column="CFDAYS" jdbcType="DECIMAL" property="cfdays" />
+    <result column="CFAUDITUSERID" jdbcType="VARCHAR" property="cfaudituserid" />
+    <result column="CFIFAUDITING" jdbcType="DECIMAL" property="cfifauditing" />
+    <result column="CFWEEKHAO" jdbcType="VARCHAR" property="cfweekhao" />
+    <result column="CFISDETECTED" jdbcType="DECIMAL" property="cfisdetected" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    FID, FCREATORID, FCREATETIME, FLASTUPDATEUSERID, FLASTUPDATETIME, FCONTROLUNITID, 
+    FNUMBER, FBIZDATE, FHANDLERID, FDESCRIPTION, FHASEFFECTED, FAUDITORID, FSOURCEBILLID, 
+    FSOURCEFUNCTION, FFIVOUCHERED, CFDESIGNNUMBERID, CFORGUNITID, CFSHCHANLINEID, CFZHUSHEID, 
+    CFFIELD, CFEARNUMBERID, CFGENETICSID, CFCOLLECTORID, CFCOLLECTIONTIME, CFDAYS, CFAUDITUSERID, 
+    CFIFAUDITING, CFWEEKHAO, CFISDETECTED
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from CT_PIG_COLLECTIONRECORD
+    where FID = #{fid,jdbcType=VARCHAR}
+  </select>
+  <select id="selectDateByearNumber" resultType="java.util.Date">
+    SELECT t.CFCOLLECTIONTIME beforeDate FROM CT_PIG_COLLECTIONRECORD t WHERE t.CFEARNUMBERID = #{earNumber,jdbcType=VARCHAR} AND ROWNUM = 1 ORDER BY t.CFCOLLECTIONTIME DESC
+  </select>
+  <select id="selectAll" resultType="entity.CtPigCollectionrecord">
+    SELECT * FROM CT_PIG_COLLECTIONRECORD c
+        LEFT JOIN (select to_char (sysdate- level + 1, 'yyyy-mm-dd hh24:mi:ss') today
+        FROM DUAL connect BY LEVEL &lt;= 7) days on days.today = c.FCREATETIME
+        WHERE c.CFORGUNITID = #{storageId,jdbcType=VARCHAR} ORDER BY c.FCREATETIME
+  </select>
+    <select id="selectSelective" resultType="entity.CtPigCollectionrecord">
+      SELECT * FROM CT_PIG_COLLECTIONRECORD c
+      left join T_BD_PERSON p on p.FID = c.CFCOLLECTORID
+        <where>
+          <!-- 使用 bind 标签,对字符串进行绑定,然后对绑定后的字符串使用 like 关键字进行模糊查询 -->
+          c.CFORGUNITID = #{orgId,jdbcType=VARCHAR} AND
+          <bind name="pattern" value="'%'+selection+'%'"/>
+            c.CFEARNUMBERID LIKE #{pattern} or p.FNAME_L2 LIKE #{pattern}
+        </where>
+    </select>
+  <select id="selectByDate" resultType="entity.CtPigCollectionrecord">
+    SELECT * FROM CT_PIG_COLLECTIONRECORD c WHERE c.CFORGUNITID = #{storageId,jdbcType=VARCHAR}
+    AND c.CFCOLLECTIONTIME &lt;= #{endDate} AND c.CFCOLLECTIONTIME >= #{startDate}
+    ORDER BY c.CFCOLLECTIONTIME
+  </select>
+    <select id="selectIfAuditByFid" resultType="java.lang.Integer">
+      select c.CFIFAUDITING from CT_PIG_COLLECTIONRECORD c where c.FID = #{fid,jdbcType=VARCHAR}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from CT_PIG_COLLECTIONRECORD
+    where FID = #{fid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" keyColumn="FID" keyProperty="fid" parameterType="entity.CtPigCollectionrecord" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into CT_PIG_COLLECTIONRECORD (FCREATORID, FCREATETIME, FLASTUPDATEUSERID, 
+      FLASTUPDATETIME, FCONTROLUNITID, FNUMBER, 
+      FBIZDATE, FHANDLERID, FDESCRIPTION, 
+      FHASEFFECTED, FAUDITORID, FSOURCEBILLID, 
+      FSOURCEFUNCTION, FFIVOUCHERED, CFDESIGNNUMBERID, 
+      CFORGUNITID, CFSHCHANLINEID, CFZHUSHEID, 
+      CFFIELD, CFEARNUMBERID, CFGENETICSID, 
+      CFCOLLECTORID, CFCOLLECTIONTIME, CFDAYS, 
+      CFAUDITUSERID, CFIFAUDITING, CFWEEKHAO, 
+      CFISDETECTED)
+    values (#{fcreatorid,jdbcType=VARCHAR}, #{fcreatetime,jdbcType=TIMESTAMP}, #{flastupdateuserid,jdbcType=VARCHAR}, 
+      #{flastupdatetime,jdbcType=TIMESTAMP}, #{fcontrolunitid,jdbcType=VARCHAR}, #{fnumber,jdbcType=VARCHAR}, 
+      #{fbizdate,jdbcType=TIMESTAMP}, #{fhandlerid,jdbcType=VARCHAR}, #{fdescription,jdbcType=VARCHAR}, 
+      #{fhaseffected,jdbcType=DECIMAL}, #{fauditorid,jdbcType=VARCHAR}, #{fsourcebillid,jdbcType=VARCHAR}, 
+      #{fsourcefunction,jdbcType=VARCHAR}, #{ffivouchered,jdbcType=DECIMAL}, #{cfdesignnumberid,jdbcType=VARCHAR}, 
+      #{cforgunitid,jdbcType=VARCHAR}, #{cfshchanlineid,jdbcType=VARCHAR}, #{cfzhusheid,jdbcType=VARCHAR}, 
+      #{cffield,jdbcType=VARCHAR}, #{cfearnumberid,jdbcType=VARCHAR}, #{cfgeneticsid,jdbcType=VARCHAR}, 
+      #{cfcollectorid,jdbcType=VARCHAR}, #{cfcollectiontime,jdbcType=TIMESTAMP}, #{cfdays,jdbcType=DECIMAL}, 
+      #{cfaudituserid,jdbcType=VARCHAR}, #{cfifauditing,jdbcType=DECIMAL}, #{cfweekhao,jdbcType=VARCHAR}, 
+      #{cfisdetected,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" keyColumn="FID" keyProperty="fid" parameterType="entity.CtPigCollectionrecord" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into CT_PIG_COLLECTIONRECORD
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fcreatorid != null">
+        FCREATORID,
+      </if>
+      <if test="fcreatetime != null">
+        FCREATETIME,
+      </if>
+      <if test="flastupdateuserid != null">
+        FLASTUPDATEUSERID,
+      </if>
+      <if test="flastupdatetime != null">
+        FLASTUPDATETIME,
+      </if>
+      <if test="fcontrolunitid != null">
+        FCONTROLUNITID,
+      </if>
+      <if test="fnumber != null">
+        FNUMBER,
+      </if>
+      <if test="fbizdate != null">
+        FBIZDATE,
+      </if>
+      <if test="fhandlerid != null">
+        FHANDLERID,
+      </if>
+      <if test="fdescription != null">
+        FDESCRIPTION,
+      </if>
+      <if test="fhaseffected != null">
+        FHASEFFECTED,
+      </if>
+      <if test="fauditorid != null">
+        FAUDITORID,
+      </if>
+      <if test="fsourcebillid != null">
+        FSOURCEBILLID,
+      </if>
+      <if test="fsourcefunction != null">
+        FSOURCEFUNCTION,
+      </if>
+      <if test="ffivouchered != null">
+        FFIVOUCHERED,
+      </if>
+      <if test="cfdesignnumberid != null">
+        CFDESIGNNUMBERID,
+      </if>
+      <if test="cforgunitid != null">
+        CFORGUNITID,
+      </if>
+      <if test="cfshchanlineid != null">
+        CFSHCHANLINEID,
+      </if>
+      <if test="cfzhusheid != null">
+        CFZHUSHEID,
+      </if>
+      <if test="cffield != null">
+        CFFIELD,
+      </if>
+      <if test="cfearnumberid != null">
+        CFEARNUMBERID,
+      </if>
+      <if test="cfgeneticsid != null">
+        CFGENETICSID,
+      </if>
+      <if test="cfcollectorid != null">
+        CFCOLLECTORID,
+      </if>
+      <if test="cfcollectiontime != null">
+        CFCOLLECTIONTIME,
+      </if>
+      <if test="cfdays != null">
+        CFDAYS,
+      </if>
+      <if test="cfaudituserid != null">
+        CFAUDITUSERID,
+      </if>
+      <if test="cfifauditing != null">
+        CFIFAUDITING,
+      </if>
+      <if test="cfweekhao != null">
+        CFWEEKHAO,
+      </if>
+      <if test="cfisdetected != null">
+        CFISDETECTED,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fcreatorid != null">
+        #{fcreatorid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcreatetime != null">
+        #{fcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flastupdateuserid != null">
+        #{flastupdateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="flastupdatetime != null">
+        #{flastupdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fcontrolunitid != null">
+        #{fcontrolunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="fnumber != null">
+        #{fnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fbizdate != null">
+        #{fbizdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fhandlerid != null">
+        #{fhandlerid,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescription != null">
+        #{fdescription,jdbcType=VARCHAR},
+      </if>
+      <if test="fhaseffected != null">
+        #{fhaseffected,jdbcType=DECIMAL},
+      </if>
+      <if test="fauditorid != null">
+        #{fauditorid,jdbcType=VARCHAR},
+      </if>
+      <if test="fsourcebillid != null">
+        #{fsourcebillid,jdbcType=VARCHAR},
+      </if>
+      <if test="fsourcefunction != null">
+        #{fsourcefunction,jdbcType=VARCHAR},
+      </if>
+      <if test="ffivouchered != null">
+        #{ffivouchered,jdbcType=DECIMAL},
+      </if>
+      <if test="cfdesignnumberid != null">
+        #{cfdesignnumberid,jdbcType=VARCHAR},
+      </if>
+      <if test="cforgunitid != null">
+        #{cforgunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfshchanlineid != null">
+        #{cfshchanlineid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfzhusheid != null">
+        #{cfzhusheid,jdbcType=VARCHAR},
+      </if>
+      <if test="cffield != null">
+        #{cffield,jdbcType=VARCHAR},
+      </if>
+      <if test="cfearnumberid != null">
+        #{cfearnumberid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfgeneticsid != null">
+        #{cfgeneticsid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfcollectorid != null">
+        #{cfcollectorid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfcollectiontime != null">
+        #{cfcollectiontime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cfdays != null">
+        #{cfdays,jdbcType=DECIMAL},
+      </if>
+      <if test="cfaudituserid != null">
+        #{cfaudituserid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfifauditing != null">
+        #{cfifauditing,jdbcType=DECIMAL},
+      </if>
+      <if test="cfweekhao != null">
+        #{cfweekhao,jdbcType=VARCHAR},
+      </if>
+      <if test="cfisdetected != null">
+        #{cfisdetected,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="entity.CtPigCollectionrecord">
+    <!--@mbg.generated-->
+    update CT_PIG_COLLECTIONRECORD
+    <set>
+      <if test="fcreatorid != null">
+        FCREATORID = #{fcreatorid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcreatetime != null">
+        FCREATETIME = #{fcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flastupdateuserid != null">
+        FLASTUPDATEUSERID = #{flastupdateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="flastupdatetime != null">
+        FLASTUPDATETIME = #{flastupdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fcontrolunitid != null">
+        FCONTROLUNITID = #{fcontrolunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="fnumber != null">
+        FNUMBER = #{fnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fbizdate != null">
+        FBIZDATE = #{fbizdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fhandlerid != null">
+        FHANDLERID = #{fhandlerid,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescription != null">
+        FDESCRIPTION = #{fdescription,jdbcType=VARCHAR},
+      </if>
+      <if test="fhaseffected != null">
+        FHASEFFECTED = #{fhaseffected,jdbcType=DECIMAL},
+      </if>
+      <if test="fauditorid != null">
+        FAUDITORID = #{fauditorid,jdbcType=VARCHAR},
+      </if>
+      <if test="fsourcebillid != null">
+        FSOURCEBILLID = #{fsourcebillid,jdbcType=VARCHAR},
+      </if>
+      <if test="fsourcefunction != null">
+        FSOURCEFUNCTION = #{fsourcefunction,jdbcType=VARCHAR},
+      </if>
+      <if test="ffivouchered != null">
+        FFIVOUCHERED = #{ffivouchered,jdbcType=DECIMAL},
+      </if>
+      <if test="cfdesignnumberid != null">
+        CFDESIGNNUMBERID = #{cfdesignnumberid,jdbcType=VARCHAR},
+      </if>
+      <if test="cforgunitid != null">
+        CFORGUNITID = #{cforgunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfshchanlineid != null">
+        CFSHCHANLINEID = #{cfshchanlineid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfzhusheid != null">
+        CFZHUSHEID = #{cfzhusheid,jdbcType=VARCHAR},
+      </if>
+      <if test="cffield != null">
+        CFFIELD = #{cffield,jdbcType=VARCHAR},
+      </if>
+      <if test="cfearnumberid != null">
+        CFEARNUMBERID = #{cfearnumberid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfgeneticsid != null">
+        CFGENETICSID = #{cfgeneticsid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfcollectorid != null">
+        CFCOLLECTORID = #{cfcollectorid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfcollectiontime != null">
+        CFCOLLECTIONTIME = #{cfcollectiontime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cfdays != null">
+        CFDAYS = #{cfdays,jdbcType=DECIMAL},
+      </if>
+      <if test="cfaudituserid != null">
+        CFAUDITUSERID = #{cfaudituserid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfifauditing != null">
+        CFIFAUDITING = #{cfifauditing,jdbcType=DECIMAL},
+      </if>
+      <if test="cfweekhao != null">
+        CFWEEKHAO = #{cfweekhao,jdbcType=VARCHAR},
+      </if>
+      <if test="cfisdetected != null">
+        CFISDETECTED = #{cfisdetected,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where FID = #{fid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="entity.CtPigCollectionrecord">
+    <!--@mbg.generated-->
+    update CT_PIG_COLLECTIONRECORD
+    set FCREATORID = #{fcreatorid,jdbcType=VARCHAR},
+      FCREATETIME = #{fcreatetime,jdbcType=TIMESTAMP},
+      FLASTUPDATEUSERID = #{flastupdateuserid,jdbcType=VARCHAR},
+      FLASTUPDATETIME = #{flastupdatetime,jdbcType=TIMESTAMP},
+      FCONTROLUNITID = #{fcontrolunitid,jdbcType=VARCHAR},
+      FNUMBER = #{fnumber,jdbcType=VARCHAR},
+      FBIZDATE = #{fbizdate,jdbcType=TIMESTAMP},
+      FHANDLERID = #{fhandlerid,jdbcType=VARCHAR},
+      FDESCRIPTION = #{fdescription,jdbcType=VARCHAR},
+      FHASEFFECTED = #{fhaseffected,jdbcType=DECIMAL},
+      FAUDITORID = #{fauditorid,jdbcType=VARCHAR},
+      FSOURCEBILLID = #{fsourcebillid,jdbcType=VARCHAR},
+      FSOURCEFUNCTION = #{fsourcefunction,jdbcType=VARCHAR},
+      FFIVOUCHERED = #{ffivouchered,jdbcType=DECIMAL},
+      CFDESIGNNUMBERID = #{cfdesignnumberid,jdbcType=VARCHAR},
+      CFORGUNITID = #{cforgunitid,jdbcType=VARCHAR},
+      CFSHCHANLINEID = #{cfshchanlineid,jdbcType=VARCHAR},
+      CFZHUSHEID = #{cfzhusheid,jdbcType=VARCHAR},
+      CFFIELD = #{cffield,jdbcType=VARCHAR},
+      CFEARNUMBERID = #{cfearnumberid,jdbcType=VARCHAR},
+      CFGENETICSID = #{cfgeneticsid,jdbcType=VARCHAR},
+      CFCOLLECTORID = #{cfcollectorid,jdbcType=VARCHAR},
+      CFCOLLECTIONTIME = #{cfcollectiontime,jdbcType=TIMESTAMP},
+      CFDAYS = #{cfdays,jdbcType=DECIMAL},
+      CFAUDITUSERID = #{cfaudituserid,jdbcType=VARCHAR},
+      CFIFAUDITING = #{cfifauditing,jdbcType=DECIMAL},
+      CFWEEKHAO = #{cfweekhao,jdbcType=VARCHAR},
+      CFISDETECTED = #{cfisdetected,jdbcType=DECIMAL}
+    where FID = #{fid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateIfAuditByFid">
+    update CT_PIG_COLLECTIONRECORD c set c.CFIFAUDITING = '1', c.CFAUDITUSERID = #{userId,jdbcType=VARCHAR}
+    where c.FID = #{fid,jdbcType=VARCHAR}
+  </update>
+</mapper>

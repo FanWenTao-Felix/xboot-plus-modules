@@ -1,0 +1,650 @@
+2021-01-08 08:28:36.764  INFO 8784 --- [main] cn.exrick.xboot.XbootApplication         : Starting XbootApplication on 海涛的小宝贝 with PID 8784 (D:\LHProgram\ZpigManager\xboot\xboot-plus-back\target\classes started by AIERXUAN in D:\LHProgram\ZpigManager)
+2021-01-08 08:28:36.769  INFO 8784 --- [main] cn.exrick.xboot.XbootApplication         : No active profile set, falling back to default profiles: default
+2021-01-08 08:28:36.857  INFO 8784 --- [main] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\AIERXUAN\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/AIERXUAN/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2021-01-08 08:28:36.857  INFO 8784 --- [main] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\AIERXUAN\.m2\repository\org\apache\xmlgraphics\fop\0.94\fop-0.94.jar referenced one or more files that do not exist: file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/avalon-framework-4.2.0.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/batik-all-1.6.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/commons-io-1.3.1.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/commons-logging-1.0.4.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/fop-hyph.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/jai_codec.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/jai_core.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/jimi.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/serializer-2.7.0.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/servlet-2.2.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/xalan-2.7.0.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/xercesImpl-2.7.1.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/xml-apis-1.3.02.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/xmlgraphics-commons-1.2.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/xmlunit1.0.jar
+2021-01-08 08:28:36.857  INFO 8784 --- [main] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\AIERXUAN\.m2\repository\org\apache\xmlgraphics\batik-js\1.7\batik-js-1.7.jar referenced one or more files that do not exist: file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/batik-js/1.7/xbean.jar
+2021-01-08 08:28:36.858  INFO 8784 --- [main] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-08 08:28:36.858  INFO 8784 --- [main] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-08 08:28:39.409  INFO 8784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-08 08:28:39.410  INFO 8784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-08 08:28:39.690  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.elasticsearch.EsLogDao. If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository.
+2021-01-08 08:28:39.776  INFO 8784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 346ms. Found 26 JPA repository interfaces.
+2021-01-08 08:28:39.795  INFO 8784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-08 08:28:39.797  INFO 8784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-01-08 08:28:39.925  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.activiti.dao.ActBusinessDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.926  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.activiti.dao.ActCategoryDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.926  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.activiti.dao.ActModelDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.927  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.activiti.dao.ActNodeDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.927  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.activiti.dao.ActProcessDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.928  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.activiti.dao.ActStarterDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.929  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.activiti.dao.business.LeaveDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.929  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.app.dao.MemberDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.930  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.DepartmentDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.930  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.DepartmentHeaderDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.931  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.DictDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.931  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.DictDataDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.931  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.LogDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.932  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.MessageDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.932  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.MessageSendDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.934  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.PermissionDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.935  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.RoleDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.935  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.RoleDepartmentDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.935  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.RolePermissionDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.936  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.SettingDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.936  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.UserDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.937  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.UserRoleDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.937  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.elasticsearch.EsLogDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.937  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.file.dao.FileDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.938  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.open.dao.ClientDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.939  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.quartz.dao.QuartzJobDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.939  INFO 8784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.social.dao.SocialDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:28:39.939  INFO 8784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123ms. Found 0 Redis repository interfaces.
+2021-01-08 08:28:40.435  INFO 8784 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2021-01-08 08:28:40.505  INFO 8784 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-01-08 08:28:40.505  INFO 8784 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-01-08 08:28:40.506  INFO 8784 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-01-08 08:28:40.506  INFO 8784 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-01-08 08:28:40.507  INFO 8784 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2021-01-08 08:28:40.507  INFO 8784 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-01-08 08:28:40.507  INFO 8784 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationConfig: [classpath:/application.yml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-01-08 08:28:40.507  INFO 8784 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-01-08 08:28:40.647  INFO 8784 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2021-01-08 08:28:40.663  INFO 8784 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2021-01-08 08:28:40.669  INFO 8784 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2021-01-08 08:28:40.795  INFO 8784 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-01-08 08:28:41.149  INFO 8784 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-01-08 08:28:41.151  INFO 8784 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-01-08 08:28:41.157  INFO 8784 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheConfig' of type [cn.exrick.xboot.config.cache.RedisCacheConfig$$EnhancerBySpringCGLIB$$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 08:28:41.205  INFO 8784 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 08:28:41.215  INFO 8784 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 08:28:41.218  INFO 8784 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3de1ec44' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 08:28:41.221  INFO 8784 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 08:28:41.229  INFO 8784 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 08:28:41.241  INFO 8784 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 08:28:41.261  INFO 8784 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 08:28:41.264  INFO 8784 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 08:28:41.965  INFO 8784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2021-01-08 08:28:41.980  INFO 8784 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-08 08:28:41.980  INFO 8784 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2021-01-08 08:28:42.313  INFO 8784 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-08 08:28:42.314  INFO 8784 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5455 ms
+2021-01-08 08:28:42.325  INFO 8784 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2021-01-08 08:28:42.341  INFO 8784 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.algorithm, using default value: PBEWITHHMACSHA512ANDAES_256
+2021-01-08 08:28:42.341  INFO 8784 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.key-obtention-iterations, using default value: 1000
+2021-01-08 08:28:42.342  INFO 8784 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.pool-size, using default value: 1
+2021-01-08 08:28:42.342  INFO 8784 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.provider-name, using default value: null
+2021-01-08 08:28:42.343  INFO 8784 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.provider-class-name, using default value: null
+2021-01-08 08:28:42.343  INFO 8784 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.salt-generator-classname, using default value: org.jasypt.salt.RandomSaltGenerator
+2021-01-08 08:28:42.345  INFO 8784 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.iv-generator-classname, using default value: org.jasypt.iv.RandomIvGenerator
+2021-01-08 08:28:42.346  INFO 8784 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.string-output-type, using default value: base64
+2021-01-08 08:28:43.126  INFO 8784 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-01-08 08:28:43.739  INFO 8784 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-01-08 08:28:44.456  INFO 8784 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-08 08:28:44.636  INFO 8784 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2021-01-08 08:28:44.638  INFO 8784 --- [main] org.hibernate.cfg.Environment            : HHH000205: Loaded properties from resource hibernate.properties: {hibernate.dialect.storage_engine=innodb, hibernate.bytecode.use_reflection_optimizer=false}
+2021-01-08 08:28:44.911  INFO 8784 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-01-08 08:28:45.790  INFO 8784 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-01-08 08:28:47.802  INFO 8784 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-08 08:28:47.826  INFO 8784 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-08 08:28:48.379  WARN 8784 --- [main] c.e.x.c.s.p.MyFilterSecurityInterceptor  : Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+2021-01-08 08:28:48.683  INFO 8784 --- [main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/xboot/actuator/jolokia' to jolokia-actuator-endpoint
+2021-01-08 08:28:48.802  INFO 8784 --- [main] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-08 08:28:50.242  WARN 8784 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-08 08:28:50.558  INFO 8784 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'primaryTaskExecutor'
+2021-01-08 08:28:52.503  INFO 8784 --- [main] o.a.engine.impl.ProcessEngineImpl        : ProcessEngine default created
+2021-01-08 08:28:52.505  INFO 8784 --- [main] o.a.e.i.a.AbstractAsyncJobExecutor       : Starting up the default async job executor [org.activiti.spring.SpringAsyncExecutor].
+2021-01-08 08:28:52.506  INFO 8784 --- [Thread-35] o.a.e.i.a.AcquireTimerJobsRunnable       : starting to acquire async jobs due
+2021-01-08 08:28:52.506  INFO 8784 --- [Thread-36] o.a.e.i.a.AcquireAsyncJobsDueRunnable    : starting to acquire async jobs due
+2021-01-08 08:28:53.056  INFO 8784 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'clientInboundChannelExecutor'
+2021-01-08 08:28:53.062  INFO 8784 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'clientOutboundChannelExecutor'
+2021-01-08 08:28:54.182  INFO 8784 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2021-01-08 08:28:54.203  INFO 8784 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-08 08:28:54.203  INFO 8784 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2021-01-08 08:28:54.212  INFO 8784 --- [main] o.s.s.quartz.LocalDataSourceJobStore     : Using db table-based data access locking (synchronization).
+2021-01-08 08:28:54.215  INFO 8784 --- [main] o.s.s.quartz.LocalDataSourceJobStore     : JobStoreCMT initialized.
+2021-01-08 08:28:54.216  INFO 8784 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is not clustered.
+
+2021-01-08 08:28:54.216  INFO 8784 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-01-08 08:28:54.216  INFO 8784 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2021-01-08 08:28:54.216  INFO 8784 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@ba1d5fa
+2021-01-08 08:28:54.865  INFO 8784 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/xboot/actuator'
+2021-01-08 08:28:55.043  INFO 8784 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-01-08 08:28:55.063  INFO 8784 --- [main] c.e.xboot.config.swagger.Swagger2Config  : 加载Swagger2
+2021-01-08 08:28:55.109  INFO 8784 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'messageBrokerTaskScheduler'
+2021-01-08 08:28:55.186  INFO 8784 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'brokerChannelExecutor'
+2021-01-08 08:28:55.982  INFO 8784 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2021-01-08 08:28:56.829  INFO 8784 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@db8404b, org.springframework.security.web.context.SecurityContextPersistenceFilter@7fdc3be0, org.springframework.security.web.header.HeaderWriterFilter@34614215, org.springframework.web.filter.CorsFilter@50ad0cc6, org.springframework.security.web.authentication.logout.LogoutFilter@5b061e48, cn.exrick.xboot.config.security.validate.ImageValidateFilter$$EnhancerBySpringCGLIB$$1@273bcc81, cn.exrick.xboot.config.security.validate.SmsValidateFilter$$EnhancerBySpringCGLIB$$1@73f7dc6a, cn.exrick.xboot.config.security.validate.VaptchaValidateFilter$$EnhancerBySpringCGLIB$$1@7293aa9d, cn.exrick.xboot.config.security.validate.EmailValidateFilter$$EnhancerBySpringCGLIB$$1@3f7e3d48, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@25600f3e, cn.exrick.xboot.config.security.jwt.JWTAuthenticationFilter@704748f8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@211a54e2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2eede21, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@57d42b6d, org.springframework.security.web.session.SessionManagementFilter@62cc20e8, org.springframework.security.web.access.ExceptionTranslationFilter@59feedcc, cn.exrick.xboot.config.security.permission.MyFilterSecurityInterceptor@742035e6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3651da7c]
+2021-01-08 08:28:57.386  INFO 8784 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2021-01-08 08:28:57.518  INFO 8784 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-01-08 08:28:57.518  INFO 8784 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application.errorChannel' has 1 subscriber(s).
+2021-01-08 08:28:57.518  INFO 8784 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2021-01-08 08:28:57.518  INFO 8784 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-01-08 08:28:57.537  INFO 8784 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-01-08 08:28:57.615  INFO 8784 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-01-08 08:28:57.890  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_1
+2021-01-08 08:28:57.927  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_2
+2021-01-08 08:28:57.983  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_3
+2021-01-08 08:28:58.020  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_1
+2021-01-08 08:28:58.034  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_2
+2021-01-08 08:28:58.148  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateStatusUsingPOST_1
+2021-01-08 08:28:58.306  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_4
+2021-01-08 08:28:58.342  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_3
+2021-01-08 08:28:58.378  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_1
+2021-01-08 08:28:58.383  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_5
+2021-01-08 08:28:58.390  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editUsingPOST_1
+2021-01-08 08:28:58.398  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByParentIdUsingGET_1
+2021-01-08 08:28:58.404  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: searchByTitleUsingGET_1
+2021-01-08 08:28:58.411  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_2
+2021-01-08 08:28:58.419  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editUsingPOST_2
+2021-01-08 08:28:58.426  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllUsingGET_1
+2021-01-08 08:28:58.441  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_3
+2021-01-08 08:28:58.445  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_6
+2021-01-08 08:28:58.450  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editUsingPOST_3
+2021-01-08 08:28:58.463  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_4
+2021-01-08 08:28:58.509  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getFileListUsingGET_1
+2021-01-08 08:28:58.537  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_4
+2021-01-08 08:28:58.541  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_7
+2021-01-08 08:28:58.549  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_1
+2021-01-08 08:28:58.555  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllUsingGET_2
+2021-01-08 08:28:58.564  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_1
+2021-01-08 08:28:58.569  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_1
+2021-01-08 08:28:58.575  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2021-01-08 08:28:58.583  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_8
+2021-01-08 08:28:58.598  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_5
+2021-01-08 08:28:58.603  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delAllByIdsUsingPOST_1
+2021-01-08 08:28:58.614  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editUsingPOST_4
+2021-01-08 08:28:58.631  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_5
+2021-01-08 08:28:58.667  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_2
+2021-01-08 08:28:58.678  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_6
+2021-01-08 08:28:58.686  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_9
+2021-01-08 08:28:58.695  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_3
+2021-01-08 08:28:58.701  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllUsingGET_3
+2021-01-08 08:28:58.712  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_7
+2021-01-08 08:28:58.718  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_2
+2021-01-08 08:28:58.723  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_2
+2021-01-08 08:28:58.728  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2021-01-08 08:28:58.771  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_6
+2021-01-08 08:28:58.775  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_10
+2021-01-08 08:28:58.781  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editUsingPOST_5
+2021-01-08 08:28:58.800  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: searchPermissionListUsingGET_1
+2021-01-08 08:28:58.805  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAccessTokenUsingGET_1
+2021-01-08 08:28:58.809  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_1
+2021-01-08 08:28:58.834  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllUsingGET_4
+2021-01-08 08:28:58.849  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delAllUsingPOST_1
+2021-01-08 08:28:58.864  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllByPageUsingGET_1
+2021-01-08 08:28:58.888  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_3
+2021-01-08 08:28:58.907  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_11
+2021-01-08 08:28:58.916  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editUsingPOST_6
+2021-01-08 08:28:58.946  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_4
+2021-01-08 08:28:59.068  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_12
+2021-01-08 08:28:59.086  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: uploadUsingPOST_1
+2021-01-08 08:28:59.115  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_7
+2021-01-08 08:28:59.128  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delAllByIdsUsingPOST_2
+2021-01-08 08:28:59.135  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: disableUsingPOST_1
+2021-01-08 08:28:59.143  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editUsingPOST_7
+2021-01-08 08:28:59.165  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_8
+2021-01-08 08:28:59.178  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_9
+2021-01-08 08:28:59.185  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_10
+2021-01-08 08:28:59.192  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUserInfoUsingGET_1
+2021-01-08 08:28:59.255  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAccessTokenUsingGET_2
+2021-01-08 08:28:59.258  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_2
+2021-01-08 08:28:59.262  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAccessTokenUsingGET_3
+2021-01-08 08:28:59.265  INFO 8784 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_3
+2021-01-08 08:28:59.302  INFO 8784 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2021-01-08 08:28:59.302  INFO 8784 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2021-01-08 08:28:59.304  INFO 8784 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2021-01-08 08:28:59.304  INFO 8784 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2021-01-08 08:28:59.339  INFO 8784 --- [main] o.s.s.quartz.LocalDataSourceJobStore     : Freed 0 triggers from 'acquired' / 'blocked' state.
+2021-01-08 08:28:59.358  INFO 8784 --- [main] o.s.s.quartz.LocalDataSourceJobStore     : Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2021-01-08 08:28:59.358  INFO 8784 --- [main] o.s.s.quartz.LocalDataSourceJobStore     : Recovery complete.
+2021-01-08 08:28:59.362  INFO 8784 --- [main] o.s.s.quartz.LocalDataSourceJobStore     : Removed 0 'complete' triggers.
+2021-01-08 08:28:59.376  INFO 8784 --- [main] o.s.s.quartz.LocalDataSourceJobStore     : Removed 0 stale fired job entries.
+2021-01-08 08:28:59.383  INFO 8784 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-01-08 08:28:59.464  INFO 8784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2021-01-08 08:28:59.467  INFO 8784 --- [main] cn.exrick.xboot.XbootApplication         : Started XbootApplication in 23.825 seconds (JVM running for 27.929)
+2021-01-08 08:28:59.740  INFO 8784 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-08 08:28:59.741  INFO 8784 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-08 08:28:59.756  INFO 8784 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2021-01-08 08:29:00.578  INFO 8784 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as 55563694b43f
+2021-01-08 08:29:00.932  INFO 8784 --- [boundedElastic-7] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2021-01-08 08:29:00.935  INFO 8784 --- [boundedElastic-7] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2021-01-08 08:29:02.989  WARN 8784 --- [boundedElastic-7] o.s.b.a.r.RedisReactiveHealthIndicator   : Redis health check failed
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1/<unresolved>:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1199) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1178) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedReactiveConnection(LettuceConnectionFactory.java:952) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:429) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:94) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at reactor.core.publisher.MonoSupplier.call(MonoSupplier.java:85) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:225) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1/<unresolved>:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78) ~[lettuce-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56) ~[lettuce-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:234) ~[lettuce-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:207) ~[lettuce-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at java.base/java.util.Optional.orElseGet(Optional.java:362) ~[na:na]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1197) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	... 13 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:660) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:875) ~[na:na]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:702) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) ~[netty-common-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.48.Final.jar:4.1.48.Final]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2021-01-08 08:29:18.183  WARN 8784 --- [boundedElastic-7] o.s.b.a.r.RedisReactiveHealthIndicator   : Redis health check failed
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1/<unresolved>:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1199) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1178) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedReactiveConnection(LettuceConnectionFactory.java:952) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:429) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:94) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at reactor.core.publisher.MonoSupplier.call(MonoSupplier.java:85) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:225) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1/<unresolved>:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78) ~[lettuce-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56) ~[lettuce-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:234) ~[lettuce-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:207) ~[lettuce-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at java.base/java.util.Optional.orElseGet(Optional.java:362) ~[na:na]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1197) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	... 13 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:660) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:875) ~[na:na]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:702) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) ~[netty-common-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.48.Final.jar:4.1.48.Final]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2021-01-08 08:29:38.178  WARN 8784 --- [boundedElastic-7] o.s.b.a.r.RedisReactiveHealthIndicator   : Redis health check failed
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1/<unresolved>:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1199) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1178) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedReactiveConnection(LettuceConnectionFactory.java:952) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:429) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:94) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at reactor.core.publisher.MonoSupplier.call(MonoSupplier.java:85) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:225) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1/<unresolved>:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78) ~[lettuce-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56) ~[lettuce-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:234) ~[lettuce-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:207) ~[lettuce-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at java.base/java.util.Optional.orElseGet(Optional.java:362) ~[na:na]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1197) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	... 13 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:660) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:875) ~[na:na]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:702) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) ~[netty-common-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.48.Final.jar:4.1.48.Final]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2021-01-08 08:29:55.187  INFO 8784 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2021-01-08 08:29:58.180  WARN 8784 --- [boundedElastic-7] o.s.b.a.r.RedisReactiveHealthIndicator   : Redis health check failed
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1/<unresolved>:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1199) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1178) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedReactiveConnection(LettuceConnectionFactory.java:952) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:429) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:94) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at reactor.core.publisher.MonoSupplier.call(MonoSupplier.java:85) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:225) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1/<unresolved>:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78) ~[lettuce-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56) ~[lettuce-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:234) ~[lettuce-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:207) ~[lettuce-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at java.base/java.util.Optional.orElseGet(Optional.java:362) ~[na:na]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1197) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	... 13 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:660) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:875) ~[na:na]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:702) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) ~[netty-common-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.48.Final.jar:4.1.48.Final]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2021-01-08 08:30:18.183  WARN 8784 --- [boundedElastic-7] o.s.b.a.r.RedisReactiveHealthIndicator   : Redis health check failed
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1/<unresolved>:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1199) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1178) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedReactiveConnection(LettuceConnectionFactory.java:952) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:429) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:94) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at reactor.core.publisher.MonoSupplier.call(MonoSupplier.java:85) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:225) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28) ~[reactor-core-3.3.4.RELEASE.jar:3.3.4.RELEASE]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1/<unresolved>:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78) ~[lettuce-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56) ~[lettuce-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:234) ~[lettuce-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:207) ~[lettuce-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at java.base/java.util.Optional.orElseGet(Optional.java:362) ~[na:na]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1197) ~[spring-data-redis-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	... 13 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:660) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:875) ~[na:na]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:702) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) ~[netty-transport-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) ~[netty-common-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.48.Final.jar:4.1.48.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.48.Final.jar:4.1.48.Final]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2021-01-08 08:31:01.682  INFO 14472 --- [main] cn.exrick.xboot.XbootApplication         : Starting XbootApplication on 海涛的小宝贝 with PID 14472 (D:\LHProgram\ZpigManager\xboot\xboot-plus-back\target\classes started by AIERXUAN in D:\LHProgram\ZpigManager)
+2021-01-08 08:31:01.683  INFO 14472 --- [main] cn.exrick.xboot.XbootApplication         : No active profile set, falling back to default profiles: default
+2021-01-08 08:31:01.767  INFO 14472 --- [main] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\AIERXUAN\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/AIERXUAN/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2021-01-08 08:31:01.767  INFO 14472 --- [main] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\AIERXUAN\.m2\repository\org\apache\xmlgraphics\fop\0.94\fop-0.94.jar referenced one or more files that do not exist: file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/avalon-framework-4.2.0.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/batik-all-1.6.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/commons-io-1.3.1.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/commons-logging-1.0.4.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/fop-hyph.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/jai_codec.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/jai_core.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/jimi.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/serializer-2.7.0.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/servlet-2.2.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/xalan-2.7.0.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/xercesImpl-2.7.1.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/xml-apis-1.3.02.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/xmlgraphics-commons-1.2.jar,file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/fop/0.94/xmlunit1.0.jar
+2021-01-08 08:31:01.767  INFO 14472 --- [main] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\AIERXUAN\.m2\repository\org\apache\xmlgraphics\batik-js\1.7\batik-js-1.7.jar referenced one or more files that do not exist: file:/C:/Users/AIERXUAN/.m2/repository/org/apache/xmlgraphics/batik-js/1.7/xbean.jar
+2021-01-08 08:31:01.767  INFO 14472 --- [main] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-08 08:31:01.767  INFO 14472 --- [main] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-08 08:31:04.140  INFO 14472 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-08 08:31:04.141  INFO 14472 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-08 08:31:04.394  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.elasticsearch.EsLogDao. If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository.
+2021-01-08 08:31:04.466  INFO 14472 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 313ms. Found 26 JPA repository interfaces.
+2021-01-08 08:31:04.480  INFO 14472 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-08 08:31:04.482  INFO 14472 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-01-08 08:31:04.602  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.activiti.dao.ActBusinessDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.603  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.activiti.dao.ActCategoryDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.603  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.activiti.dao.ActModelDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.604  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.activiti.dao.ActNodeDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.604  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.activiti.dao.ActProcessDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.604  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.activiti.dao.ActStarterDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.605  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.activiti.dao.business.LeaveDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.605  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.app.dao.MemberDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.606  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.DepartmentDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.606  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.DepartmentHeaderDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.606  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.DictDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.607  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.DictDataDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.607  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.LogDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.608  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.MessageDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.608  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.MessageSendDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.611  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.PermissionDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.611  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.RoleDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.612  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.RoleDepartmentDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.612  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.RolePermissionDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.612  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.SettingDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.613  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.UserDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.614  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.UserRoleDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.614  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.elasticsearch.EsLogDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.614  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.file.dao.FileDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.615  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.open.dao.ClientDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.615  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.quartz.dao.QuartzJobDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.615  INFO 14472 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.social.dao.SocialDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-01-08 08:31:04.615  INFO 14472 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117ms. Found 0 Redis repository interfaces.
+2021-01-08 08:31:05.088  INFO 14472 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2021-01-08 08:31:05.156  INFO 14472 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-01-08 08:31:05.157  INFO 14472 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-01-08 08:31:05.157  INFO 14472 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-01-08 08:31:05.158  INFO 14472 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-01-08 08:31:05.159  INFO 14472 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2021-01-08 08:31:05.159  INFO 14472 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-01-08 08:31:05.159  INFO 14472 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationConfig: [classpath:/application.yml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-01-08 08:31:05.159  INFO 14472 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-01-08 08:31:05.281  INFO 14472 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2021-01-08 08:31:05.295  INFO 14472 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2021-01-08 08:31:05.301  INFO 14472 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2021-01-08 08:31:05.412  INFO 14472 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-01-08 08:31:05.743  INFO 14472 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-01-08 08:31:05.746  INFO 14472 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-01-08 08:31:05.755  INFO 14472 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheConfig' of type [cn.exrick.xboot.config.cache.RedisCacheConfig$$EnhancerBySpringCGLIB$$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 08:31:05.806  INFO 14472 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 08:31:05.815  INFO 14472 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 08:31:05.818  INFO 14472 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1035ec3c' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 08:31:05.821  INFO 14472 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 08:31:05.829  INFO 14472 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 08:31:05.840  INFO 14472 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 08:31:05.860  INFO 14472 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 08:31:05.863  INFO 14472 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-08 08:31:06.531  INFO 14472 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2021-01-08 08:31:06.543  INFO 14472 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-08 08:31:06.543  INFO 14472 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2021-01-08 08:31:06.835  INFO 14472 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-08 08:31:06.835  INFO 14472 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5067 ms
+2021-01-08 08:31:06.845  INFO 14472 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2021-01-08 08:31:06.859  INFO 14472 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.algorithm, using default value: PBEWITHHMACSHA512ANDAES_256
+2021-01-08 08:31:06.859  INFO 14472 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.key-obtention-iterations, using default value: 1000
+2021-01-08 08:31:06.860  INFO 14472 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.pool-size, using default value: 1
+2021-01-08 08:31:06.860  INFO 14472 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.provider-name, using default value: null
+2021-01-08 08:31:06.860  INFO 14472 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.provider-class-name, using default value: null
+2021-01-08 08:31:06.861  INFO 14472 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.salt-generator-classname, using default value: org.jasypt.salt.RandomSaltGenerator
+2021-01-08 08:31:06.862  INFO 14472 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.iv-generator-classname, using default value: org.jasypt.iv.RandomIvGenerator
+2021-01-08 08:31:06.863  INFO 14472 --- [main] c.u.j.encryptor.DefaultLazyEncryptor     : Encryptor config not found for property jasypt.encryptor.string-output-type, using default value: base64
+2021-01-08 08:31:07.564  INFO 14472 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-01-08 08:31:08.097  INFO 14472 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-01-08 08:31:08.765  INFO 14472 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-08 08:31:08.882  INFO 14472 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2021-01-08 08:31:08.885  INFO 14472 --- [main] org.hibernate.cfg.Environment            : HHH000205: Loaded properties from resource hibernate.properties: {hibernate.dialect.storage_engine=innodb, hibernate.bytecode.use_reflection_optimizer=false}
+2021-01-08 08:31:09.070  INFO 14472 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-01-08 08:31:09.906  INFO 14472 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-01-08 08:31:12.089  INFO 14472 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-08 08:31:12.113  INFO 14472 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-08 08:31:12.823  WARN 14472 --- [main] c.e.x.c.s.p.MyFilterSecurityInterceptor  : Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+2021-01-08 08:31:13.150  INFO 14472 --- [main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/xboot/actuator/jolokia' to jolokia-actuator-endpoint
+2021-01-08 08:31:13.263  INFO 14472 --- [main] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-08 08:31:14.703  WARN 14472 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-08 08:31:15.022  INFO 14472 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'primaryTaskExecutor'
+2021-01-08 08:31:16.981  INFO 14472 --- [main] o.a.engine.impl.ProcessEngineImpl        : ProcessEngine default created
+2021-01-08 08:31:16.982  INFO 14472 --- [main] o.a.e.i.a.AbstractAsyncJobExecutor       : Starting up the default async job executor [org.activiti.spring.SpringAsyncExecutor].
+2021-01-08 08:31:16.984  INFO 14472 --- [Thread-35] o.a.e.i.a.AcquireTimerJobsRunnable       : starting to acquire async jobs due
+2021-01-08 08:31:16.984  INFO 14472 --- [Thread-36] o.a.e.i.a.AcquireAsyncJobsDueRunnable    : starting to acquire async jobs due
+2021-01-08 08:31:17.508  INFO 14472 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'clientInboundChannelExecutor'
+2021-01-08 08:31:17.514  INFO 14472 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'clientOutboundChannelExecutor'
+2021-01-08 08:31:18.621  INFO 14472 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2021-01-08 08:31:18.640  INFO 14472 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-08 08:31:18.640  INFO 14472 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2021-01-08 08:31:18.649  INFO 14472 --- [main] o.s.s.quartz.LocalDataSourceJobStore     : Using db table-based data access locking (synchronization).
+2021-01-08 08:31:18.652  INFO 14472 --- [main] o.s.s.quartz.LocalDataSourceJobStore     : JobStoreCMT initialized.
+2021-01-08 08:31:18.653  INFO 14472 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is not clustered.
+
+2021-01-08 08:31:18.653  INFO 14472 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-01-08 08:31:18.653  INFO 14472 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2021-01-08 08:31:18.653  INFO 14472 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@46517f89
+2021-01-08 08:31:19.334  INFO 14472 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/xboot/actuator'
+2021-01-08 08:31:19.483  INFO 14472 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-01-08 08:31:19.504  INFO 14472 --- [main] c.e.xboot.config.swagger.Swagger2Config  : 加载Swagger2
+2021-01-08 08:31:19.541  INFO 14472 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'messageBrokerTaskScheduler'
+2021-01-08 08:31:19.609  INFO 14472 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'brokerChannelExecutor'
+2021-01-08 08:31:20.357  INFO 14472 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2021-01-08 08:31:21.222  INFO 14472 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@24dad480, org.springframework.security.web.context.SecurityContextPersistenceFilter@404cd424, org.springframework.security.web.header.HeaderWriterFilter@10f046cd, org.springframework.web.filter.CorsFilter@262d406f, org.springframework.security.web.authentication.logout.LogoutFilter@76bdc6a5, cn.exrick.xboot.config.security.validate.ImageValidateFilter$$EnhancerBySpringCGLIB$$1@4e208c98, cn.exrick.xboot.config.security.validate.SmsValidateFilter$$EnhancerBySpringCGLIB$$1@2c511b09, cn.exrick.xboot.config.security.validate.VaptchaValidateFilter$$EnhancerBySpringCGLIB$$1@149d4e72, cn.exrick.xboot.config.security.validate.EmailValidateFilter$$EnhancerBySpringCGLIB$$1@30c39288, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@37ee246b, cn.exrick.xboot.config.security.jwt.JWTAuthenticationFilter@3803bae2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@465490ee, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e5b79bb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7ea1d3ce, org.springframework.security.web.session.SessionManagementFilter@3366beb8, org.springframework.security.web.access.ExceptionTranslationFilter@167c40cc, cn.exrick.xboot.config.security.permission.MyFilterSecurityInterceptor@3bea96e2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@72bd2bfa]
+2021-01-08 08:31:21.796  INFO 14472 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2021-01-08 08:31:21.947  INFO 14472 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-01-08 08:31:21.948  INFO 14472 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application.errorChannel' has 1 subscriber(s).
+2021-01-08 08:31:21.948  INFO 14472 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2021-01-08 08:31:21.948  INFO 14472 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-01-08 08:31:21.965  INFO 14472 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-01-08 08:31:22.050  INFO 14472 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-01-08 08:31:22.337  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_1
+2021-01-08 08:31:22.375  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_2
+2021-01-08 08:31:22.429  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_3
+2021-01-08 08:31:22.463  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_1
+2021-01-08 08:31:22.476  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_2
+2021-01-08 08:31:22.599  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateStatusUsingPOST_1
+2021-01-08 08:31:22.755  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_4
+2021-01-08 08:31:22.782  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_3
+2021-01-08 08:31:22.818  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_1
+2021-01-08 08:31:22.824  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_5
+2021-01-08 08:31:22.831  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editUsingPOST_1
+2021-01-08 08:31:22.839  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByParentIdUsingGET_1
+2021-01-08 08:31:22.844  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: searchByTitleUsingGET_1
+2021-01-08 08:31:22.851  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_2
+2021-01-08 08:31:22.859  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editUsingPOST_2
+2021-01-08 08:31:22.866  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllUsingGET_1
+2021-01-08 08:31:22.878  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_3
+2021-01-08 08:31:22.881  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_6
+2021-01-08 08:31:22.886  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editUsingPOST_3
+2021-01-08 08:31:22.898  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_4
+2021-01-08 08:31:22.945  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getFileListUsingGET_1
+2021-01-08 08:31:22.973  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_4
+2021-01-08 08:31:22.977  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_7
+2021-01-08 08:31:22.985  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_1
+2021-01-08 08:31:22.991  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllUsingGET_2
+2021-01-08 08:31:23.000  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_1
+2021-01-08 08:31:23.005  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_1
+2021-01-08 08:31:23.011  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2021-01-08 08:31:23.019  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_8
+2021-01-08 08:31:23.034  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_5
+2021-01-08 08:31:23.039  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delAllByIdsUsingPOST_1
+2021-01-08 08:31:23.049  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editUsingPOST_4
+2021-01-08 08:31:23.067  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_5
+2021-01-08 08:31:23.106  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_2
+2021-01-08 08:31:23.117  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_6
+2021-01-08 08:31:23.125  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_9
+2021-01-08 08:31:23.134  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_3
+2021-01-08 08:31:23.140  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllUsingGET_3
+2021-01-08 08:31:23.151  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_7
+2021-01-08 08:31:23.156  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_2
+2021-01-08 08:31:23.161  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_2
+2021-01-08 08:31:23.166  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2021-01-08 08:31:23.214  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_6
+2021-01-08 08:31:23.219  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_10
+2021-01-08 08:31:23.224  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editUsingPOST_5
+2021-01-08 08:31:23.244  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: searchPermissionListUsingGET_1
+2021-01-08 08:31:23.249  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAccessTokenUsingGET_1
+2021-01-08 08:31:23.252  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_1
+2021-01-08 08:31:23.279  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllUsingGET_4
+2021-01-08 08:31:23.294  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delAllUsingPOST_1
+2021-01-08 08:31:23.309  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllByPageUsingGET_1
+2021-01-08 08:31:23.331  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_3
+2021-01-08 08:31:23.351  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_11
+2021-01-08 08:31:23.359  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editUsingPOST_6
+2021-01-08 08:31:23.402  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_4
+2021-01-08 08:31:23.528  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_12
+2021-01-08 08:31:23.546  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: uploadUsingPOST_1
+2021-01-08 08:31:23.573  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_7
+2021-01-08 08:31:23.586  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delAllByIdsUsingPOST_2
+2021-01-08 08:31:23.592  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: disableUsingPOST_1
+2021-01-08 08:31:23.600  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editUsingPOST_7
+2021-01-08 08:31:23.622  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_8
+2021-01-08 08:31:23.636  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_9
+2021-01-08 08:31:23.642  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_10
+2021-01-08 08:31:23.650  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUserInfoUsingGET_1
+2021-01-08 08:31:23.713  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAccessTokenUsingGET_2
+2021-01-08 08:31:23.715  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_2
+2021-01-08 08:31:23.719  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAccessTokenUsingGET_3
+2021-01-08 08:31:23.722  INFO 14472 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_3
+2021-01-08 08:31:23.754  INFO 14472 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2021-01-08 08:31:23.754  INFO 14472 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2021-01-08 08:31:23.756  INFO 14472 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2021-01-08 08:31:23.756  INFO 14472 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2021-01-08 08:31:23.786  INFO 14472 --- [main] o.s.s.quartz.LocalDataSourceJobStore     : Freed 0 triggers from 'acquired' / 'blocked' state.
+2021-01-08 08:31:23.801  INFO 14472 --- [main] o.s.s.quartz.LocalDataSourceJobStore     : Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2021-01-08 08:31:23.801  INFO 14472 --- [main] o.s.s.quartz.LocalDataSourceJobStore     : Recovery complete.
+2021-01-08 08:31:23.804  INFO 14472 --- [main] o.s.s.quartz.LocalDataSourceJobStore     : Removed 0 'complete' triggers.
+2021-01-08 08:31:23.809  INFO 14472 --- [main] o.s.s.quartz.LocalDataSourceJobStore     : Removed 0 stale fired job entries.
+2021-01-08 08:31:23.814  INFO 14472 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-01-08 08:31:23.888  INFO 14472 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2021-01-08 08:31:23.893  INFO 14472 --- [main] cn.exrick.xboot.XbootApplication         : Started XbootApplication in 23.209 seconds (JVM running for 26.592)
+2021-01-08 08:31:24.105  INFO 14472 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-08 08:31:24.106  INFO 14472 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-08 08:31:24.119  INFO 14472 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2021-01-08 08:31:24.748  INFO 14472 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as 55563694b43f
+2021-01-08 08:31:25.015  INFO 14472 --- [boundedElastic-7] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2021-01-08 08:31:25.017  INFO 14472 --- [boundedElastic-7] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2021-01-08 08:32:19.608  INFO 14472 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2021-01-08 09:02:19.609  INFO 14472 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]

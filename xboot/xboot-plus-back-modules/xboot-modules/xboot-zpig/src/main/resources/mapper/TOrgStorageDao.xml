@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.TOrgStorageDao">
+  <resultMap id="BaseResultMap" type="entity.TOrgStorage">
+    <!--@mbg.generated-->
+    <id column="FID" jdbcType="VARCHAR" property="fid" />
+    <result column="FNAME_L1" jdbcType="VARCHAR" property="fnameL1" />
+    <result column="FNAME_L2" jdbcType="VARCHAR" property="fnameL2" />
+    <result column="FNAME_L3" jdbcType="VARCHAR" property="fnameL3" />
+    <result column="FNUMBER" jdbcType="VARCHAR" property="fnumber" />
+    <result column="FDESCRIPTION_L1" jdbcType="VARCHAR" property="fdescriptionL1" />
+    <result column="FDESCRIPTION_L2" jdbcType="VARCHAR" property="fdescriptionL2" />
+    <result column="FDESCRIPTION_L3" jdbcType="VARCHAR" property="fdescriptionL3" />
+    <result column="FSIMPLENAME" jdbcType="VARCHAR" property="fsimplename" />
+    <result column="FISGROUPING" jdbcType="DECIMAL" property="fisgrouping" />
+    <result column="FEFFECTDATE" jdbcType="TIMESTAMP" property="feffectdate" />
+    <result column="FINVALIDDATE" jdbcType="TIMESTAMP" property="finvaliddate" />
+    <result column="FISFREEZE" jdbcType="DECIMAL" property="fisfreeze" />
+    <result column="FISCOMPANYORGUNIT" jdbcType="DECIMAL" property="fiscompanyorgunit" />
+    <result column="FISADMINORGUNIT" jdbcType="DECIMAL" property="fisadminorgunit" />
+    <result column="FISSALEORGUNIT" jdbcType="DECIMAL" property="fissaleorgunit" />
+    <result column="FISPURCHASEORGUNIT" jdbcType="DECIMAL" property="fispurchaseorgunit" />
+    <result column="FISSTORAGEORGUNIT" jdbcType="DECIMAL" property="fisstorageorgunit" />
+    <result column="FISPROFITORGUNIT" jdbcType="DECIMAL" property="fisprofitorgunit" />
+    <result column="FISCOSTORGUNIT" jdbcType="DECIMAL" property="fiscostorgunit" />
+    <result column="FISCU" jdbcType="DECIMAL" property="fiscu" />
+    <result column="FISUNION" jdbcType="DECIMAL" property="fisunion" />
+    <result column="FISHRORGUNIT" jdbcType="DECIMAL" property="fishrorgunit" />
+    <result column="FCREATORID" jdbcType="VARCHAR" property="fcreatorid" />
+    <result column="FCREATETIME" jdbcType="TIMESTAMP" property="fcreatetime" />
+    <result column="FLASTUPDATEUSERID" jdbcType="VARCHAR" property="flastupdateuserid" />
+    <result column="FLASTUPDATETIME" jdbcType="TIMESTAMP" property="flastupdatetime" />
+    <result column="FCONTROLUNITID" jdbcType="VARCHAR" property="fcontrolunitid" />
+    <result column="FISLEAF" jdbcType="DECIMAL" property="fisleaf" />
+    <result column="FLEVEL" jdbcType="DECIMAL" property="flevel" />
+    <result column="FLONGNUMBER" jdbcType="VARCHAR" property="flongnumber" />
+    <result column="FPARENTID" jdbcType="VARCHAR" property="fparentid" />
+    <result column="FLEADER" jdbcType="VARCHAR" property="fleader" />
+    <result column="FADDRESSID" jdbcType="VARCHAR" property="faddressid" />
+    <result column="FISSEALUP" jdbcType="DECIMAL" property="fissealup" />
+    <result column="FISBIZUNIT" jdbcType="DECIMAL" property="fisbizunit" />
+    <result column="FTYPE" jdbcType="DECIMAL" property="ftype" />
+    <result column="FSTATUS" jdbcType="DECIMAL" property="fstatus" />
+    <result column="FISSTART" jdbcType="DECIMAL" property="fisstart" />
+    <result column="FISOUSEALUP" jdbcType="DECIMAL" property="fisousealup" />
+    <result column="FDISPLAYNAME_L1" jdbcType="VARCHAR" property="fdisplaynameL1" />
+    <result column="FDISPLAYNAME_L2" jdbcType="VARCHAR" property="fdisplaynameL2" />
+    <result column="FDISPLAYNAME_L3" jdbcType="VARCHAR" property="fdisplaynameL3" />
+    <result column="FPROPERTYSEALUPDATE" jdbcType="TIMESTAMP" property="fpropertysealupdate" />
+    <result column="FLOCATION" jdbcType="VARCHAR" property="flocation" />
+    <result column="FVERSIONNUMBER" jdbcType="VARCHAR" property="fversionnumber" />
+    <result column="FCODE" jdbcType="VARCHAR" property="fcode" />
+    <result column="FISTRANSPORTORGUNIT" jdbcType="DECIMAL" property="fistransportorgunit" />
+    <result column="FISQUALITYORGUNIT" jdbcType="DECIMAL" property="fisqualityorgunit" />
+    <result column="FORGTYPESTR" jdbcType="VARCHAR" property="forgtypestr" />
+    <result column="JING" jdbcType="VARCHAR" property="jing" />
+    <result column="WEI" jdbcType="VARCHAR" property="wei" />
+    <result column="JINGWEIUSER" jdbcType="VARCHAR" property="jingweiuser" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    FID, FNAME_L1, FNAME_L2, FNAME_L3, FNUMBER, FDESCRIPTION_L1, FDESCRIPTION_L2, FDESCRIPTION_L3, 
+    FSIMPLENAME, FISGROUPING, FEFFECTDATE, FINVALIDDATE, FISFREEZE, FISCOMPANYORGUNIT, 
+    FISADMINORGUNIT, FISSALEORGUNIT, FISPURCHASEORGUNIT, FISSTORAGEORGUNIT, FISPROFITORGUNIT, 
+    FISCOSTORGUNIT, FISCU, FISUNION, FISHRORGUNIT, FCREATORID, FCREATETIME, FLASTUPDATEUSERID, 
+    FLASTUPDATETIME, FCONTROLUNITID, FISLEAF, FLEVEL, FLONGNUMBER, FPARENTID, FLEADER, 
+    FADDRESSID, FISSEALUP, FISBIZUNIT, FTYPE, FSTATUS, FISSTART, FISOUSEALUP, FDISPLAYNAME_L1, 
+    FDISPLAYNAME_L2, FDISPLAYNAME_L3, FPROPERTYSEALUPDATE, FLOCATION, FVERSIONNUMBER, 
+    FCODE, FISTRANSPORTORGUNIT, FISQUALITYORGUNIT, FORGTYPESTR, JING, WEI, JINGWEIUSER
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from T_ORG_STORAGE
+    where FID = #{fid,jdbcType=VARCHAR}
+  </select>
+    <select id="findAllByType" resultType="entity.TOrgStorage">
+      SELECT * FROM T_ORG_STORAGE t WHERE t.FTYPE = '1301';
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from T_ORG_STORAGE
+    where FID = #{fid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" keyColumn="FID" keyProperty="fid" parameterType="entity.TOrgStorage" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into T_ORG_STORAGE (FNAME_L1, FNAME_L2, FNAME_L3, 
+      FNUMBER, FDESCRIPTION_L1, FDESCRIPTION_L2, 
+      FDESCRIPTION_L3, FSIMPLENAME, FISGROUPING, 
+      FEFFECTDATE, FINVALIDDATE, FISFREEZE, 
+      FISCOMPANYORGUNIT, FISADMINORGUNIT, FISSALEORGUNIT, 
+      FISPURCHASEORGUNIT, FISSTORAGEORGUNIT, 
+      FISPROFITORGUNIT, FISCOSTORGUNIT, FISCU, 
+      FISUNION, FISHRORGUNIT, FCREATORID, 
+      FCREATETIME, FLASTUPDATEUSERID, FLASTUPDATETIME, 
+      FCONTROLUNITID, FISLEAF, FLEVEL, 
+      FLONGNUMBER, FPARENTID, FLEADER, 
+      FADDRESSID, FISSEALUP, FISBIZUNIT, 
+      FTYPE, FSTATUS, FISSTART, 
+      FISOUSEALUP, FDISPLAYNAME_L1, FDISPLAYNAME_L2, 
+      FDISPLAYNAME_L3, FPROPERTYSEALUPDATE, 
+      FLOCATION, FVERSIONNUMBER, FCODE, 
+      FISTRANSPORTORGUNIT, FISQUALITYORGUNIT, 
+      FORGTYPESTR, JING, WEI, 
+      JINGWEIUSER)
+    values (#{fnameL1,jdbcType=VARCHAR}, #{fnameL2,jdbcType=VARCHAR}, #{fnameL3,jdbcType=VARCHAR}, 
+      #{fnumber,jdbcType=VARCHAR}, #{fdescriptionL1,jdbcType=VARCHAR}, #{fdescriptionL2,jdbcType=VARCHAR}, 
+      #{fdescriptionL3,jdbcType=VARCHAR}, #{fsimplename,jdbcType=VARCHAR}, #{fisgrouping,jdbcType=DECIMAL}, 
+      #{feffectdate,jdbcType=TIMESTAMP}, #{finvaliddate,jdbcType=TIMESTAMP}, #{fisfreeze,jdbcType=DECIMAL}, 
+      #{fiscompanyorgunit,jdbcType=DECIMAL}, #{fisadminorgunit,jdbcType=DECIMAL}, #{fissaleorgunit,jdbcType=DECIMAL}, 
+      #{fispurchaseorgunit,jdbcType=DECIMAL}, #{fisstorageorgunit,jdbcType=DECIMAL}, 
+      #{fisprofitorgunit,jdbcType=DECIMAL}, #{fiscostorgunit,jdbcType=DECIMAL}, #{fiscu,jdbcType=DECIMAL}, 
+      #{fisunion,jdbcType=DECIMAL}, #{fishrorgunit,jdbcType=DECIMAL}, #{fcreatorid,jdbcType=VARCHAR}, 
+      #{fcreatetime,jdbcType=TIMESTAMP}, #{flastupdateuserid,jdbcType=VARCHAR}, #{flastupdatetime,jdbcType=TIMESTAMP}, 
+      #{fcontrolunitid,jdbcType=VARCHAR}, #{fisleaf,jdbcType=DECIMAL}, #{flevel,jdbcType=DECIMAL}, 
+      #{flongnumber,jdbcType=VARCHAR}, #{fparentid,jdbcType=VARCHAR}, #{fleader,jdbcType=VARCHAR}, 
+      #{faddressid,jdbcType=VARCHAR}, #{fissealup,jdbcType=DECIMAL}, #{fisbizunit,jdbcType=DECIMAL}, 
+      #{ftype,jdbcType=DECIMAL}, #{fstatus,jdbcType=DECIMAL}, #{fisstart,jdbcType=DECIMAL}, 
+      #{fisousealup,jdbcType=DECIMAL}, #{fdisplaynameL1,jdbcType=VARCHAR}, #{fdisplaynameL2,jdbcType=VARCHAR}, 
+      #{fdisplaynameL3,jdbcType=VARCHAR}, #{fpropertysealupdate,jdbcType=TIMESTAMP}, 
+      #{flocation,jdbcType=VARCHAR}, #{fversionnumber,jdbcType=VARCHAR}, #{fcode,jdbcType=VARCHAR}, 
+      #{fistransportorgunit,jdbcType=DECIMAL}, #{fisqualityorgunit,jdbcType=DECIMAL}, 
+      #{forgtypestr,jdbcType=VARCHAR}, #{jing,jdbcType=VARCHAR}, #{wei,jdbcType=VARCHAR}, 
+      #{jingweiuser,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="FID" keyProperty="fid" parameterType="entity.TOrgStorage" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into T_ORG_STORAGE
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fnameL1 != null">
+        FNAME_L1,
+      </if>
+      <if test="fnameL2 != null">
+        FNAME_L2,
+      </if>
+      <if test="fnameL3 != null">
+        FNAME_L3,
+      </if>
+      <if test="fnumber != null">
+        FNUMBER,
+      </if>
+      <if test="fdescriptionL1 != null">
+        FDESCRIPTION_L1,
+      </if>
+      <if test="fdescriptionL2 != null">
+        FDESCRIPTION_L2,
+      </if>
+      <if test="fdescriptionL3 != null">
+        FDESCRIPTION_L3,
+      </if>
+      <if test="fsimplename != null">
+        FSIMPLENAME,
+      </if>
+      <if test="fisgrouping != null">
+        FISGROUPING,
+      </if>
+      <if test="feffectdate != null">
+        FEFFECTDATE,
+      </if>
+      <if test="finvaliddate != null">
+        FINVALIDDATE,
+      </if>
+      <if test="fisfreeze != null">
+        FISFREEZE,
+      </if>
+      <if test="fiscompanyorgunit != null">
+        FISCOMPANYORGUNIT,
+      </if>
+      <if test="fisadminorgunit != null">
+        FISADMINORGUNIT,
+      </if>
+      <if test="fissaleorgunit != null">
+        FISSALEORGUNIT,
+      </if>
+      <if test="fispurchaseorgunit != null">
+        FISPURCHASEORGUNIT,
+      </if>
+      <if test="fisstorageorgunit != null">
+        FISSTORAGEORGUNIT,
+      </if>
+      <if test="fisprofitorgunit != null">
+        FISPROFITORGUNIT,
+      </if>
+      <if test="fiscostorgunit != null">
+        FISCOSTORGUNIT,
+      </if>
+      <if test="fiscu != null">
+        FISCU,
+      </if>
+      <if test="fisunion != null">
+        FISUNION,
+      </if>
+      <if test="fishrorgunit != null">
+        FISHRORGUNIT,
+      </if>
+      <if test="fcreatorid != null">
+        FCREATORID,
+      </if>
+      <if test="fcreatetime != null">
+        FCREATETIME,
+      </if>
+      <if test="flastupdateuserid != null">
+        FLASTUPDATEUSERID,
+      </if>
+      <if test="flastupdatetime != null">
+        FLASTUPDATETIME,
+      </if>
+      <if test="fcontrolunitid != null">
+        FCONTROLUNITID,
+      </if>
+      <if test="fisleaf != null">
+        FISLEAF,
+      </if>
+      <if test="flevel != null">
+        FLEVEL,
+      </if>
+      <if test="flongnumber != null">
+        FLONGNUMBER,
+      </if>
+      <if test="fparentid != null">
+        FPARENTID,
+      </if>
+      <if test="fleader != null">
+        FLEADER,
+      </if>
+      <if test="faddressid != null">
+        FADDRESSID,
+      </if>
+      <if test="fissealup != null">
+        FISSEALUP,
+      </if>
+      <if test="fisbizunit != null">
+        FISBIZUNIT,
+      </if>
+      <if test="ftype != null">
+        FTYPE,
+      </if>
+      <if test="fstatus != null">
+        FSTATUS,
+      </if>
+      <if test="fisstart != null">
+        FISSTART,
+      </if>
+      <if test="fisousealup != null">
+        FISOUSEALUP,
+      </if>
+      <if test="fdisplaynameL1 != null">
+        FDISPLAYNAME_L1,
+      </if>
+      <if test="fdisplaynameL2 != null">
+        FDISPLAYNAME_L2,
+      </if>
+      <if test="fdisplaynameL3 != null">
+        FDISPLAYNAME_L3,
+      </if>
+      <if test="fpropertysealupdate != null">
+        FPROPERTYSEALUPDATE,
+      </if>
+      <if test="flocation != null">
+        FLOCATION,
+      </if>
+      <if test="fversionnumber != null">
+        FVERSIONNUMBER,
+      </if>
+      <if test="fcode != null">
+        FCODE,
+      </if>
+      <if test="fistransportorgunit != null">
+        FISTRANSPORTORGUNIT,
+      </if>
+      <if test="fisqualityorgunit != null">
+        FISQUALITYORGUNIT,
+      </if>
+      <if test="forgtypestr != null">
+        FORGTYPESTR,
+      </if>
+      <if test="jing != null">
+        JING,
+      </if>
+      <if test="wei != null">
+        WEI,
+      </if>
+      <if test="jingweiuser != null">
+        JINGWEIUSER,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fnameL1 != null">
+        #{fnameL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL2 != null">
+        #{fnameL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL3 != null">
+        #{fnameL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fnumber != null">
+        #{fnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL1 != null">
+        #{fdescriptionL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL2 != null">
+        #{fdescriptionL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL3 != null">
+        #{fdescriptionL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fsimplename != null">
+        #{fsimplename,jdbcType=VARCHAR},
+      </if>
+      <if test="fisgrouping != null">
+        #{fisgrouping,jdbcType=DECIMAL},
+      </if>
+      <if test="feffectdate != null">
+        #{feffectdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="finvaliddate != null">
+        #{finvaliddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fisfreeze != null">
+        #{fisfreeze,jdbcType=DECIMAL},
+      </if>
+      <if test="fiscompanyorgunit != null">
+        #{fiscompanyorgunit,jdbcType=DECIMAL},
+      </if>
+      <if test="fisadminorgunit != null">
+        #{fisadminorgunit,jdbcType=DECIMAL},
+      </if>
+      <if test="fissaleorgunit != null">
+        #{fissaleorgunit,jdbcType=DECIMAL},
+      </if>
+      <if test="fispurchaseorgunit != null">
+        #{fispurchaseorgunit,jdbcType=DECIMAL},
+      </if>
+      <if test="fisstorageorgunit != null">
+        #{fisstorageorgunit,jdbcType=DECIMAL},
+      </if>
+      <if test="fisprofitorgunit != null">
+        #{fisprofitorgunit,jdbcType=DECIMAL},
+      </if>
+      <if test="fiscostorgunit != null">
+        #{fiscostorgunit,jdbcType=DECIMAL},
+      </if>
+      <if test="fiscu != null">
+        #{fiscu,jdbcType=DECIMAL},
+      </if>
+      <if test="fisunion != null">
+        #{fisunion,jdbcType=DECIMAL},
+      </if>
+      <if test="fishrorgunit != null">
+        #{fishrorgunit,jdbcType=DECIMAL},
+      </if>
+      <if test="fcreatorid != null">
+        #{fcreatorid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcreatetime != null">
+        #{fcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flastupdateuserid != null">
+        #{flastupdateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="flastupdatetime != null">
+        #{flastupdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fcontrolunitid != null">
+        #{fcontrolunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="fisleaf != null">
+        #{fisleaf,jdbcType=DECIMAL},
+      </if>
+      <if test="flevel != null">
+        #{flevel,jdbcType=DECIMAL},
+      </if>
+      <if test="flongnumber != null">
+        #{flongnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fparentid != null">
+        #{fparentid,jdbcType=VARCHAR},
+      </if>
+      <if test="fleader != null">
+        #{fleader,jdbcType=VARCHAR},
+      </if>
+      <if test="faddressid != null">
+        #{faddressid,jdbcType=VARCHAR},
+      </if>
+      <if test="fissealup != null">
+        #{fissealup,jdbcType=DECIMAL},
+      </if>
+      <if test="fisbizunit != null">
+        #{fisbizunit,jdbcType=DECIMAL},
+      </if>
+      <if test="ftype != null">
+        #{ftype,jdbcType=DECIMAL},
+      </if>
+      <if test="fstatus != null">
+        #{fstatus,jdbcType=DECIMAL},
+      </if>
+      <if test="fisstart != null">
+        #{fisstart,jdbcType=DECIMAL},
+      </if>
+      <if test="fisousealup != null">
+        #{fisousealup,jdbcType=DECIMAL},
+      </if>
+      <if test="fdisplaynameL1 != null">
+        #{fdisplaynameL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fdisplaynameL2 != null">
+        #{fdisplaynameL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fdisplaynameL3 != null">
+        #{fdisplaynameL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fpropertysealupdate != null">
+        #{fpropertysealupdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flocation != null">
+        #{flocation,jdbcType=VARCHAR},
+      </if>
+      <if test="fversionnumber != null">
+        #{fversionnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fcode != null">
+        #{fcode,jdbcType=VARCHAR},
+      </if>
+      <if test="fistransportorgunit != null">
+        #{fistransportorgunit,jdbcType=DECIMAL},
+      </if>
+      <if test="fisqualityorgunit != null">
+        #{fisqualityorgunit,jdbcType=DECIMAL},
+      </if>
+      <if test="forgtypestr != null">
+        #{forgtypestr,jdbcType=VARCHAR},
+      </if>
+      <if test="jing != null">
+        #{jing,jdbcType=VARCHAR},
+      </if>
+      <if test="wei != null">
+        #{wei,jdbcType=VARCHAR},
+      </if>
+      <if test="jingweiuser != null">
+        #{jingweiuser,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="entity.TOrgStorage">
+    <!--@mbg.generated-->
+    update T_ORG_STORAGE
+    <set>
+      <if test="fnameL1 != null">
+        FNAME_L1 = #{fnameL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL2 != null">
+        FNAME_L2 = #{fnameL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL3 != null">
+        FNAME_L3 = #{fnameL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fnumber != null">
+        FNUMBER = #{fnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL1 != null">
+        FDESCRIPTION_L1 = #{fdescriptionL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL2 != null">
+        FDESCRIPTION_L2 = #{fdescriptionL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL3 != null">
+        FDESCRIPTION_L3 = #{fdescriptionL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fsimplename != null">
+        FSIMPLENAME = #{fsimplename,jdbcType=VARCHAR},
+      </if>
+      <if test="fisgrouping != null">
+        FISGROUPING = #{fisgrouping,jdbcType=DECIMAL},
+      </if>
+      <if test="feffectdate != null">
+        FEFFECTDATE = #{feffectdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="finvaliddate != null">
+        FINVALIDDATE = #{finvaliddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fisfreeze != null">
+        FISFREEZE = #{fisfreeze,jdbcType=DECIMAL},
+      </if>
+      <if test="fiscompanyorgunit != null">
+        FISCOMPANYORGUNIT = #{fiscompanyorgunit,jdbcType=DECIMAL},
+      </if>
+      <if test="fisadminorgunit != null">
+        FISADMINORGUNIT = #{fisadminorgunit,jdbcType=DECIMAL},
+      </if>
+      <if test="fissaleorgunit != null">
+        FISSALEORGUNIT = #{fissaleorgunit,jdbcType=DECIMAL},
+      </if>
+      <if test="fispurchaseorgunit != null">
+        FISPURCHASEORGUNIT = #{fispurchaseorgunit,jdbcType=DECIMAL},
+      </if>
+      <if test="fisstorageorgunit != null">
+        FISSTORAGEORGUNIT = #{fisstorageorgunit,jdbcType=DECIMAL},
+      </if>
+      <if test="fisprofitorgunit != null">
+        FISPROFITORGUNIT = #{fisprofitorgunit,jdbcType=DECIMAL},
+      </if>
+      <if test="fiscostorgunit != null">
+        FISCOSTORGUNIT = #{fiscostorgunit,jdbcType=DECIMAL},
+      </if>
+      <if test="fiscu != null">
+        FISCU = #{fiscu,jdbcType=DECIMAL},
+      </if>
+      <if test="fisunion != null">
+        FISUNION = #{fisunion,jdbcType=DECIMAL},
+      </if>
+      <if test="fishrorgunit != null">
+        FISHRORGUNIT = #{fishrorgunit,jdbcType=DECIMAL},
+      </if>
+      <if test="fcreatorid != null">
+        FCREATORID = #{fcreatorid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcreatetime != null">
+        FCREATETIME = #{fcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flastupdateuserid != null">
+        FLASTUPDATEUSERID = #{flastupdateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="flastupdatetime != null">
+        FLASTUPDATETIME = #{flastupdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fcontrolunitid != null">
+        FCONTROLUNITID = #{fcontrolunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="fisleaf != null">
+        FISLEAF = #{fisleaf,jdbcType=DECIMAL},
+      </if>
+      <if test="flevel != null">
+        FLEVEL = #{flevel,jdbcType=DECIMAL},
+      </if>
+      <if test="flongnumber != null">
+        FLONGNUMBER = #{flongnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fparentid != null">
+        FPARENTID = #{fparentid,jdbcType=VARCHAR},
+      </if>
+      <if test="fleader != null">
+        FLEADER = #{fleader,jdbcType=VARCHAR},
+      </if>
+      <if test="faddressid != null">
+        FADDRESSID = #{faddressid,jdbcType=VARCHAR},
+      </if>
+      <if test="fissealup != null">
+        FISSEALUP = #{fissealup,jdbcType=DECIMAL},
+      </if>
+      <if test="fisbizunit != null">
+        FISBIZUNIT = #{fisbizunit,jdbcType=DECIMAL},
+      </if>
+      <if test="ftype != null">
+        FTYPE = #{ftype,jdbcType=DECIMAL},
+      </if>
+      <if test="fstatus != null">
+        FSTATUS = #{fstatus,jdbcType=DECIMAL},
+      </if>
+      <if test="fisstart != null">
+        FISSTART = #{fisstart,jdbcType=DECIMAL},
+      </if>
+      <if test="fisousealup != null">
+        FISOUSEALUP = #{fisousealup,jdbcType=DECIMAL},
+      </if>
+      <if test="fdisplaynameL1 != null">
+        FDISPLAYNAME_L1 = #{fdisplaynameL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fdisplaynameL2 != null">
+        FDISPLAYNAME_L2 = #{fdisplaynameL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fdisplaynameL3 != null">
+        FDISPLAYNAME_L3 = #{fdisplaynameL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fpropertysealupdate != null">
+        FPROPERTYSEALUPDATE = #{fpropertysealupdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flocation != null">
+        FLOCATION = #{flocation,jdbcType=VARCHAR},
+      </if>
+      <if test="fversionnumber != null">
+        FVERSIONNUMBER = #{fversionnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fcode != null">
+        FCODE = #{fcode,jdbcType=VARCHAR},
+      </if>
+      <if test="fistransportorgunit != null">
+        FISTRANSPORTORGUNIT = #{fistransportorgunit,jdbcType=DECIMAL},
+      </if>
+      <if test="fisqualityorgunit != null">
+        FISQUALITYORGUNIT = #{fisqualityorgunit,jdbcType=DECIMAL},
+      </if>
+      <if test="forgtypestr != null">
+        FORGTYPESTR = #{forgtypestr,jdbcType=VARCHAR},
+      </if>
+      <if test="jing != null">
+        JING = #{jing,jdbcType=VARCHAR},
+      </if>
+      <if test="wei != null">
+        WEI = #{wei,jdbcType=VARCHAR},
+      </if>
+      <if test="jingweiuser != null">
+        JINGWEIUSER = #{jingweiuser,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where FID = #{fid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="entity.TOrgStorage">
+    <!--@mbg.generated-->
+    update T_ORG_STORAGE
+    set FNAME_L1 = #{fnameL1,jdbcType=VARCHAR},
+      FNAME_L2 = #{fnameL2,jdbcType=VARCHAR},
+      FNAME_L3 = #{fnameL3,jdbcType=VARCHAR},
+      FNUMBER = #{fnumber,jdbcType=VARCHAR},
+      FDESCRIPTION_L1 = #{fdescriptionL1,jdbcType=VARCHAR},
+      FDESCRIPTION_L2 = #{fdescriptionL2,jdbcType=VARCHAR},
+      FDESCRIPTION_L3 = #{fdescriptionL3,jdbcType=VARCHAR},
+      FSIMPLENAME = #{fsimplename,jdbcType=VARCHAR},
+      FISGROUPING = #{fisgrouping,jdbcType=DECIMAL},
+      FEFFECTDATE = #{feffectdate,jdbcType=TIMESTAMP},
+      FINVALIDDATE = #{finvaliddate,jdbcType=TIMESTAMP},
+      FISFREEZE = #{fisfreeze,jdbcType=DECIMAL},
+      FISCOMPANYORGUNIT = #{fiscompanyorgunit,jdbcType=DECIMAL},
+      FISADMINORGUNIT = #{fisadminorgunit,jdbcType=DECIMAL},
+      FISSALEORGUNIT = #{fissaleorgunit,jdbcType=DECIMAL},
+      FISPURCHASEORGUNIT = #{fispurchaseorgunit,jdbcType=DECIMAL},
+      FISSTORAGEORGUNIT = #{fisstorageorgunit,jdbcType=DECIMAL},
+      FISPROFITORGUNIT = #{fisprofitorgunit,jdbcType=DECIMAL},
+      FISCOSTORGUNIT = #{fiscostorgunit,jdbcType=DECIMAL},
+      FISCU = #{fiscu,jdbcType=DECIMAL},
+      FISUNION = #{fisunion,jdbcType=DECIMAL},
+      FISHRORGUNIT = #{fishrorgunit,jdbcType=DECIMAL},
+      FCREATORID = #{fcreatorid,jdbcType=VARCHAR},
+      FCREATETIME = #{fcreatetime,jdbcType=TIMESTAMP},
+      FLASTUPDATEUSERID = #{flastupdateuserid,jdbcType=VARCHAR},
+      FLASTUPDATETIME = #{flastupdatetime,jdbcType=TIMESTAMP},
+      FCONTROLUNITID = #{fcontrolunitid,jdbcType=VARCHAR},
+      FISLEAF = #{fisleaf,jdbcType=DECIMAL},
+      FLEVEL = #{flevel,jdbcType=DECIMAL},
+      FLONGNUMBER = #{flongnumber,jdbcType=VARCHAR},
+      FPARENTID = #{fparentid,jdbcType=VARCHAR},
+      FLEADER = #{fleader,jdbcType=VARCHAR},
+      FADDRESSID = #{faddressid,jdbcType=VARCHAR},
+      FISSEALUP = #{fissealup,jdbcType=DECIMAL},
+      FISBIZUNIT = #{fisbizunit,jdbcType=DECIMAL},
+      FTYPE = #{ftype,jdbcType=DECIMAL},
+      FSTATUS = #{fstatus,jdbcType=DECIMAL},
+      FISSTART = #{fisstart,jdbcType=DECIMAL},
+      FISOUSEALUP = #{fisousealup,jdbcType=DECIMAL},
+      FDISPLAYNAME_L1 = #{fdisplaynameL1,jdbcType=VARCHAR},
+      FDISPLAYNAME_L2 = #{fdisplaynameL2,jdbcType=VARCHAR},
+      FDISPLAYNAME_L3 = #{fdisplaynameL3,jdbcType=VARCHAR},
+      FPROPERTYSEALUPDATE = #{fpropertysealupdate,jdbcType=TIMESTAMP},
+      FLOCATION = #{flocation,jdbcType=VARCHAR},
+      FVERSIONNUMBER = #{fversionnumber,jdbcType=VARCHAR},
+      FCODE = #{fcode,jdbcType=VARCHAR},
+      FISTRANSPORTORGUNIT = #{fistransportorgunit,jdbcType=DECIMAL},
+      FISQUALITYORGUNIT = #{fisqualityorgunit,jdbcType=DECIMAL},
+      FORGTYPESTR = #{forgtypestr,jdbcType=VARCHAR},
+      JING = #{jing,jdbcType=VARCHAR},
+      WEI = #{wei,jdbcType=VARCHAR},
+      JINGWEIUSER = #{jingweiuser,jdbcType=VARCHAR}
+    where FID = #{fid,jdbcType=VARCHAR}
+  </update>
+</mapper>

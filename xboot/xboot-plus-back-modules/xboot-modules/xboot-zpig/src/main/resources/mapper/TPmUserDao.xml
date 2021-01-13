@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.TPmUserDao">
+  <resultMap id="BaseResultMap" type="entity.TPmUser">
+    <!--@mbg.generated-->
+    <id column="FID" jdbcType="VARCHAR" property="fid" />
+    <result column="FNUMBER" jdbcType="VARCHAR" property="fnumber" />
+    <result column="FNAME_L1" jdbcType="VARCHAR" property="fnameL1" />
+    <result column="FNAME_L2" jdbcType="VARCHAR" property="fnameL2" />
+    <result column="FNAME_L3" jdbcType="VARCHAR" property="fnameL3" />
+    <result column="FTYPE" jdbcType="DECIMAL" property="ftype" />
+    <result column="FDESCRIPTION_L1" jdbcType="VARCHAR" property="fdescriptionL1" />
+    <result column="FDESCRIPTION_L2" jdbcType="VARCHAR" property="fdescriptionL2" />
+    <result column="FDESCRIPTION_L3" jdbcType="VARCHAR" property="fdescriptionL3" />
+    <result column="FPASSWORD" jdbcType="VARCHAR" property="fpassword" />
+    <result column="FISDELETE" jdbcType="DECIMAL" property="fisdelete" />
+    <result column="FISLOCKED" jdbcType="DECIMAL" property="fislocked" />
+    <result column="FFORBIDDEN" jdbcType="DECIMAL" property="fforbidden" />
+    <result column="FEFFECTIVEDATE" jdbcType="TIMESTAMP" property="feffectivedate" />
+    <result column="FINVALIDATIONDATE" jdbcType="TIMESTAMP" property="finvalidationdate" />
+    <result column="FDEFAULTLOCALE" jdbcType="VARCHAR" property="fdefaultlocale" />
+    <result column="FISREGISTER" jdbcType="DECIMAL" property="fisregister" />
+    <result column="FERRCOUNT" jdbcType="DECIMAL" property="ferrcount" />
+    <result column="FGROUPID" jdbcType="VARCHAR" property="fgroupid" />
+    <result column="FPERSONID" jdbcType="VARCHAR" property="fpersonid" />
+    <result column="FSECURITYID" jdbcType="VARCHAR" property="fsecurityid" />
+    <result column="FPWEFFECTIVEDATE" jdbcType="TIMESTAMP" property="fpweffectivedate" />
+    <result column="FLOCKEDTIME" jdbcType="TIMESTAMP" property="flockedtime" />
+    <result column="FISBIZADMIN" jdbcType="DECIMAL" property="fisbizadmin" />
+    <result column="FISCHANGEDPW" jdbcType="DECIMAL" property="fischangedpw" />
+    <result column="FDEFORGUNITID" jdbcType="VARCHAR" property="fdeforgunitid" />
+    <result column="FCONTROLUNITID" jdbcType="VARCHAR" property="fcontrolunitid" />
+    <result column="FCREATORID" jdbcType="VARCHAR" property="fcreatorid" />
+    <result column="FCREATETIME" jdbcType="TIMESTAMP" property="fcreatetime" />
+    <result column="FLASTUPDATEUSERID" jdbcType="VARCHAR" property="flastupdateuserid" />
+    <result column="FLASTUPDATETIME" jdbcType="TIMESTAMP" property="flastupdatetime" />
+    <result column="FCUSTOMERID" jdbcType="VARCHAR" property="fcustomerid" />
+    <result column="FSUPPLIERID" jdbcType="VARCHAR" property="fsupplierid" />
+    <result column="FMAINROLEID" jdbcType="VARCHAR" property="fmainroleid" />
+    <result column="FAGENTUSER" jdbcType="DECIMAL" property="fagentuser" />
+    <result column="FLOGINAUTHORWAY" jdbcType="DECIMAL" property="floginauthorway" />
+    <result column="FPWDHISSTR" jdbcType="VARCHAR" property="fpwdhisstr" />
+    <result column="FREFERID" jdbcType="VARCHAR" property="freferid" />
+    <result column="FCELL" jdbcType="VARCHAR" property="fcell" />
+    <result column="FBACKUPEMAIL" jdbcType="VARCHAR" property="fbackupemail" />
+    <result column="FHOMEPHONE" jdbcType="VARCHAR" property="fhomephone" />
+    <result column="FOFFICEPHONE" jdbcType="VARCHAR" property="fofficephone" />
+    <result column="FEMAIL" jdbcType="VARCHAR" property="femail" />
+    <result column="FADNUMBER" jdbcType="VARCHAR" property="fadnumber" />
+    <result column="FNAMEPINYIN" jdbcType="VARCHAR" property="fnamepinyin" />
+    <result column="FNAMESHORTPINYIN" jdbcType="VARCHAR" property="fnameshortpinyin" />
+    <result column="FPINYIN" jdbcType="VARCHAR" property="fpinyin" />
+    <result column="FSHORTPINYIN" jdbcType="VARCHAR" property="fshortpinyin" />
+    <result column="FISAUTHENADMIN" jdbcType="DECIMAL" property="fisauthenadmin" />
+    <result column="FISACTIVATE" jdbcType="DECIMAL" property="fisactivate" />
+    <result column="FUID" jdbcType="VARCHAR" property="fuid" />
+    <result column="FISSYNTOCLOUD" jdbcType="DECIMAL" property="fissyntocloud" />
+    <result column="FPOSID" jdbcType="VARCHAR" property="fposid" />
+    <result column="FERPUSERSTATUS" jdbcType="DECIMAL" property="ferpuserstatus" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    FID, FNUMBER, FNAME_L1, FNAME_L2, FNAME_L3, FTYPE, FDESCRIPTION_L1, FDESCRIPTION_L2, 
+    FDESCRIPTION_L3, FPASSWORD, FISDELETE, FISLOCKED, FFORBIDDEN, FEFFECTIVEDATE, FINVALIDATIONDATE, 
+    FDEFAULTLOCALE, FISREGISTER, FERRCOUNT, FGROUPID, FPERSONID, FSECURITYID, FPWEFFECTIVEDATE, 
+    FLOCKEDTIME, FISBIZADMIN, FISCHANGEDPW, FDEFORGUNITID, FCONTROLUNITID, FCREATORID, 
+    FCREATETIME, FLASTUPDATEUSERID, FLASTUPDATETIME, FCUSTOMERID, FSUPPLIERID, FMAINROLEID, 
+    FAGENTUSER, FLOGINAUTHORWAY, FPWDHISSTR, FREFERID, FCELL, FBACKUPEMAIL, FHOMEPHONE, 
+    FOFFICEPHONE, FEMAIL, FADNUMBER, FNAMEPINYIN, FNAMESHORTPINYIN, FPINYIN, FSHORTPINYIN, 
+    FISAUTHENADMIN, FISACTIVATE, FUID, FISSYNTOCLOUD, FPOSID, FERPUSERSTATUS
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from T_PM_USER
+    where FID = #{fid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from T_PM_USER
+    where FID = #{fid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" keyColumn="FID" keyProperty="fid" parameterType="entity.TPmUser" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into T_PM_USER (FNUMBER, FNAME_L1, FNAME_L2, 
+      FNAME_L3, FTYPE, FDESCRIPTION_L1, 
+      FDESCRIPTION_L2, FDESCRIPTION_L3, FPASSWORD, 
+      FISDELETE, FISLOCKED, FFORBIDDEN, 
+      FEFFECTIVEDATE, FINVALIDATIONDATE, 
+      FDEFAULTLOCALE, FISREGISTER, FERRCOUNT, 
+      FGROUPID, FPERSONID, FSECURITYID, 
+      FPWEFFECTIVEDATE, FLOCKEDTIME, FISBIZADMIN, 
+      FISCHANGEDPW, FDEFORGUNITID, FCONTROLUNITID, 
+      FCREATORID, FCREATETIME, FLASTUPDATEUSERID, 
+      FLASTUPDATETIME, FCUSTOMERID, FSUPPLIERID, 
+      FMAINROLEID, FAGENTUSER, FLOGINAUTHORWAY, 
+      FPWDHISSTR, FREFERID, FCELL, 
+      FBACKUPEMAIL, FHOMEPHONE, FOFFICEPHONE, 
+      FEMAIL, FADNUMBER, FNAMEPINYIN, 
+      FNAMESHORTPINYIN, FPINYIN, FSHORTPINYIN, 
+      FISAUTHENADMIN, FISACTIVATE, FUID, 
+      FISSYNTOCLOUD, FPOSID, FERPUSERSTATUS
+      )
+    values (#{fnumber,jdbcType=VARCHAR}, #{fnameL1,jdbcType=VARCHAR}, #{fnameL2,jdbcType=VARCHAR}, 
+      #{fnameL3,jdbcType=VARCHAR}, #{ftype,jdbcType=DECIMAL}, #{fdescriptionL1,jdbcType=VARCHAR}, 
+      #{fdescriptionL2,jdbcType=VARCHAR}, #{fdescriptionL3,jdbcType=VARCHAR}, #{fpassword,jdbcType=VARCHAR}, 
+      #{fisdelete,jdbcType=DECIMAL}, #{fislocked,jdbcType=DECIMAL}, #{fforbidden,jdbcType=DECIMAL}, 
+      #{feffectivedate,jdbcType=TIMESTAMP}, #{finvalidationdate,jdbcType=TIMESTAMP}, 
+      #{fdefaultlocale,jdbcType=VARCHAR}, #{fisregister,jdbcType=DECIMAL}, #{ferrcount,jdbcType=DECIMAL}, 
+      #{fgroupid,jdbcType=VARCHAR}, #{fpersonid,jdbcType=VARCHAR}, #{fsecurityid,jdbcType=VARCHAR}, 
+      #{fpweffectivedate,jdbcType=TIMESTAMP}, #{flockedtime,jdbcType=TIMESTAMP}, #{fisbizadmin,jdbcType=DECIMAL}, 
+      #{fischangedpw,jdbcType=DECIMAL}, #{fdeforgunitid,jdbcType=VARCHAR}, #{fcontrolunitid,jdbcType=VARCHAR}, 
+      #{fcreatorid,jdbcType=VARCHAR}, #{fcreatetime,jdbcType=TIMESTAMP}, #{flastupdateuserid,jdbcType=VARCHAR}, 
+      #{flastupdatetime,jdbcType=TIMESTAMP}, #{fcustomerid,jdbcType=VARCHAR}, #{fsupplierid,jdbcType=VARCHAR}, 
+      #{fmainroleid,jdbcType=VARCHAR}, #{fagentuser,jdbcType=DECIMAL}, #{floginauthorway,jdbcType=DECIMAL}, 
+      #{fpwdhisstr,jdbcType=VARCHAR}, #{freferid,jdbcType=VARCHAR}, #{fcell,jdbcType=VARCHAR}, 
+      #{fbackupemail,jdbcType=VARCHAR}, #{fhomephone,jdbcType=VARCHAR}, #{fofficephone,jdbcType=VARCHAR}, 
+      #{femail,jdbcType=VARCHAR}, #{fadnumber,jdbcType=VARCHAR}, #{fnamepinyin,jdbcType=VARCHAR}, 
+      #{fnameshortpinyin,jdbcType=VARCHAR}, #{fpinyin,jdbcType=VARCHAR}, #{fshortpinyin,jdbcType=VARCHAR}, 
+      #{fisauthenadmin,jdbcType=DECIMAL}, #{fisactivate,jdbcType=DECIMAL}, #{fuid,jdbcType=VARCHAR}, 
+      #{fissyntocloud,jdbcType=DECIMAL}, #{fposid,jdbcType=VARCHAR}, #{ferpuserstatus,jdbcType=DECIMAL}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="FID" keyProperty="fid" parameterType="entity.TPmUser" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into T_PM_USER
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fnumber != null">
+        FNUMBER,
+      </if>
+      <if test="fnameL1 != null">
+        FNAME_L1,
+      </if>
+      <if test="fnameL2 != null">
+        FNAME_L2,
+      </if>
+      <if test="fnameL3 != null">
+        FNAME_L3,
+      </if>
+      <if test="ftype != null">
+        FTYPE,
+      </if>
+      <if test="fdescriptionL1 != null">
+        FDESCRIPTION_L1,
+      </if>
+      <if test="fdescriptionL2 != null">
+        FDESCRIPTION_L2,
+      </if>
+      <if test="fdescriptionL3 != null">
+        FDESCRIPTION_L3,
+      </if>
+      <if test="fpassword != null">
+        FPASSWORD,
+      </if>
+      <if test="fisdelete != null">
+        FISDELETE,
+      </if>
+      <if test="fislocked != null">
+        FISLOCKED,
+      </if>
+      <if test="fforbidden != null">
+        FFORBIDDEN,
+      </if>
+      <if test="feffectivedate != null">
+        FEFFECTIVEDATE,
+      </if>
+      <if test="finvalidationdate != null">
+        FINVALIDATIONDATE,
+      </if>
+      <if test="fdefaultlocale != null">
+        FDEFAULTLOCALE,
+      </if>
+      <if test="fisregister != null">
+        FISREGISTER,
+      </if>
+      <if test="ferrcount != null">
+        FERRCOUNT,
+      </if>
+      <if test="fgroupid != null">
+        FGROUPID,
+      </if>
+      <if test="fpersonid != null">
+        FPERSONID,
+      </if>
+      <if test="fsecurityid != null">
+        FSECURITYID,
+      </if>
+      <if test="fpweffectivedate != null">
+        FPWEFFECTIVEDATE,
+      </if>
+      <if test="flockedtime != null">
+        FLOCKEDTIME,
+      </if>
+      <if test="fisbizadmin != null">
+        FISBIZADMIN,
+      </if>
+      <if test="fischangedpw != null">
+        FISCHANGEDPW,
+      </if>
+      <if test="fdeforgunitid != null">
+        FDEFORGUNITID,
+      </if>
+      <if test="fcontrolunitid != null">
+        FCONTROLUNITID,
+      </if>
+      <if test="fcreatorid != null">
+        FCREATORID,
+      </if>
+      <if test="fcreatetime != null">
+        FCREATETIME,
+      </if>
+      <if test="flastupdateuserid != null">
+        FLASTUPDATEUSERID,
+      </if>
+      <if test="flastupdatetime != null">
+        FLASTUPDATETIME,
+      </if>
+      <if test="fcustomerid != null">
+        FCUSTOMERID,
+      </if>
+      <if test="fsupplierid != null">
+        FSUPPLIERID,
+      </if>
+      <if test="fmainroleid != null">
+        FMAINROLEID,
+      </if>
+      <if test="fagentuser != null">
+        FAGENTUSER,
+      </if>
+      <if test="floginauthorway != null">
+        FLOGINAUTHORWAY,
+      </if>
+      <if test="fpwdhisstr != null">
+        FPWDHISSTR,
+      </if>
+      <if test="freferid != null">
+        FREFERID,
+      </if>
+      <if test="fcell != null">
+        FCELL,
+      </if>
+      <if test="fbackupemail != null">
+        FBACKUPEMAIL,
+      </if>
+      <if test="fhomephone != null">
+        FHOMEPHONE,
+      </if>
+      <if test="fofficephone != null">
+        FOFFICEPHONE,
+      </if>
+      <if test="femail != null">
+        FEMAIL,
+      </if>
+      <if test="fadnumber != null">
+        FADNUMBER,
+      </if>
+      <if test="fnamepinyin != null">
+        FNAMEPINYIN,
+      </if>
+      <if test="fnameshortpinyin != null">
+        FNAMESHORTPINYIN,
+      </if>
+      <if test="fpinyin != null">
+        FPINYIN,
+      </if>
+      <if test="fshortpinyin != null">
+        FSHORTPINYIN,
+      </if>
+      <if test="fisauthenadmin != null">
+        FISAUTHENADMIN,
+      </if>
+      <if test="fisactivate != null">
+        FISACTIVATE,
+      </if>
+      <if test="fuid != null">
+        FUID,
+      </if>
+      <if test="fissyntocloud != null">
+        FISSYNTOCLOUD,
+      </if>
+      <if test="fposid != null">
+        FPOSID,
+      </if>
+      <if test="ferpuserstatus != null">
+        FERPUSERSTATUS,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fnumber != null">
+        #{fnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL1 != null">
+        #{fnameL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL2 != null">
+        #{fnameL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL3 != null">
+        #{fnameL3,jdbcType=VARCHAR},
+      </if>
+      <if test="ftype != null">
+        #{ftype,jdbcType=DECIMAL},
+      </if>
+      <if test="fdescriptionL1 != null">
+        #{fdescriptionL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL2 != null">
+        #{fdescriptionL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL3 != null">
+        #{fdescriptionL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fpassword != null">
+        #{fpassword,jdbcType=VARCHAR},
+      </if>
+      <if test="fisdelete != null">
+        #{fisdelete,jdbcType=DECIMAL},
+      </if>
+      <if test="fislocked != null">
+        #{fislocked,jdbcType=DECIMAL},
+      </if>
+      <if test="fforbidden != null">
+        #{fforbidden,jdbcType=DECIMAL},
+      </if>
+      <if test="feffectivedate != null">
+        #{feffectivedate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="finvalidationdate != null">
+        #{finvalidationdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fdefaultlocale != null">
+        #{fdefaultlocale,jdbcType=VARCHAR},
+      </if>
+      <if test="fisregister != null">
+        #{fisregister,jdbcType=DECIMAL},
+      </if>
+      <if test="ferrcount != null">
+        #{ferrcount,jdbcType=DECIMAL},
+      </if>
+      <if test="fgroupid != null">
+        #{fgroupid,jdbcType=VARCHAR},
+      </if>
+      <if test="fpersonid != null">
+        #{fpersonid,jdbcType=VARCHAR},
+      </if>
+      <if test="fsecurityid != null">
+        #{fsecurityid,jdbcType=VARCHAR},
+      </if>
+      <if test="fpweffectivedate != null">
+        #{fpweffectivedate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flockedtime != null">
+        #{flockedtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fisbizadmin != null">
+        #{fisbizadmin,jdbcType=DECIMAL},
+      </if>
+      <if test="fischangedpw != null">
+        #{fischangedpw,jdbcType=DECIMAL},
+      </if>
+      <if test="fdeforgunitid != null">
+        #{fdeforgunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcontrolunitid != null">
+        #{fcontrolunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcreatorid != null">
+        #{fcreatorid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcreatetime != null">
+        #{fcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flastupdateuserid != null">
+        #{flastupdateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="flastupdatetime != null">
+        #{flastupdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fcustomerid != null">
+        #{fcustomerid,jdbcType=VARCHAR},
+      </if>
+      <if test="fsupplierid != null">
+        #{fsupplierid,jdbcType=VARCHAR},
+      </if>
+      <if test="fmainroleid != null">
+        #{fmainroleid,jdbcType=VARCHAR},
+      </if>
+      <if test="fagentuser != null">
+        #{fagentuser,jdbcType=DECIMAL},
+      </if>
+      <if test="floginauthorway != null">
+        #{floginauthorway,jdbcType=DECIMAL},
+      </if>
+      <if test="fpwdhisstr != null">
+        #{fpwdhisstr,jdbcType=VARCHAR},
+      </if>
+      <if test="freferid != null">
+        #{freferid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcell != null">
+        #{fcell,jdbcType=VARCHAR},
+      </if>
+      <if test="fbackupemail != null">
+        #{fbackupemail,jdbcType=VARCHAR},
+      </if>
+      <if test="fhomephone != null">
+        #{fhomephone,jdbcType=VARCHAR},
+      </if>
+      <if test="fofficephone != null">
+        #{fofficephone,jdbcType=VARCHAR},
+      </if>
+      <if test="femail != null">
+        #{femail,jdbcType=VARCHAR},
+      </if>
+      <if test="fadnumber != null">
+        #{fadnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fnamepinyin != null">
+        #{fnamepinyin,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameshortpinyin != null">
+        #{fnameshortpinyin,jdbcType=VARCHAR},
+      </if>
+      <if test="fpinyin != null">
+        #{fpinyin,jdbcType=VARCHAR},
+      </if>
+      <if test="fshortpinyin != null">
+        #{fshortpinyin,jdbcType=VARCHAR},
+      </if>
+      <if test="fisauthenadmin != null">
+        #{fisauthenadmin,jdbcType=DECIMAL},
+      </if>
+      <if test="fisactivate != null">
+        #{fisactivate,jdbcType=DECIMAL},
+      </if>
+      <if test="fuid != null">
+        #{fuid,jdbcType=VARCHAR},
+      </if>
+      <if test="fissyntocloud != null">
+        #{fissyntocloud,jdbcType=DECIMAL},
+      </if>
+      <if test="fposid != null">
+        #{fposid,jdbcType=VARCHAR},
+      </if>
+      <if test="ferpuserstatus != null">
+        #{ferpuserstatus,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="entity.TPmUser">
+    <!--@mbg.generated-->
+    update T_PM_USER
+    <set>
+      <if test="fnumber != null">
+        FNUMBER = #{fnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL1 != null">
+        FNAME_L1 = #{fnameL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL2 != null">
+        FNAME_L2 = #{fnameL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL3 != null">
+        FNAME_L3 = #{fnameL3,jdbcType=VARCHAR},
+      </if>
+      <if test="ftype != null">
+        FTYPE = #{ftype,jdbcType=DECIMAL},
+      </if>
+      <if test="fdescriptionL1 != null">
+        FDESCRIPTION_L1 = #{fdescriptionL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL2 != null">
+        FDESCRIPTION_L2 = #{fdescriptionL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL3 != null">
+        FDESCRIPTION_L3 = #{fdescriptionL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fpassword != null">
+        FPASSWORD = #{fpassword,jdbcType=VARCHAR},
+      </if>
+      <if test="fisdelete != null">
+        FISDELETE = #{fisdelete,jdbcType=DECIMAL},
+      </if>
+      <if test="fislocked != null">
+        FISLOCKED = #{fislocked,jdbcType=DECIMAL},
+      </if>
+      <if test="fforbidden != null">
+        FFORBIDDEN = #{fforbidden,jdbcType=DECIMAL},
+      </if>
+      <if test="feffectivedate != null">
+        FEFFECTIVEDATE = #{feffectivedate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="finvalidationdate != null">
+        FINVALIDATIONDATE = #{finvalidationdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fdefaultlocale != null">
+        FDEFAULTLOCALE = #{fdefaultlocale,jdbcType=VARCHAR},
+      </if>
+      <if test="fisregister != null">
+        FISREGISTER = #{fisregister,jdbcType=DECIMAL},
+      </if>
+      <if test="ferrcount != null">
+        FERRCOUNT = #{ferrcount,jdbcType=DECIMAL},
+      </if>
+      <if test="fgroupid != null">
+        FGROUPID = #{fgroupid,jdbcType=VARCHAR},
+      </if>
+      <if test="fpersonid != null">
+        FPERSONID = #{fpersonid,jdbcType=VARCHAR},
+      </if>
+      <if test="fsecurityid != null">
+        FSECURITYID = #{fsecurityid,jdbcType=VARCHAR},
+      </if>
+      <if test="fpweffectivedate != null">
+        FPWEFFECTIVEDATE = #{fpweffectivedate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flockedtime != null">
+        FLOCKEDTIME = #{flockedtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fisbizadmin != null">
+        FISBIZADMIN = #{fisbizadmin,jdbcType=DECIMAL},
+      </if>
+      <if test="fischangedpw != null">
+        FISCHANGEDPW = #{fischangedpw,jdbcType=DECIMAL},
+      </if>
+      <if test="fdeforgunitid != null">
+        FDEFORGUNITID = #{fdeforgunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcontrolunitid != null">
+        FCONTROLUNITID = #{fcontrolunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcreatorid != null">
+        FCREATORID = #{fcreatorid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcreatetime != null">
+        FCREATETIME = #{fcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flastupdateuserid != null">
+        FLASTUPDATEUSERID = #{flastupdateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="flastupdatetime != null">
+        FLASTUPDATETIME = #{flastupdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fcustomerid != null">
+        FCUSTOMERID = #{fcustomerid,jdbcType=VARCHAR},
+      </if>
+      <if test="fsupplierid != null">
+        FSUPPLIERID = #{fsupplierid,jdbcType=VARCHAR},
+      </if>
+      <if test="fmainroleid != null">
+        FMAINROLEID = #{fmainroleid,jdbcType=VARCHAR},
+      </if>
+      <if test="fagentuser != null">
+        FAGENTUSER = #{fagentuser,jdbcType=DECIMAL},
+      </if>
+      <if test="floginauthorway != null">
+        FLOGINAUTHORWAY = #{floginauthorway,jdbcType=DECIMAL},
+      </if>
+      <if test="fpwdhisstr != null">
+        FPWDHISSTR = #{fpwdhisstr,jdbcType=VARCHAR},
+      </if>
+      <if test="freferid != null">
+        FREFERID = #{freferid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcell != null">
+        FCELL = #{fcell,jdbcType=VARCHAR},
+      </if>
+      <if test="fbackupemail != null">
+        FBACKUPEMAIL = #{fbackupemail,jdbcType=VARCHAR},
+      </if>
+      <if test="fhomephone != null">
+        FHOMEPHONE = #{fhomephone,jdbcType=VARCHAR},
+      </if>
+      <if test="fofficephone != null">
+        FOFFICEPHONE = #{fofficephone,jdbcType=VARCHAR},
+      </if>
+      <if test="femail != null">
+        FEMAIL = #{femail,jdbcType=VARCHAR},
+      </if>
+      <if test="fadnumber != null">
+        FADNUMBER = #{fadnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fnamepinyin != null">
+        FNAMEPINYIN = #{fnamepinyin,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameshortpinyin != null">
+        FNAMESHORTPINYIN = #{fnameshortpinyin,jdbcType=VARCHAR},
+      </if>
+      <if test="fpinyin != null">
+        FPINYIN = #{fpinyin,jdbcType=VARCHAR},
+      </if>
+      <if test="fshortpinyin != null">
+        FSHORTPINYIN = #{fshortpinyin,jdbcType=VARCHAR},
+      </if>
+      <if test="fisauthenadmin != null">
+        FISAUTHENADMIN = #{fisauthenadmin,jdbcType=DECIMAL},
+      </if>
+      <if test="fisactivate != null">
+        FISACTIVATE = #{fisactivate,jdbcType=DECIMAL},
+      </if>
+      <if test="fuid != null">
+        FUID = #{fuid,jdbcType=VARCHAR},
+      </if>
+      <if test="fissyntocloud != null">
+        FISSYNTOCLOUD = #{fissyntocloud,jdbcType=DECIMAL},
+      </if>
+      <if test="fposid != null">
+        FPOSID = #{fposid,jdbcType=VARCHAR},
+      </if>
+      <if test="ferpuserstatus != null">
+        FERPUSERSTATUS = #{ferpuserstatus,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where FID = #{fid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="entity.TPmUser">
+    <!--@mbg.generated-->
+    update T_PM_USER
+    set FNUMBER = #{fnumber,jdbcType=VARCHAR},
+      FNAME_L1 = #{fnameL1,jdbcType=VARCHAR},
+      FNAME_L2 = #{fnameL2,jdbcType=VARCHAR},
+      FNAME_L3 = #{fnameL3,jdbcType=VARCHAR},
+      FTYPE = #{ftype,jdbcType=DECIMAL},
+      FDESCRIPTION_L1 = #{fdescriptionL1,jdbcType=VARCHAR},
+      FDESCRIPTION_L2 = #{fdescriptionL2,jdbcType=VARCHAR},
+      FDESCRIPTION_L3 = #{fdescriptionL3,jdbcType=VARCHAR},
+      FPASSWORD = #{fpassword,jdbcType=VARCHAR},
+      FISDELETE = #{fisdelete,jdbcType=DECIMAL},
+      FISLOCKED = #{fislocked,jdbcType=DECIMAL},
+      FFORBIDDEN = #{fforbidden,jdbcType=DECIMAL},
+      FEFFECTIVEDATE = #{feffectivedate,jdbcType=TIMESTAMP},
+      FINVALIDATIONDATE = #{finvalidationdate,jdbcType=TIMESTAMP},
+      FDEFAULTLOCALE = #{fdefaultlocale,jdbcType=VARCHAR},
+      FISREGISTER = #{fisregister,jdbcType=DECIMAL},
+      FERRCOUNT = #{ferrcount,jdbcType=DECIMAL},
+      FGROUPID = #{fgroupid,jdbcType=VARCHAR},
+      FPERSONID = #{fpersonid,jdbcType=VARCHAR},
+      FSECURITYID = #{fsecurityid,jdbcType=VARCHAR},
+      FPWEFFECTIVEDATE = #{fpweffectivedate,jdbcType=TIMESTAMP},
+      FLOCKEDTIME = #{flockedtime,jdbcType=TIMESTAMP},
+      FISBIZADMIN = #{fisbizadmin,jdbcType=DECIMAL},
+      FISCHANGEDPW = #{fischangedpw,jdbcType=DECIMAL},
+      FDEFORGUNITID = #{fdeforgunitid,jdbcType=VARCHAR},
+      FCONTROLUNITID = #{fcontrolunitid,jdbcType=VARCHAR},
+      FCREATORID = #{fcreatorid,jdbcType=VARCHAR},
+      FCREATETIME = #{fcreatetime,jdbcType=TIMESTAMP},
+      FLASTUPDATEUSERID = #{flastupdateuserid,jdbcType=VARCHAR},
+      FLASTUPDATETIME = #{flastupdatetime,jdbcType=TIMESTAMP},
+      FCUSTOMERID = #{fcustomerid,jdbcType=VARCHAR},
+      FSUPPLIERID = #{fsupplierid,jdbcType=VARCHAR},
+      FMAINROLEID = #{fmainroleid,jdbcType=VARCHAR},
+      FAGENTUSER = #{fagentuser,jdbcType=DECIMAL},
+      FLOGINAUTHORWAY = #{floginauthorway,jdbcType=DECIMAL},
+      FPWDHISSTR = #{fpwdhisstr,jdbcType=VARCHAR},
+      FREFERID = #{freferid,jdbcType=VARCHAR},
+      FCELL = #{fcell,jdbcType=VARCHAR},
+      FBACKUPEMAIL = #{fbackupemail,jdbcType=VARCHAR},
+      FHOMEPHONE = #{fhomephone,jdbcType=VARCHAR},
+      FOFFICEPHONE = #{fofficephone,jdbcType=VARCHAR},
+      FEMAIL = #{femail,jdbcType=VARCHAR},
+      FADNUMBER = #{fadnumber,jdbcType=VARCHAR},
+      FNAMEPINYIN = #{fnamepinyin,jdbcType=VARCHAR},
+      FNAMESHORTPINYIN = #{fnameshortpinyin,jdbcType=VARCHAR},
+      FPINYIN = #{fpinyin,jdbcType=VARCHAR},
+      FSHORTPINYIN = #{fshortpinyin,jdbcType=VARCHAR},
+      FISAUTHENADMIN = #{fisauthenadmin,jdbcType=DECIMAL},
+      FISACTIVATE = #{fisactivate,jdbcType=DECIMAL},
+      FUID = #{fuid,jdbcType=VARCHAR},
+      FISSYNTOCLOUD = #{fissyntocloud,jdbcType=DECIMAL},
+      FPOSID = #{fposid,jdbcType=VARCHAR},
+      FERPUSERSTATUS = #{ferpuserstatus,jdbcType=DECIMAL}
+    where FID = #{fid,jdbcType=VARCHAR}
+  </update>
+</mapper>

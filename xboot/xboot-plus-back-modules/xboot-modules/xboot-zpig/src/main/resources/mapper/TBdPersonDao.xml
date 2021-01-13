@@ -1,0 +1,1359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.TBdPersonDao">
+  <resultMap id="BaseResultMap" type="entity.TBdPerson">
+    <!--@mbg.generated-->
+    <id column="FID" jdbcType="VARCHAR" property="fid" />
+    <result column="FIDNUM" jdbcType="VARCHAR" property="fidnum" />
+    <result column="FNAME_L1" jdbcType="VARCHAR" property="fnameL1" />
+    <result column="FNAME_L2" jdbcType="VARCHAR" property="fnameL2" />
+    <result column="FNAME_L3" jdbcType="VARCHAR" property="fnameL3" />
+    <result column="FNUMBER" jdbcType="VARCHAR" property="fnumber" />
+    <result column="FDESCRIPTION_L1" jdbcType="VARCHAR" property="fdescriptionL1" />
+    <result column="FDESCRIPTION_L2" jdbcType="VARCHAR" property="fdescriptionL2" />
+    <result column="FDESCRIPTION_L3" jdbcType="VARCHAR" property="fdescriptionL3" />
+    <result column="FSIMPLENAME" jdbcType="VARCHAR" property="fsimplename" />
+    <result column="FGENDER" jdbcType="DECIMAL" property="fgender" />
+    <result column="FBIRTHDAY" jdbcType="TIMESTAMP" property="fbirthday" />
+    <result column="FEMAIL" jdbcType="VARCHAR" property="femail" />
+    <result column="FADDRESS_L1" jdbcType="VARCHAR" property="faddressL1" />
+    <result column="FADDRESS_L2" jdbcType="VARCHAR" property="faddressL2" />
+    <result column="FADDRESS_L3" jdbcType="VARCHAR" property="faddressL3" />
+    <result column="FSTATE" jdbcType="DECIMAL" property="fstate" />
+    <result column="FHOMEPHONE" jdbcType="VARCHAR" property="fhomephone" />
+    <result column="FOFFICEPHONE" jdbcType="VARCHAR" property="fofficephone" />
+    <result column="FCELL" jdbcType="VARCHAR" property="fcell" />
+    <result column="FBACKUPCELL" jdbcType="VARCHAR" property="fbackupcell" />
+    <result column="FBACKUPEMAIL" jdbcType="VARCHAR" property="fbackupemail" />
+    <result column="FRTX" jdbcType="VARCHAR" property="frtx" />
+    <result column="FIDCARDNO" jdbcType="VARCHAR" property="fidcardno" />
+    <result column="FIDCARDADRESS_L1" jdbcType="VARCHAR" property="fidcardadressL1" />
+    <result column="FIDCARDADRESS_L2" jdbcType="VARCHAR" property="fidcardadressL2" />
+    <result column="FIDCARDADRESS_L3" jdbcType="VARCHAR" property="fidcardadressL3" />
+    <result column="FPASSPORTNO" jdbcType="VARCHAR" property="fpassportno" />
+    <result column="FOLDNAME_L1" jdbcType="VARCHAR" property="foldnameL1" />
+    <result column="FOLDNAME_L2" jdbcType="VARCHAR" property="foldnameL2" />
+    <result column="FOLDNAME_L3" jdbcType="VARCHAR" property="foldnameL3" />
+    <result column="FHEIGHT" jdbcType="DECIMAL" property="fheight" />
+    <result column="FNATIVEPLACE_L1" jdbcType="VARCHAR" property="fnativeplaceL1" />
+    <result column="FNATIVEPLACE_L2" jdbcType="VARCHAR" property="fnativeplaceL2" />
+    <result column="FNATIVEPLACE_L3" jdbcType="VARCHAR" property="fnativeplaceL3" />
+    <result column="FBLOODTYPE" jdbcType="DECIMAL" property="fbloodtype" />
+    <result column="FCREATORID" jdbcType="VARCHAR" property="fcreatorid" />
+    <result column="FCREATETIME" jdbcType="TIMESTAMP" property="fcreatetime" />
+    <result column="FLASTUPDATEUSERID" jdbcType="VARCHAR" property="flastupdateuserid" />
+    <result column="FLASTUPDATETIME" jdbcType="TIMESTAMP" property="flastupdatetime" />
+    <result column="FKACLASSFICATIONID" jdbcType="VARCHAR" property="fkaclassficationid" />
+    <result column="FWEDID" jdbcType="VARCHAR" property="fwedid" />
+    <result column="FHEALTHID" jdbcType="VARCHAR" property="fhealthid" />
+    <result column="FPOLITICALFACEID" jdbcType="VARCHAR" property="fpoliticalfaceid" />
+    <result column="FSTANDINGID" jdbcType="VARCHAR" property="fstandingid" />
+    <result column="FFOLKID" jdbcType="VARCHAR" property="ffolkid" />
+    <result column="FBIRTHID" jdbcType="VARCHAR" property="fbirthid" />
+    <result column="FCONTROLUNITID" jdbcType="VARCHAR" property="fcontrolunitid" />
+    <result column="FHRORGUNITID" jdbcType="VARCHAR" property="fhrorgunitid" />
+    <result column="FRESIDENCEPLACE" jdbcType="VARCHAR" property="fresidenceplace" />
+    <result column="FLENOFACTUALSERVICE" jdbcType="DECIMAL" property="flenofactualservice" />
+    <result column="FEMPLOYEETYPEID" jdbcType="VARCHAR" property="femployeetypeid" />
+    <result column="FHIGHESTTECHPOSTID" jdbcType="VARCHAR" property="fhighesttechpostid" />
+    <result column="FHIGHESTDEGREEID" jdbcType="VARCHAR" property="fhighestdegreeid" />
+    <result column="FEMPLOYEECLASSIFYID" jdbcType="VARCHAR" property="femployeeclassifyid" />
+    <result column="FDELETEDSTATUS" jdbcType="DECIMAL" property="fdeletedstatus" />
+    <result column="FLCMRATIONLEVELID" jdbcType="VARCHAR" property="flcmrationlevelid" />
+    <result column="FNATIONALITYID" jdbcType="VARCHAR" property="fnationalityid" />
+    <result column="FCHECKSTATE" jdbcType="DECIMAL" property="fcheckstate" />
+    <result column="FINDEX" jdbcType="DECIMAL" property="findex" />
+    <result column="FEMPLOYTECHPOSTID" jdbcType="VARCHAR" property="femploytechpostid" />
+    <result column="FHIGHESTSUBDEGREEID" jdbcType="VARCHAR" property="fhighestsubdegreeid" />
+    <result column="FZDY1" jdbcType="VARCHAR" property="fzdy1" />
+    <result column="FZDY2" jdbcType="VARCHAR" property="fzdy2" />
+    <result column="FZDY3" jdbcType="VARCHAR" property="fzdy3" />
+    <result column="FZDY4" jdbcType="VARCHAR" property="fzdy4" />
+    <result column="FZDY5" jdbcType="VARCHAR" property="fzdy5" />
+    <result column="FZDY6" jdbcType="VARCHAR" property="fzdy6" />
+    <result column="FZDY7" jdbcType="VARCHAR" property="fzdy7" />
+    <result column="FZDY8" jdbcType="VARCHAR" property="fzdy8" />
+    <result column="FZDY9" jdbcType="TIMESTAMP" property="fzdy9" />
+    <result column="FZDY10" jdbcType="TIMESTAMP" property="fzdy10" />
+    <result column="FZDY11" jdbcType="TIMESTAMP" property="fzdy11" />
+    <result column="FZDY12" jdbcType="TIMESTAMP" property="fzdy12" />
+    <result column="FZDY13" jdbcType="TIMESTAMP" property="fzdy13" />
+    <result column="FZDY14" jdbcType="TIMESTAMP" property="fzdy14" />
+    <result column="FZDY15" jdbcType="VARCHAR" property="fzdy15" />
+    <result column="FZDY16" jdbcType="VARCHAR" property="fzdy16" />
+    <result column="FZDY17" jdbcType="VARCHAR" property="fzdy17" />
+    <result column="FZDY18" jdbcType="DECIMAL" property="fzdy18" />
+    <result column="FZDY19" jdbcType="DECIMAL" property="fzdy19" />
+    <result column="FZDY20" jdbcType="DECIMAL" property="fzdy20" />
+    <result column="FZDY21" jdbcType="DECIMAL" property="fzdy21" />
+    <result column="FZDY22" jdbcType="VARCHAR" property="fzdy22" />
+    <result column="FZDY23" jdbcType="VARCHAR" property="fzdy23" />
+    <result column="FZDY24" jdbcType="VARCHAR" property="fzdy24" />
+    <result column="FZDY25" jdbcType="VARCHAR" property="fzdy25" />
+    <result column="FZDY26" jdbcType="DECIMAL" property="fzdy26" />
+    <result column="FFULLNAMEPINGYIN" jdbcType="VARCHAR" property="ffullnamepingyin" />
+    <result column="FSIMPLENAMEPINGYIN" jdbcType="VARCHAR" property="fsimplenamepingyin" />
+    <result column="FISSTANDBY" jdbcType="DECIMAL" property="fisstandby" />
+    <result column="FISSTANDBYCADRE" jdbcType="DECIMAL" property="fisstandbycadre" />
+    <result column="FHIGHESTCOMPETENCYID" jdbcType="VARCHAR" property="fhighestcompetencyid" />
+    <result column="FNAMEPINYIN" jdbcType="VARCHAR" property="fnamepinyin" />
+    <result column="FNAMESHORTPINYIN" jdbcType="VARCHAR" property="fnameshortpinyin" />
+    <result column="FREGRESIDENCEID" jdbcType="VARCHAR" property="fregresidenceid" />
+    <result column="FHJADDRESS" jdbcType="VARCHAR" property="fhjaddress" />
+    <result column="FIDCARDADDRESS" jdbcType="VARCHAR" property="fidcardaddress" />
+    <result column="FHOMEPLACE" jdbcType="VARCHAR" property="fhomeplace" />
+    <result column="FEFFDT" jdbcType="TIMESTAMP" property="feffdt" />
+    <result column="FLEFFDT" jdbcType="TIMESTAMP" property="fleffdt" />
+    <result column="FHISTORYRELATEID" jdbcType="VARCHAR" property="fhistoryrelateid" />
+    <result column="FIDCARDBEGINDATE" jdbcType="TIMESTAMP" property="fidcardbegindate" />
+    <result column="FIDCARDENDDATE" jdbcType="TIMESTAMP" property="fidcardenddate" />
+    <result column="FEXTENDFIELDNUMONE" jdbcType="VARCHAR" property="fextendfieldnumone" />
+    <result column="FPROTOCOL" jdbcType="VARCHAR" property="fprotocol" />
+    <result column="FIDCARDISSUEORG" jdbcType="VARCHAR" property="fidcardissueorg" />
+    <result column="FGKADMIN" jdbcType="VARCHAR" property="fgkadmin" />
+    <result column="CFRELIGIONID" jdbcType="VARCHAR" property="cfreligionid" />
+    <result column="CFPERSONCITYID" jdbcType="VARCHAR" property="cfpersoncityid" />
+    <result column="CFPROVINCE" jdbcType="VARCHAR" property="cfprovince" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    FID, FIDNUM, FNAME_L1, FNAME_L2, FNAME_L3, FNUMBER, FDESCRIPTION_L1, FDESCRIPTION_L2, 
+    FDESCRIPTION_L3, FSIMPLENAME, FGENDER, FBIRTHDAY, FEMAIL, FADDRESS_L1, FADDRESS_L2, 
+    FADDRESS_L3, FSTATE, FHOMEPHONE, FOFFICEPHONE, FCELL, FBACKUPCELL, FBACKUPEMAIL, 
+    FRTX, FIDCARDNO, FIDCARDADRESS_L1, FIDCARDADRESS_L2, FIDCARDADRESS_L3, FPASSPORTNO, 
+    FOLDNAME_L1, FOLDNAME_L2, FOLDNAME_L3, FHEIGHT, FNATIVEPLACE_L1, FNATIVEPLACE_L2, 
+    FNATIVEPLACE_L3, FBLOODTYPE, FCREATORID, FCREATETIME, FLASTUPDATEUSERID, FLASTUPDATETIME, 
+    FKACLASSFICATIONID, FWEDID, FHEALTHID, FPOLITICALFACEID, FSTANDINGID, FFOLKID, FBIRTHID, 
+    FCONTROLUNITID, FHRORGUNITID, FRESIDENCEPLACE, FLENOFACTUALSERVICE, FEMPLOYEETYPEID, 
+    FHIGHESTTECHPOSTID, FHIGHESTDEGREEID, FEMPLOYEECLASSIFYID, FDELETEDSTATUS, FLCMRATIONLEVELID, 
+    FNATIONALITYID, FCHECKSTATE, FINDEX, FEMPLOYTECHPOSTID, FHIGHESTSUBDEGREEID, FZDY1, 
+    FZDY2, FZDY3, FZDY4, FZDY5, FZDY6, FZDY7, FZDY8, FZDY9, FZDY10, FZDY11, FZDY12, FZDY13, 
+    FZDY14, FZDY15, FZDY16, FZDY17, FZDY18, FZDY19, FZDY20, FZDY21, FZDY22, FZDY23, FZDY24, 
+    FZDY25, FZDY26, FFULLNAMEPINGYIN, FSIMPLENAMEPINGYIN, FISSTANDBY, FISSTANDBYCADRE, 
+    FHIGHESTCOMPETENCYID, FNAMEPINYIN, FNAMESHORTPINYIN, FREGRESIDENCEID, FHJADDRESS, 
+    FIDCARDADDRESS, FHOMEPLACE, FEFFDT, FLEFFDT, FHISTORYRELATEID, FIDCARDBEGINDATE, 
+    FIDCARDENDDATE, FEXTENDFIELDNUMONE, FPROTOCOL, FIDCARDISSUEORG, FGKADMIN, CFRELIGIONID, 
+    CFPERSONCITYID, CFPROVINCE
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from T_BD_PERSON
+    where FID = #{fid,jdbcType=VARCHAR}
+  </select>
+    <select id="selectByName" resultType="entity.TBdPerson">
+      SELECT * FROM T_BD_PERSON t
+        <where>
+            <!-- 使用 bind 标签,对字符串进行绑定,然后对绑定后的字符串使用 like 关键字进行模糊查询 -->
+            <if test="FNAME_L2 != null">
+                <bind name="pattern" value="'%'+name+'%'"/>
+              t.FNAME_L2 LIKE #{pattern}
+            </if>
+        </where>
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from T_BD_PERSON
+    where FID = #{fid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" keyColumn="FID" keyProperty="fid" parameterType="entity.TBdPerson" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into T_BD_PERSON (FIDNUM, FNAME_L1, FNAME_L2, 
+      FNAME_L3, FNUMBER, FDESCRIPTION_L1, 
+      FDESCRIPTION_L2, FDESCRIPTION_L3, FSIMPLENAME, 
+      FGENDER, FBIRTHDAY, FEMAIL, 
+      FADDRESS_L1, FADDRESS_L2, FADDRESS_L3, 
+      FSTATE, FHOMEPHONE, FOFFICEPHONE, 
+      FCELL, FBACKUPCELL, FBACKUPEMAIL, 
+      FRTX, FIDCARDNO, FIDCARDADRESS_L1, 
+      FIDCARDADRESS_L2, FIDCARDADRESS_L3, FPASSPORTNO, 
+      FOLDNAME_L1, FOLDNAME_L2, FOLDNAME_L3, 
+      FHEIGHT, FNATIVEPLACE_L1, FNATIVEPLACE_L2, 
+      FNATIVEPLACE_L3, FBLOODTYPE, FCREATORID, 
+      FCREATETIME, FLASTUPDATEUSERID, FLASTUPDATETIME, 
+      FKACLASSFICATIONID, FWEDID, FHEALTHID, 
+      FPOLITICALFACEID, FSTANDINGID, FFOLKID, 
+      FBIRTHID, FCONTROLUNITID, FHRORGUNITID, 
+      FRESIDENCEPLACE, FLENOFACTUALSERVICE, FEMPLOYEETYPEID, 
+      FHIGHESTTECHPOSTID, FHIGHESTDEGREEID, FEMPLOYEECLASSIFYID, 
+      FDELETEDSTATUS, FLCMRATIONLEVELID, FNATIONALITYID, 
+      FCHECKSTATE, FINDEX, FEMPLOYTECHPOSTID, 
+      FHIGHESTSUBDEGREEID, FZDY1, FZDY2, 
+      FZDY3, FZDY4, FZDY5, 
+      FZDY6, FZDY7, FZDY8, 
+      FZDY9, FZDY10, FZDY11, 
+      FZDY12, FZDY13, FZDY14, 
+      FZDY15, FZDY16, FZDY17, 
+      FZDY18, FZDY19, FZDY20, 
+      FZDY21, FZDY22, FZDY23, 
+      FZDY24, FZDY25, FZDY26, 
+      FFULLNAMEPINGYIN, FSIMPLENAMEPINGYIN, FISSTANDBY, 
+      FISSTANDBYCADRE, FHIGHESTCOMPETENCYID, 
+      FNAMEPINYIN, FNAMESHORTPINYIN, FREGRESIDENCEID, 
+      FHJADDRESS, FIDCARDADDRESS, FHOMEPLACE, 
+      FEFFDT, FLEFFDT, FHISTORYRELATEID, 
+      FIDCARDBEGINDATE, FIDCARDENDDATE, FEXTENDFIELDNUMONE, 
+      FPROTOCOL, FIDCARDISSUEORG, FGKADMIN, 
+      CFRELIGIONID, CFPERSONCITYID, CFPROVINCE
+      )
+    values (#{fidnum,jdbcType=VARCHAR}, #{fnameL1,jdbcType=VARCHAR}, #{fnameL2,jdbcType=VARCHAR}, 
+      #{fnameL3,jdbcType=VARCHAR}, #{fnumber,jdbcType=VARCHAR}, #{fdescriptionL1,jdbcType=VARCHAR}, 
+      #{fdescriptionL2,jdbcType=VARCHAR}, #{fdescriptionL3,jdbcType=VARCHAR}, #{fsimplename,jdbcType=VARCHAR}, 
+      #{fgender,jdbcType=DECIMAL}, #{fbirthday,jdbcType=TIMESTAMP}, #{femail,jdbcType=VARCHAR}, 
+      #{faddressL1,jdbcType=VARCHAR}, #{faddressL2,jdbcType=VARCHAR}, #{faddressL3,jdbcType=VARCHAR}, 
+      #{fstate,jdbcType=DECIMAL}, #{fhomephone,jdbcType=VARCHAR}, #{fofficephone,jdbcType=VARCHAR}, 
+      #{fcell,jdbcType=VARCHAR}, #{fbackupcell,jdbcType=VARCHAR}, #{fbackupemail,jdbcType=VARCHAR}, 
+      #{frtx,jdbcType=VARCHAR}, #{fidcardno,jdbcType=VARCHAR}, #{fidcardadressL1,jdbcType=VARCHAR}, 
+      #{fidcardadressL2,jdbcType=VARCHAR}, #{fidcardadressL3,jdbcType=VARCHAR}, #{fpassportno,jdbcType=VARCHAR}, 
+      #{foldnameL1,jdbcType=VARCHAR}, #{foldnameL2,jdbcType=VARCHAR}, #{foldnameL3,jdbcType=VARCHAR}, 
+      #{fheight,jdbcType=DECIMAL}, #{fnativeplaceL1,jdbcType=VARCHAR}, #{fnativeplaceL2,jdbcType=VARCHAR}, 
+      #{fnativeplaceL3,jdbcType=VARCHAR}, #{fbloodtype,jdbcType=DECIMAL}, #{fcreatorid,jdbcType=VARCHAR}, 
+      #{fcreatetime,jdbcType=TIMESTAMP}, #{flastupdateuserid,jdbcType=VARCHAR}, #{flastupdatetime,jdbcType=TIMESTAMP}, 
+      #{fkaclassficationid,jdbcType=VARCHAR}, #{fwedid,jdbcType=VARCHAR}, #{fhealthid,jdbcType=VARCHAR}, 
+      #{fpoliticalfaceid,jdbcType=VARCHAR}, #{fstandingid,jdbcType=VARCHAR}, #{ffolkid,jdbcType=VARCHAR}, 
+      #{fbirthid,jdbcType=VARCHAR}, #{fcontrolunitid,jdbcType=VARCHAR}, #{fhrorgunitid,jdbcType=VARCHAR}, 
+      #{fresidenceplace,jdbcType=VARCHAR}, #{flenofactualservice,jdbcType=DECIMAL}, #{femployeetypeid,jdbcType=VARCHAR}, 
+      #{fhighesttechpostid,jdbcType=VARCHAR}, #{fhighestdegreeid,jdbcType=VARCHAR}, #{femployeeclassifyid,jdbcType=VARCHAR}, 
+      #{fdeletedstatus,jdbcType=DECIMAL}, #{flcmrationlevelid,jdbcType=VARCHAR}, #{fnationalityid,jdbcType=VARCHAR}, 
+      #{fcheckstate,jdbcType=DECIMAL}, #{findex,jdbcType=DECIMAL}, #{femploytechpostid,jdbcType=VARCHAR}, 
+      #{fhighestsubdegreeid,jdbcType=VARCHAR}, #{fzdy1,jdbcType=VARCHAR}, #{fzdy2,jdbcType=VARCHAR}, 
+      #{fzdy3,jdbcType=VARCHAR}, #{fzdy4,jdbcType=VARCHAR}, #{fzdy5,jdbcType=VARCHAR}, 
+      #{fzdy6,jdbcType=VARCHAR}, #{fzdy7,jdbcType=VARCHAR}, #{fzdy8,jdbcType=VARCHAR}, 
+      #{fzdy9,jdbcType=TIMESTAMP}, #{fzdy10,jdbcType=TIMESTAMP}, #{fzdy11,jdbcType=TIMESTAMP}, 
+      #{fzdy12,jdbcType=TIMESTAMP}, #{fzdy13,jdbcType=TIMESTAMP}, #{fzdy14,jdbcType=TIMESTAMP}, 
+      #{fzdy15,jdbcType=VARCHAR}, #{fzdy16,jdbcType=VARCHAR}, #{fzdy17,jdbcType=VARCHAR}, 
+      #{fzdy18,jdbcType=DECIMAL}, #{fzdy19,jdbcType=DECIMAL}, #{fzdy20,jdbcType=DECIMAL}, 
+      #{fzdy21,jdbcType=DECIMAL}, #{fzdy22,jdbcType=VARCHAR}, #{fzdy23,jdbcType=VARCHAR}, 
+      #{fzdy24,jdbcType=VARCHAR}, #{fzdy25,jdbcType=VARCHAR}, #{fzdy26,jdbcType=DECIMAL}, 
+      #{ffullnamepingyin,jdbcType=VARCHAR}, #{fsimplenamepingyin,jdbcType=VARCHAR}, #{fisstandby,jdbcType=DECIMAL}, 
+      #{fisstandbycadre,jdbcType=DECIMAL}, #{fhighestcompetencyid,jdbcType=VARCHAR}, 
+      #{fnamepinyin,jdbcType=VARCHAR}, #{fnameshortpinyin,jdbcType=VARCHAR}, #{fregresidenceid,jdbcType=VARCHAR}, 
+      #{fhjaddress,jdbcType=VARCHAR}, #{fidcardaddress,jdbcType=VARCHAR}, #{fhomeplace,jdbcType=VARCHAR}, 
+      #{feffdt,jdbcType=TIMESTAMP}, #{fleffdt,jdbcType=TIMESTAMP}, #{fhistoryrelateid,jdbcType=VARCHAR}, 
+      #{fidcardbegindate,jdbcType=TIMESTAMP}, #{fidcardenddate,jdbcType=TIMESTAMP}, #{fextendfieldnumone,jdbcType=VARCHAR}, 
+      #{fprotocol,jdbcType=VARCHAR}, #{fidcardissueorg,jdbcType=VARCHAR}, #{fgkadmin,jdbcType=VARCHAR}, 
+      #{cfreligionid,jdbcType=VARCHAR}, #{cfpersoncityid,jdbcType=VARCHAR}, #{cfprovince,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="FID" keyProperty="fid" parameterType="entity.TBdPerson" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into T_BD_PERSON
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fidnum != null">
+        FIDNUM,
+      </if>
+      <if test="fnameL1 != null">
+        FNAME_L1,
+      </if>
+      <if test="fnameL2 != null">
+        FNAME_L2,
+      </if>
+      <if test="fnameL3 != null">
+        FNAME_L3,
+      </if>
+      <if test="fnumber != null">
+        FNUMBER,
+      </if>
+      <if test="fdescriptionL1 != null">
+        FDESCRIPTION_L1,
+      </if>
+      <if test="fdescriptionL2 != null">
+        FDESCRIPTION_L2,
+      </if>
+      <if test="fdescriptionL3 != null">
+        FDESCRIPTION_L3,
+      </if>
+      <if test="fsimplename != null">
+        FSIMPLENAME,
+      </if>
+      <if test="fgender != null">
+        FGENDER,
+      </if>
+      <if test="fbirthday != null">
+        FBIRTHDAY,
+      </if>
+      <if test="femail != null">
+        FEMAIL,
+      </if>
+      <if test="faddressL1 != null">
+        FADDRESS_L1,
+      </if>
+      <if test="faddressL2 != null">
+        FADDRESS_L2,
+      </if>
+      <if test="faddressL3 != null">
+        FADDRESS_L3,
+      </if>
+      <if test="fstate != null">
+        FSTATE,
+      </if>
+      <if test="fhomephone != null">
+        FHOMEPHONE,
+      </if>
+      <if test="fofficephone != null">
+        FOFFICEPHONE,
+      </if>
+      <if test="fcell != null">
+        FCELL,
+      </if>
+      <if test="fbackupcell != null">
+        FBACKUPCELL,
+      </if>
+      <if test="fbackupemail != null">
+        FBACKUPEMAIL,
+      </if>
+      <if test="frtx != null">
+        FRTX,
+      </if>
+      <if test="fidcardno != null">
+        FIDCARDNO,
+      </if>
+      <if test="fidcardadressL1 != null">
+        FIDCARDADRESS_L1,
+      </if>
+      <if test="fidcardadressL2 != null">
+        FIDCARDADRESS_L2,
+      </if>
+      <if test="fidcardadressL3 != null">
+        FIDCARDADRESS_L3,
+      </if>
+      <if test="fpassportno != null">
+        FPASSPORTNO,
+      </if>
+      <if test="foldnameL1 != null">
+        FOLDNAME_L1,
+      </if>
+      <if test="foldnameL2 != null">
+        FOLDNAME_L2,
+      </if>
+      <if test="foldnameL3 != null">
+        FOLDNAME_L3,
+      </if>
+      <if test="fheight != null">
+        FHEIGHT,
+      </if>
+      <if test="fnativeplaceL1 != null">
+        FNATIVEPLACE_L1,
+      </if>
+      <if test="fnativeplaceL2 != null">
+        FNATIVEPLACE_L2,
+      </if>
+      <if test="fnativeplaceL3 != null">
+        FNATIVEPLACE_L3,
+      </if>
+      <if test="fbloodtype != null">
+        FBLOODTYPE,
+      </if>
+      <if test="fcreatorid != null">
+        FCREATORID,
+      </if>
+      <if test="fcreatetime != null">
+        FCREATETIME,
+      </if>
+      <if test="flastupdateuserid != null">
+        FLASTUPDATEUSERID,
+      </if>
+      <if test="flastupdatetime != null">
+        FLASTUPDATETIME,
+      </if>
+      <if test="fkaclassficationid != null">
+        FKACLASSFICATIONID,
+      </if>
+      <if test="fwedid != null">
+        FWEDID,
+      </if>
+      <if test="fhealthid != null">
+        FHEALTHID,
+      </if>
+      <if test="fpoliticalfaceid != null">
+        FPOLITICALFACEID,
+      </if>
+      <if test="fstandingid != null">
+        FSTANDINGID,
+      </if>
+      <if test="ffolkid != null">
+        FFOLKID,
+      </if>
+      <if test="fbirthid != null">
+        FBIRTHID,
+      </if>
+      <if test="fcontrolunitid != null">
+        FCONTROLUNITID,
+      </if>
+      <if test="fhrorgunitid != null">
+        FHRORGUNITID,
+      </if>
+      <if test="fresidenceplace != null">
+        FRESIDENCEPLACE,
+      </if>
+      <if test="flenofactualservice != null">
+        FLENOFACTUALSERVICE,
+      </if>
+      <if test="femployeetypeid != null">
+        FEMPLOYEETYPEID,
+      </if>
+      <if test="fhighesttechpostid != null">
+        FHIGHESTTECHPOSTID,
+      </if>
+      <if test="fhighestdegreeid != null">
+        FHIGHESTDEGREEID,
+      </if>
+      <if test="femployeeclassifyid != null">
+        FEMPLOYEECLASSIFYID,
+      </if>
+      <if test="fdeletedstatus != null">
+        FDELETEDSTATUS,
+      </if>
+      <if test="flcmrationlevelid != null">
+        FLCMRATIONLEVELID,
+      </if>
+      <if test="fnationalityid != null">
+        FNATIONALITYID,
+      </if>
+      <if test="fcheckstate != null">
+        FCHECKSTATE,
+      </if>
+      <if test="findex != null">
+        FINDEX,
+      </if>
+      <if test="femploytechpostid != null">
+        FEMPLOYTECHPOSTID,
+      </if>
+      <if test="fhighestsubdegreeid != null">
+        FHIGHESTSUBDEGREEID,
+      </if>
+      <if test="fzdy1 != null">
+        FZDY1,
+      </if>
+      <if test="fzdy2 != null">
+        FZDY2,
+      </if>
+      <if test="fzdy3 != null">
+        FZDY3,
+      </if>
+      <if test="fzdy4 != null">
+        FZDY4,
+      </if>
+      <if test="fzdy5 != null">
+        FZDY5,
+      </if>
+      <if test="fzdy6 != null">
+        FZDY6,
+      </if>
+      <if test="fzdy7 != null">
+        FZDY7,
+      </if>
+      <if test="fzdy8 != null">
+        FZDY8,
+      </if>
+      <if test="fzdy9 != null">
+        FZDY9,
+      </if>
+      <if test="fzdy10 != null">
+        FZDY10,
+      </if>
+      <if test="fzdy11 != null">
+        FZDY11,
+      </if>
+      <if test="fzdy12 != null">
+        FZDY12,
+      </if>
+      <if test="fzdy13 != null">
+        FZDY13,
+      </if>
+      <if test="fzdy14 != null">
+        FZDY14,
+      </if>
+      <if test="fzdy15 != null">
+        FZDY15,
+      </if>
+      <if test="fzdy16 != null">
+        FZDY16,
+      </if>
+      <if test="fzdy17 != null">
+        FZDY17,
+      </if>
+      <if test="fzdy18 != null">
+        FZDY18,
+      </if>
+      <if test="fzdy19 != null">
+        FZDY19,
+      </if>
+      <if test="fzdy20 != null">
+        FZDY20,
+      </if>
+      <if test="fzdy21 != null">
+        FZDY21,
+      </if>
+      <if test="fzdy22 != null">
+        FZDY22,
+      </if>
+      <if test="fzdy23 != null">
+        FZDY23,
+      </if>
+      <if test="fzdy24 != null">
+        FZDY24,
+      </if>
+      <if test="fzdy25 != null">
+        FZDY25,
+      </if>
+      <if test="fzdy26 != null">
+        FZDY26,
+      </if>
+      <if test="ffullnamepingyin != null">
+        FFULLNAMEPINGYIN,
+      </if>
+      <if test="fsimplenamepingyin != null">
+        FSIMPLENAMEPINGYIN,
+      </if>
+      <if test="fisstandby != null">
+        FISSTANDBY,
+      </if>
+      <if test="fisstandbycadre != null">
+        FISSTANDBYCADRE,
+      </if>
+      <if test="fhighestcompetencyid != null">
+        FHIGHESTCOMPETENCYID,
+      </if>
+      <if test="fnamepinyin != null">
+        FNAMEPINYIN,
+      </if>
+      <if test="fnameshortpinyin != null">
+        FNAMESHORTPINYIN,
+      </if>
+      <if test="fregresidenceid != null">
+        FREGRESIDENCEID,
+      </if>
+      <if test="fhjaddress != null">
+        FHJADDRESS,
+      </if>
+      <if test="fidcardaddress != null">
+        FIDCARDADDRESS,
+      </if>
+      <if test="fhomeplace != null">
+        FHOMEPLACE,
+      </if>
+      <if test="feffdt != null">
+        FEFFDT,
+      </if>
+      <if test="fleffdt != null">
+        FLEFFDT,
+      </if>
+      <if test="fhistoryrelateid != null">
+        FHISTORYRELATEID,
+      </if>
+      <if test="fidcardbegindate != null">
+        FIDCARDBEGINDATE,
+      </if>
+      <if test="fidcardenddate != null">
+        FIDCARDENDDATE,
+      </if>
+      <if test="fextendfieldnumone != null">
+        FEXTENDFIELDNUMONE,
+      </if>
+      <if test="fprotocol != null">
+        FPROTOCOL,
+      </if>
+      <if test="fidcardissueorg != null">
+        FIDCARDISSUEORG,
+      </if>
+      <if test="fgkadmin != null">
+        FGKADMIN,
+      </if>
+      <if test="cfreligionid != null">
+        CFRELIGIONID,
+      </if>
+      <if test="cfpersoncityid != null">
+        CFPERSONCITYID,
+      </if>
+      <if test="cfprovince != null">
+        CFPROVINCE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fidnum != null">
+        #{fidnum,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL1 != null">
+        #{fnameL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL2 != null">
+        #{fnameL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL3 != null">
+        #{fnameL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fnumber != null">
+        #{fnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL1 != null">
+        #{fdescriptionL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL2 != null">
+        #{fdescriptionL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL3 != null">
+        #{fdescriptionL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fsimplename != null">
+        #{fsimplename,jdbcType=VARCHAR},
+      </if>
+      <if test="fgender != null">
+        #{fgender,jdbcType=DECIMAL},
+      </if>
+      <if test="fbirthday != null">
+        #{fbirthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="femail != null">
+        #{femail,jdbcType=VARCHAR},
+      </if>
+      <if test="faddressL1 != null">
+        #{faddressL1,jdbcType=VARCHAR},
+      </if>
+      <if test="faddressL2 != null">
+        #{faddressL2,jdbcType=VARCHAR},
+      </if>
+      <if test="faddressL3 != null">
+        #{faddressL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fstate != null">
+        #{fstate,jdbcType=DECIMAL},
+      </if>
+      <if test="fhomephone != null">
+        #{fhomephone,jdbcType=VARCHAR},
+      </if>
+      <if test="fofficephone != null">
+        #{fofficephone,jdbcType=VARCHAR},
+      </if>
+      <if test="fcell != null">
+        #{fcell,jdbcType=VARCHAR},
+      </if>
+      <if test="fbackupcell != null">
+        #{fbackupcell,jdbcType=VARCHAR},
+      </if>
+      <if test="fbackupemail != null">
+        #{fbackupemail,jdbcType=VARCHAR},
+      </if>
+      <if test="frtx != null">
+        #{frtx,jdbcType=VARCHAR},
+      </if>
+      <if test="fidcardno != null">
+        #{fidcardno,jdbcType=VARCHAR},
+      </if>
+      <if test="fidcardadressL1 != null">
+        #{fidcardadressL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fidcardadressL2 != null">
+        #{fidcardadressL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fidcardadressL3 != null">
+        #{fidcardadressL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fpassportno != null">
+        #{fpassportno,jdbcType=VARCHAR},
+      </if>
+      <if test="foldnameL1 != null">
+        #{foldnameL1,jdbcType=VARCHAR},
+      </if>
+      <if test="foldnameL2 != null">
+        #{foldnameL2,jdbcType=VARCHAR},
+      </if>
+      <if test="foldnameL3 != null">
+        #{foldnameL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fheight != null">
+        #{fheight,jdbcType=DECIMAL},
+      </if>
+      <if test="fnativeplaceL1 != null">
+        #{fnativeplaceL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fnativeplaceL2 != null">
+        #{fnativeplaceL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fnativeplaceL3 != null">
+        #{fnativeplaceL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fbloodtype != null">
+        #{fbloodtype,jdbcType=DECIMAL},
+      </if>
+      <if test="fcreatorid != null">
+        #{fcreatorid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcreatetime != null">
+        #{fcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flastupdateuserid != null">
+        #{flastupdateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="flastupdatetime != null">
+        #{flastupdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fkaclassficationid != null">
+        #{fkaclassficationid,jdbcType=VARCHAR},
+      </if>
+      <if test="fwedid != null">
+        #{fwedid,jdbcType=VARCHAR},
+      </if>
+      <if test="fhealthid != null">
+        #{fhealthid,jdbcType=VARCHAR},
+      </if>
+      <if test="fpoliticalfaceid != null">
+        #{fpoliticalfaceid,jdbcType=VARCHAR},
+      </if>
+      <if test="fstandingid != null">
+        #{fstandingid,jdbcType=VARCHAR},
+      </if>
+      <if test="ffolkid != null">
+        #{ffolkid,jdbcType=VARCHAR},
+      </if>
+      <if test="fbirthid != null">
+        #{fbirthid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcontrolunitid != null">
+        #{fcontrolunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="fhrorgunitid != null">
+        #{fhrorgunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="fresidenceplace != null">
+        #{fresidenceplace,jdbcType=VARCHAR},
+      </if>
+      <if test="flenofactualservice != null">
+        #{flenofactualservice,jdbcType=DECIMAL},
+      </if>
+      <if test="femployeetypeid != null">
+        #{femployeetypeid,jdbcType=VARCHAR},
+      </if>
+      <if test="fhighesttechpostid != null">
+        #{fhighesttechpostid,jdbcType=VARCHAR},
+      </if>
+      <if test="fhighestdegreeid != null">
+        #{fhighestdegreeid,jdbcType=VARCHAR},
+      </if>
+      <if test="femployeeclassifyid != null">
+        #{femployeeclassifyid,jdbcType=VARCHAR},
+      </if>
+      <if test="fdeletedstatus != null">
+        #{fdeletedstatus,jdbcType=DECIMAL},
+      </if>
+      <if test="flcmrationlevelid != null">
+        #{flcmrationlevelid,jdbcType=VARCHAR},
+      </if>
+      <if test="fnationalityid != null">
+        #{fnationalityid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcheckstate != null">
+        #{fcheckstate,jdbcType=DECIMAL},
+      </if>
+      <if test="findex != null">
+        #{findex,jdbcType=DECIMAL},
+      </if>
+      <if test="femploytechpostid != null">
+        #{femploytechpostid,jdbcType=VARCHAR},
+      </if>
+      <if test="fhighestsubdegreeid != null">
+        #{fhighestsubdegreeid,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy1 != null">
+        #{fzdy1,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy2 != null">
+        #{fzdy2,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy3 != null">
+        #{fzdy3,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy4 != null">
+        #{fzdy4,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy5 != null">
+        #{fzdy5,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy6 != null">
+        #{fzdy6,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy7 != null">
+        #{fzdy7,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy8 != null">
+        #{fzdy8,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy9 != null">
+        #{fzdy9,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fzdy10 != null">
+        #{fzdy10,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fzdy11 != null">
+        #{fzdy11,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fzdy12 != null">
+        #{fzdy12,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fzdy13 != null">
+        #{fzdy13,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fzdy14 != null">
+        #{fzdy14,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fzdy15 != null">
+        #{fzdy15,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy16 != null">
+        #{fzdy16,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy17 != null">
+        #{fzdy17,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy18 != null">
+        #{fzdy18,jdbcType=DECIMAL},
+      </if>
+      <if test="fzdy19 != null">
+        #{fzdy19,jdbcType=DECIMAL},
+      </if>
+      <if test="fzdy20 != null">
+        #{fzdy20,jdbcType=DECIMAL},
+      </if>
+      <if test="fzdy21 != null">
+        #{fzdy21,jdbcType=DECIMAL},
+      </if>
+      <if test="fzdy22 != null">
+        #{fzdy22,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy23 != null">
+        #{fzdy23,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy24 != null">
+        #{fzdy24,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy25 != null">
+        #{fzdy25,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy26 != null">
+        #{fzdy26,jdbcType=DECIMAL},
+      </if>
+      <if test="ffullnamepingyin != null">
+        #{ffullnamepingyin,jdbcType=VARCHAR},
+      </if>
+      <if test="fsimplenamepingyin != null">
+        #{fsimplenamepingyin,jdbcType=VARCHAR},
+      </if>
+      <if test="fisstandby != null">
+        #{fisstandby,jdbcType=DECIMAL},
+      </if>
+      <if test="fisstandbycadre != null">
+        #{fisstandbycadre,jdbcType=DECIMAL},
+      </if>
+      <if test="fhighestcompetencyid != null">
+        #{fhighestcompetencyid,jdbcType=VARCHAR},
+      </if>
+      <if test="fnamepinyin != null">
+        #{fnamepinyin,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameshortpinyin != null">
+        #{fnameshortpinyin,jdbcType=VARCHAR},
+      </if>
+      <if test="fregresidenceid != null">
+        #{fregresidenceid,jdbcType=VARCHAR},
+      </if>
+      <if test="fhjaddress != null">
+        #{fhjaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="fidcardaddress != null">
+        #{fidcardaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="fhomeplace != null">
+        #{fhomeplace,jdbcType=VARCHAR},
+      </if>
+      <if test="feffdt != null">
+        #{feffdt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fleffdt != null">
+        #{fleffdt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fhistoryrelateid != null">
+        #{fhistoryrelateid,jdbcType=VARCHAR},
+      </if>
+      <if test="fidcardbegindate != null">
+        #{fidcardbegindate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fidcardenddate != null">
+        #{fidcardenddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fextendfieldnumone != null">
+        #{fextendfieldnumone,jdbcType=VARCHAR},
+      </if>
+      <if test="fprotocol != null">
+        #{fprotocol,jdbcType=VARCHAR},
+      </if>
+      <if test="fidcardissueorg != null">
+        #{fidcardissueorg,jdbcType=VARCHAR},
+      </if>
+      <if test="fgkadmin != null">
+        #{fgkadmin,jdbcType=VARCHAR},
+      </if>
+      <if test="cfreligionid != null">
+        #{cfreligionid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfpersoncityid != null">
+        #{cfpersoncityid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfprovince != null">
+        #{cfprovince,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="entity.TBdPerson">
+    <!--@mbg.generated-->
+    update T_BD_PERSON
+    <set>
+      <if test="fidnum != null">
+        FIDNUM = #{fidnum,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL1 != null">
+        FNAME_L1 = #{fnameL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL2 != null">
+        FNAME_L2 = #{fnameL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL3 != null">
+        FNAME_L3 = #{fnameL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fnumber != null">
+        FNUMBER = #{fnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL1 != null">
+        FDESCRIPTION_L1 = #{fdescriptionL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL2 != null">
+        FDESCRIPTION_L2 = #{fdescriptionL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL3 != null">
+        FDESCRIPTION_L3 = #{fdescriptionL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fsimplename != null">
+        FSIMPLENAME = #{fsimplename,jdbcType=VARCHAR},
+      </if>
+      <if test="fgender != null">
+        FGENDER = #{fgender,jdbcType=DECIMAL},
+      </if>
+      <if test="fbirthday != null">
+        FBIRTHDAY = #{fbirthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="femail != null">
+        FEMAIL = #{femail,jdbcType=VARCHAR},
+      </if>
+      <if test="faddressL1 != null">
+        FADDRESS_L1 = #{faddressL1,jdbcType=VARCHAR},
+      </if>
+      <if test="faddressL2 != null">
+        FADDRESS_L2 = #{faddressL2,jdbcType=VARCHAR},
+      </if>
+      <if test="faddressL3 != null">
+        FADDRESS_L3 = #{faddressL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fstate != null">
+        FSTATE = #{fstate,jdbcType=DECIMAL},
+      </if>
+      <if test="fhomephone != null">
+        FHOMEPHONE = #{fhomephone,jdbcType=VARCHAR},
+      </if>
+      <if test="fofficephone != null">
+        FOFFICEPHONE = #{fofficephone,jdbcType=VARCHAR},
+      </if>
+      <if test="fcell != null">
+        FCELL = #{fcell,jdbcType=VARCHAR},
+      </if>
+      <if test="fbackupcell != null">
+        FBACKUPCELL = #{fbackupcell,jdbcType=VARCHAR},
+      </if>
+      <if test="fbackupemail != null">
+        FBACKUPEMAIL = #{fbackupemail,jdbcType=VARCHAR},
+      </if>
+      <if test="frtx != null">
+        FRTX = #{frtx,jdbcType=VARCHAR},
+      </if>
+      <if test="fidcardno != null">
+        FIDCARDNO = #{fidcardno,jdbcType=VARCHAR},
+      </if>
+      <if test="fidcardadressL1 != null">
+        FIDCARDADRESS_L1 = #{fidcardadressL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fidcardadressL2 != null">
+        FIDCARDADRESS_L2 = #{fidcardadressL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fidcardadressL3 != null">
+        FIDCARDADRESS_L3 = #{fidcardadressL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fpassportno != null">
+        FPASSPORTNO = #{fpassportno,jdbcType=VARCHAR},
+      </if>
+      <if test="foldnameL1 != null">
+        FOLDNAME_L1 = #{foldnameL1,jdbcType=VARCHAR},
+      </if>
+      <if test="foldnameL2 != null">
+        FOLDNAME_L2 = #{foldnameL2,jdbcType=VARCHAR},
+      </if>
+      <if test="foldnameL3 != null">
+        FOLDNAME_L3 = #{foldnameL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fheight != null">
+        FHEIGHT = #{fheight,jdbcType=DECIMAL},
+      </if>
+      <if test="fnativeplaceL1 != null">
+        FNATIVEPLACE_L1 = #{fnativeplaceL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fnativeplaceL2 != null">
+        FNATIVEPLACE_L2 = #{fnativeplaceL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fnativeplaceL3 != null">
+        FNATIVEPLACE_L3 = #{fnativeplaceL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fbloodtype != null">
+        FBLOODTYPE = #{fbloodtype,jdbcType=DECIMAL},
+      </if>
+      <if test="fcreatorid != null">
+        FCREATORID = #{fcreatorid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcreatetime != null">
+        FCREATETIME = #{fcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flastupdateuserid != null">
+        FLASTUPDATEUSERID = #{flastupdateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="flastupdatetime != null">
+        FLASTUPDATETIME = #{flastupdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fkaclassficationid != null">
+        FKACLASSFICATIONID = #{fkaclassficationid,jdbcType=VARCHAR},
+      </if>
+      <if test="fwedid != null">
+        FWEDID = #{fwedid,jdbcType=VARCHAR},
+      </if>
+      <if test="fhealthid != null">
+        FHEALTHID = #{fhealthid,jdbcType=VARCHAR},
+      </if>
+      <if test="fpoliticalfaceid != null">
+        FPOLITICALFACEID = #{fpoliticalfaceid,jdbcType=VARCHAR},
+      </if>
+      <if test="fstandingid != null">
+        FSTANDINGID = #{fstandingid,jdbcType=VARCHAR},
+      </if>
+      <if test="ffolkid != null">
+        FFOLKID = #{ffolkid,jdbcType=VARCHAR},
+      </if>
+      <if test="fbirthid != null">
+        FBIRTHID = #{fbirthid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcontrolunitid != null">
+        FCONTROLUNITID = #{fcontrolunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="fhrorgunitid != null">
+        FHRORGUNITID = #{fhrorgunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="fresidenceplace != null">
+        FRESIDENCEPLACE = #{fresidenceplace,jdbcType=VARCHAR},
+      </if>
+      <if test="flenofactualservice != null">
+        FLENOFACTUALSERVICE = #{flenofactualservice,jdbcType=DECIMAL},
+      </if>
+      <if test="femployeetypeid != null">
+        FEMPLOYEETYPEID = #{femployeetypeid,jdbcType=VARCHAR},
+      </if>
+      <if test="fhighesttechpostid != null">
+        FHIGHESTTECHPOSTID = #{fhighesttechpostid,jdbcType=VARCHAR},
+      </if>
+      <if test="fhighestdegreeid != null">
+        FHIGHESTDEGREEID = #{fhighestdegreeid,jdbcType=VARCHAR},
+      </if>
+      <if test="femployeeclassifyid != null">
+        FEMPLOYEECLASSIFYID = #{femployeeclassifyid,jdbcType=VARCHAR},
+      </if>
+      <if test="fdeletedstatus != null">
+        FDELETEDSTATUS = #{fdeletedstatus,jdbcType=DECIMAL},
+      </if>
+      <if test="flcmrationlevelid != null">
+        FLCMRATIONLEVELID = #{flcmrationlevelid,jdbcType=VARCHAR},
+      </if>
+      <if test="fnationalityid != null">
+        FNATIONALITYID = #{fnationalityid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcheckstate != null">
+        FCHECKSTATE = #{fcheckstate,jdbcType=DECIMAL},
+      </if>
+      <if test="findex != null">
+        FINDEX = #{findex,jdbcType=DECIMAL},
+      </if>
+      <if test="femploytechpostid != null">
+        FEMPLOYTECHPOSTID = #{femploytechpostid,jdbcType=VARCHAR},
+      </if>
+      <if test="fhighestsubdegreeid != null">
+        FHIGHESTSUBDEGREEID = #{fhighestsubdegreeid,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy1 != null">
+        FZDY1 = #{fzdy1,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy2 != null">
+        FZDY2 = #{fzdy2,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy3 != null">
+        FZDY3 = #{fzdy3,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy4 != null">
+        FZDY4 = #{fzdy4,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy5 != null">
+        FZDY5 = #{fzdy5,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy6 != null">
+        FZDY6 = #{fzdy6,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy7 != null">
+        FZDY7 = #{fzdy7,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy8 != null">
+        FZDY8 = #{fzdy8,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy9 != null">
+        FZDY9 = #{fzdy9,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fzdy10 != null">
+        FZDY10 = #{fzdy10,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fzdy11 != null">
+        FZDY11 = #{fzdy11,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fzdy12 != null">
+        FZDY12 = #{fzdy12,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fzdy13 != null">
+        FZDY13 = #{fzdy13,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fzdy14 != null">
+        FZDY14 = #{fzdy14,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fzdy15 != null">
+        FZDY15 = #{fzdy15,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy16 != null">
+        FZDY16 = #{fzdy16,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy17 != null">
+        FZDY17 = #{fzdy17,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy18 != null">
+        FZDY18 = #{fzdy18,jdbcType=DECIMAL},
+      </if>
+      <if test="fzdy19 != null">
+        FZDY19 = #{fzdy19,jdbcType=DECIMAL},
+      </if>
+      <if test="fzdy20 != null">
+        FZDY20 = #{fzdy20,jdbcType=DECIMAL},
+      </if>
+      <if test="fzdy21 != null">
+        FZDY21 = #{fzdy21,jdbcType=DECIMAL},
+      </if>
+      <if test="fzdy22 != null">
+        FZDY22 = #{fzdy22,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy23 != null">
+        FZDY23 = #{fzdy23,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy24 != null">
+        FZDY24 = #{fzdy24,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy25 != null">
+        FZDY25 = #{fzdy25,jdbcType=VARCHAR},
+      </if>
+      <if test="fzdy26 != null">
+        FZDY26 = #{fzdy26,jdbcType=DECIMAL},
+      </if>
+      <if test="ffullnamepingyin != null">
+        FFULLNAMEPINGYIN = #{ffullnamepingyin,jdbcType=VARCHAR},
+      </if>
+      <if test="fsimplenamepingyin != null">
+        FSIMPLENAMEPINGYIN = #{fsimplenamepingyin,jdbcType=VARCHAR},
+      </if>
+      <if test="fisstandby != null">
+        FISSTANDBY = #{fisstandby,jdbcType=DECIMAL},
+      </if>
+      <if test="fisstandbycadre != null">
+        FISSTANDBYCADRE = #{fisstandbycadre,jdbcType=DECIMAL},
+      </if>
+      <if test="fhighestcompetencyid != null">
+        FHIGHESTCOMPETENCYID = #{fhighestcompetencyid,jdbcType=VARCHAR},
+      </if>
+      <if test="fnamepinyin != null">
+        FNAMEPINYIN = #{fnamepinyin,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameshortpinyin != null">
+        FNAMESHORTPINYIN = #{fnameshortpinyin,jdbcType=VARCHAR},
+      </if>
+      <if test="fregresidenceid != null">
+        FREGRESIDENCEID = #{fregresidenceid,jdbcType=VARCHAR},
+      </if>
+      <if test="fhjaddress != null">
+        FHJADDRESS = #{fhjaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="fidcardaddress != null">
+        FIDCARDADDRESS = #{fidcardaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="fhomeplace != null">
+        FHOMEPLACE = #{fhomeplace,jdbcType=VARCHAR},
+      </if>
+      <if test="feffdt != null">
+        FEFFDT = #{feffdt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fleffdt != null">
+        FLEFFDT = #{fleffdt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fhistoryrelateid != null">
+        FHISTORYRELATEID = #{fhistoryrelateid,jdbcType=VARCHAR},
+      </if>
+      <if test="fidcardbegindate != null">
+        FIDCARDBEGINDATE = #{fidcardbegindate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fidcardenddate != null">
+        FIDCARDENDDATE = #{fidcardenddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fextendfieldnumone != null">
+        FEXTENDFIELDNUMONE = #{fextendfieldnumone,jdbcType=VARCHAR},
+      </if>
+      <if test="fprotocol != null">
+        FPROTOCOL = #{fprotocol,jdbcType=VARCHAR},
+      </if>
+      <if test="fidcardissueorg != null">
+        FIDCARDISSUEORG = #{fidcardissueorg,jdbcType=VARCHAR},
+      </if>
+      <if test="fgkadmin != null">
+        FGKADMIN = #{fgkadmin,jdbcType=VARCHAR},
+      </if>
+      <if test="cfreligionid != null">
+        CFRELIGIONID = #{cfreligionid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfpersoncityid != null">
+        CFPERSONCITYID = #{cfpersoncityid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfprovince != null">
+        CFPROVINCE = #{cfprovince,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where FID = #{fid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="entity.TBdPerson">
+    <!--@mbg.generated-->
+    update T_BD_PERSON
+    set FIDNUM = #{fidnum,jdbcType=VARCHAR},
+      FNAME_L1 = #{fnameL1,jdbcType=VARCHAR},
+      FNAME_L2 = #{fnameL2,jdbcType=VARCHAR},
+      FNAME_L3 = #{fnameL3,jdbcType=VARCHAR},
+      FNUMBER = #{fnumber,jdbcType=VARCHAR},
+      FDESCRIPTION_L1 = #{fdescriptionL1,jdbcType=VARCHAR},
+      FDESCRIPTION_L2 = #{fdescriptionL2,jdbcType=VARCHAR},
+      FDESCRIPTION_L3 = #{fdescriptionL3,jdbcType=VARCHAR},
+      FSIMPLENAME = #{fsimplename,jdbcType=VARCHAR},
+      FGENDER = #{fgender,jdbcType=DECIMAL},
+      FBIRTHDAY = #{fbirthday,jdbcType=TIMESTAMP},
+      FEMAIL = #{femail,jdbcType=VARCHAR},
+      FADDRESS_L1 = #{faddressL1,jdbcType=VARCHAR},
+      FADDRESS_L2 = #{faddressL2,jdbcType=VARCHAR},
+      FADDRESS_L3 = #{faddressL3,jdbcType=VARCHAR},
+      FSTATE = #{fstate,jdbcType=DECIMAL},
+      FHOMEPHONE = #{fhomephone,jdbcType=VARCHAR},
+      FOFFICEPHONE = #{fofficephone,jdbcType=VARCHAR},
+      FCELL = #{fcell,jdbcType=VARCHAR},
+      FBACKUPCELL = #{fbackupcell,jdbcType=VARCHAR},
+      FBACKUPEMAIL = #{fbackupemail,jdbcType=VARCHAR},
+      FRTX = #{frtx,jdbcType=VARCHAR},
+      FIDCARDNO = #{fidcardno,jdbcType=VARCHAR},
+      FIDCARDADRESS_L1 = #{fidcardadressL1,jdbcType=VARCHAR},
+      FIDCARDADRESS_L2 = #{fidcardadressL2,jdbcType=VARCHAR},
+      FIDCARDADRESS_L3 = #{fidcardadressL3,jdbcType=VARCHAR},
+      FPASSPORTNO = #{fpassportno,jdbcType=VARCHAR},
+      FOLDNAME_L1 = #{foldnameL1,jdbcType=VARCHAR},
+      FOLDNAME_L2 = #{foldnameL2,jdbcType=VARCHAR},
+      FOLDNAME_L3 = #{foldnameL3,jdbcType=VARCHAR},
+      FHEIGHT = #{fheight,jdbcType=DECIMAL},
+      FNATIVEPLACE_L1 = #{fnativeplaceL1,jdbcType=VARCHAR},
+      FNATIVEPLACE_L2 = #{fnativeplaceL2,jdbcType=VARCHAR},
+      FNATIVEPLACE_L3 = #{fnativeplaceL3,jdbcType=VARCHAR},
+      FBLOODTYPE = #{fbloodtype,jdbcType=DECIMAL},
+      FCREATORID = #{fcreatorid,jdbcType=VARCHAR},
+      FCREATETIME = #{fcreatetime,jdbcType=TIMESTAMP},
+      FLASTUPDATEUSERID = #{flastupdateuserid,jdbcType=VARCHAR},
+      FLASTUPDATETIME = #{flastupdatetime,jdbcType=TIMESTAMP},
+      FKACLASSFICATIONID = #{fkaclassficationid,jdbcType=VARCHAR},
+      FWEDID = #{fwedid,jdbcType=VARCHAR},
+      FHEALTHID = #{fhealthid,jdbcType=VARCHAR},
+      FPOLITICALFACEID = #{fpoliticalfaceid,jdbcType=VARCHAR},
+      FSTANDINGID = #{fstandingid,jdbcType=VARCHAR},
+      FFOLKID = #{ffolkid,jdbcType=VARCHAR},
+      FBIRTHID = #{fbirthid,jdbcType=VARCHAR},
+      FCONTROLUNITID = #{fcontrolunitid,jdbcType=VARCHAR},
+      FHRORGUNITID = #{fhrorgunitid,jdbcType=VARCHAR},
+      FRESIDENCEPLACE = #{fresidenceplace,jdbcType=VARCHAR},
+      FLENOFACTUALSERVICE = #{flenofactualservice,jdbcType=DECIMAL},
+      FEMPLOYEETYPEID = #{femployeetypeid,jdbcType=VARCHAR},
+      FHIGHESTTECHPOSTID = #{fhighesttechpostid,jdbcType=VARCHAR},
+      FHIGHESTDEGREEID = #{fhighestdegreeid,jdbcType=VARCHAR},
+      FEMPLOYEECLASSIFYID = #{femployeeclassifyid,jdbcType=VARCHAR},
+      FDELETEDSTATUS = #{fdeletedstatus,jdbcType=DECIMAL},
+      FLCMRATIONLEVELID = #{flcmrationlevelid,jdbcType=VARCHAR},
+      FNATIONALITYID = #{fnationalityid,jdbcType=VARCHAR},
+      FCHECKSTATE = #{fcheckstate,jdbcType=DECIMAL},
+      FINDEX = #{findex,jdbcType=DECIMAL},
+      FEMPLOYTECHPOSTID = #{femploytechpostid,jdbcType=VARCHAR},
+      FHIGHESTSUBDEGREEID = #{fhighestsubdegreeid,jdbcType=VARCHAR},
+      FZDY1 = #{fzdy1,jdbcType=VARCHAR},
+      FZDY2 = #{fzdy2,jdbcType=VARCHAR},
+      FZDY3 = #{fzdy3,jdbcType=VARCHAR},
+      FZDY4 = #{fzdy4,jdbcType=VARCHAR},
+      FZDY5 = #{fzdy5,jdbcType=VARCHAR},
+      FZDY6 = #{fzdy6,jdbcType=VARCHAR},
+      FZDY7 = #{fzdy7,jdbcType=VARCHAR},
+      FZDY8 = #{fzdy8,jdbcType=VARCHAR},
+      FZDY9 = #{fzdy9,jdbcType=TIMESTAMP},
+      FZDY10 = #{fzdy10,jdbcType=TIMESTAMP},
+      FZDY11 = #{fzdy11,jdbcType=TIMESTAMP},
+      FZDY12 = #{fzdy12,jdbcType=TIMESTAMP},
+      FZDY13 = #{fzdy13,jdbcType=TIMESTAMP},
+      FZDY14 = #{fzdy14,jdbcType=TIMESTAMP},
+      FZDY15 = #{fzdy15,jdbcType=VARCHAR},
+      FZDY16 = #{fzdy16,jdbcType=VARCHAR},
+      FZDY17 = #{fzdy17,jdbcType=VARCHAR},
+      FZDY18 = #{fzdy18,jdbcType=DECIMAL},
+      FZDY19 = #{fzdy19,jdbcType=DECIMAL},
+      FZDY20 = #{fzdy20,jdbcType=DECIMAL},
+      FZDY21 = #{fzdy21,jdbcType=DECIMAL},
+      FZDY22 = #{fzdy22,jdbcType=VARCHAR},
+      FZDY23 = #{fzdy23,jdbcType=VARCHAR},
+      FZDY24 = #{fzdy24,jdbcType=VARCHAR},
+      FZDY25 = #{fzdy25,jdbcType=VARCHAR},
+      FZDY26 = #{fzdy26,jdbcType=DECIMAL},
+      FFULLNAMEPINGYIN = #{ffullnamepingyin,jdbcType=VARCHAR},
+      FSIMPLENAMEPINGYIN = #{fsimplenamepingyin,jdbcType=VARCHAR},
+      FISSTANDBY = #{fisstandby,jdbcType=DECIMAL},
+      FISSTANDBYCADRE = #{fisstandbycadre,jdbcType=DECIMAL},
+      FHIGHESTCOMPETENCYID = #{fhighestcompetencyid,jdbcType=VARCHAR},
+      FNAMEPINYIN = #{fnamepinyin,jdbcType=VARCHAR},
+      FNAMESHORTPINYIN = #{fnameshortpinyin,jdbcType=VARCHAR},
+      FREGRESIDENCEID = #{fregresidenceid,jdbcType=VARCHAR},
+      FHJADDRESS = #{fhjaddress,jdbcType=VARCHAR},
+      FIDCARDADDRESS = #{fidcardaddress,jdbcType=VARCHAR},
+      FHOMEPLACE = #{fhomeplace,jdbcType=VARCHAR},
+      FEFFDT = #{feffdt,jdbcType=TIMESTAMP},
+      FLEFFDT = #{fleffdt,jdbcType=TIMESTAMP},
+      FHISTORYRELATEID = #{fhistoryrelateid,jdbcType=VARCHAR},
+      FIDCARDBEGINDATE = #{fidcardbegindate,jdbcType=TIMESTAMP},
+      FIDCARDENDDATE = #{fidcardenddate,jdbcType=TIMESTAMP},
+      FEXTENDFIELDNUMONE = #{fextendfieldnumone,jdbcType=VARCHAR},
+      FPROTOCOL = #{fprotocol,jdbcType=VARCHAR},
+      FIDCARDISSUEORG = #{fidcardissueorg,jdbcType=VARCHAR},
+      FGKADMIN = #{fgkadmin,jdbcType=VARCHAR},
+      CFRELIGIONID = #{cfreligionid,jdbcType=VARCHAR},
+      CFPERSONCITYID = #{cfpersoncityid,jdbcType=VARCHAR},
+      CFPROVINCE = #{cfprovince,jdbcType=VARCHAR}
+    where FID = #{fid,jdbcType=VARCHAR}
+  </update>
+</mapper>

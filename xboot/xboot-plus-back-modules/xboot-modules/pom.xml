@@ -21,6 +21,7 @@
         <module>xboot-open</module>
         <module>xboot-your</module>
         <module>xboot-app</module>
+        <module>xboot-zpig</module>
     </modules>
 
     <dependencies>

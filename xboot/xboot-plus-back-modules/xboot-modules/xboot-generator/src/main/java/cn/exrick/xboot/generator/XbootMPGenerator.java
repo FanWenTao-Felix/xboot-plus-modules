@@ -33,25 +33,25 @@ public class XbootMPGenerator {
      * 实体类名
      * 建议仅需修改
      */
-    private static final String className = "Student";
+    private static final String className = "CT_PIG_COLLECTIONRECORD";
 
     /**
      * 类说明描述
      * 建议仅需修改
      */
-    private static final String description = "测试";
+    private static final String description = "精液采集记录";
 
     /**
      * 作者名
      * 建议仅需修改
      */
-    private static final String author = "Exrick";
+    private static final String author = "JIHT";
 
     /**
      * 数据库表名前缀
      * 下方请根据需要修改
      */
-    private static final String tablePre = "t_";
+    private static final String tablePre = "";
 
     /**
      * 主键类型
@@ -62,37 +62,37 @@ public class XbootMPGenerator {
      * 生成模块路径
      * (文件自动生成至该模块下)
      */
-    private static final String module = "/xboot-modules/xboot-your";
+    private static final String module = "/xboot/xboot-plus-back-modules/xboot-modules/xboot-zpig";
 
     /**
      * 实体类对应包
      * (文件自动生成至该包下)
      */
-    private static final String entityPackage = "cn.exrick.xboot.your.entity";
+    private static final String entityPackage = "entity";
 
     /**
      * dao对应包 【注意修改后需到cn.exrick.xboot.core.config.mybatisplus.MybatisPlusConfig配置你的mapper路径扫描】
      * (文件自动生成至该包下)
      */
-    private static final String daoPackage = "cn.exrick.xboot.your.mapper";
+    private static final String daoPackage = "dao";
 
     /**
      * service对应包
      * (文件自动生成至该包下)
      */
-    private static final String servicePackage = "cn.exrick.xboot.your.service";
+    private static final String servicePackage = "service";
 
     /**
      * serviceImpl对应包
      * (文件自动生成至该包下)
      */
-    private static final String serviceImplPackage = "cn.exrick.xboot.your.serviceimpl";
+    private static final String serviceImplPackage = "serviceimpl";
 
     /**
      * controller对应包
      * (文件自动生成至该包下)
      */
-    private static final String controllerPackage = "cn.exrick.xboot.your.controller";
+    private static final String controllerPackage = "controller";
 
     /**
      * 运行该主函数即可生成代码
@@ -113,7 +113,7 @@ public class XbootMPGenerator {
         generatePlus(gt);
 
         // 根据类名删除生成的代码
-        // deleteCode(className);
+        //deleteCode(className);
     }
 
     /**

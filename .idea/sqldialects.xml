@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/xboot/quartz.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/xboot/xboot-plus-back-modules/xboot-core/src/main/resources/mapper/DeleteMapper.xml" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/xboot/xboot-plus-back-modules/xboot-core/src/main/resources/mapper/PermissionMapper.xml" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/xboot/xboot-plus-back-modules/xboot-core/src/main/resources/mapper/UserRoleMapper.xml" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/xboot/xboot.sql" dialect="MySQL" />
+    <file url="PROJECT" dialect="Oracle" />
+  </component>
+</project>

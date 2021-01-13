@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.TBdMaterialDao">
+  <resultMap id="BaseResultMap" type="entity.TBdMaterial">
+    <!--@mbg.generated-->
+    <id column="FID" jdbcType="VARCHAR" property="fid" />
+    <result column="FCREATORID" jdbcType="VARCHAR" property="fcreatorid" />
+    <result column="FCREATETIME" jdbcType="TIMESTAMP" property="fcreatetime" />
+    <result column="FLASTUPDATEUSERID" jdbcType="VARCHAR" property="flastupdateuserid" />
+    <result column="FLASTUPDATETIME" jdbcType="TIMESTAMP" property="flastupdatetime" />
+    <result column="FCONTROLUNITID" jdbcType="VARCHAR" property="fcontrolunitid" />
+    <result column="FNAME_L1" jdbcType="VARCHAR" property="fnameL1" />
+    <result column="FNAME_L2" jdbcType="VARCHAR" property="fnameL2" />
+    <result column="FNAME_L3" jdbcType="VARCHAR" property="fnameL3" />
+    <result column="FNUMBER" jdbcType="VARCHAR" property="fnumber" />
+    <result column="FDESCRIPTION_L1" jdbcType="VARCHAR" property="fdescriptionL1" />
+    <result column="FDESCRIPTION_L2" jdbcType="VARCHAR" property="fdescriptionL2" />
+    <result column="FDESCRIPTION_L3" jdbcType="VARCHAR" property="fdescriptionL3" />
+    <result column="FSIMPLENAME" jdbcType="VARCHAR" property="fsimplename" />
+    <result column="FVERSION" jdbcType="DECIMAL" property="fversion" />
+    <result column="FLONGNUMBER" jdbcType="VARCHAR" property="flongnumber" />
+    <result column="FSHORTNAME" jdbcType="VARCHAR" property="fshortname" />
+    <result column="FMODEL" jdbcType="VARCHAR" property="fmodel" />
+    <result column="FBASEUNIT" jdbcType="VARCHAR" property="fbaseunit" />
+    <result column="FPRICEPRECISION" jdbcType="DECIMAL" property="fpriceprecision" />
+    <result column="FHELPCODE" jdbcType="VARCHAR" property="fhelpcode" />
+    <result column="FBARCODE" jdbcType="VARCHAR" property="fbarcode" />
+    <result column="FPICTURENUMBER" jdbcType="VARCHAR" property="fpicturenumber" />
+    <result column="FASSISTATTR" jdbcType="VARCHAR" property="fassistattr" />
+    <result column="FGROSSWEIGHT" jdbcType="DECIMAL" property="fgrossweight" />
+    <result column="FNETWEIGHT" jdbcType="DECIMAL" property="fnetweight" />
+    <result column="FLENGTH" jdbcType="DECIMAL" property="flength" />
+    <result column="FWIDTH" jdbcType="DECIMAL" property="fwidth" />
+    <result column="FHEIGHT" jdbcType="DECIMAL" property="fheight" />
+    <result column="FVOLUME" jdbcType="DECIMAL" property="fvolume" />
+    <result column="FWEIGHTUNIT" jdbcType="VARCHAR" property="fweightunit" />
+    <result column="FLENGTHUNIT" jdbcType="VARCHAR" property="flengthunit" />
+    <result column="FVOLUMNUNIT" jdbcType="VARCHAR" property="fvolumnunit" />
+    <result column="FMATERIALGROUPID" jdbcType="VARCHAR" property="fmaterialgroupid" />
+    <result column="FEFFECTEDSTATUS" jdbcType="DECIMAL" property="feffectedstatus" />
+    <result column="FALIAS" jdbcType="VARCHAR" property="falias" />
+    <result column="FFOREIGNNAME" jdbcType="VARCHAR" property="fforeignname" />
+    <result column="FREGISTEREDMARK" jdbcType="VARCHAR" property="fregisteredmark" />
+    <result column="FWARRANTNUMBER" jdbcType="VARCHAR" property="fwarrantnumber" />
+    <result column="FSTATUS" jdbcType="DECIMAL" property="fstatus" />
+    <result column="FFREEZEORGUNIT" jdbcType="VARCHAR" property="ffreezeorgunit" />
+    <result column="FADMINCUID" jdbcType="VARCHAR" property="fadmincuid" />
+    <result column="FASSISTUNIT" jdbcType="VARCHAR" property="fassistunit" />
+    <result column="FSEQUNITID" jdbcType="VARCHAR" property="fsequnitid" />
+    <result column="FISWEIGHTED" jdbcType="DECIMAL" property="fisweighted" />
+    <result column="FUSEASSTATTRRELATION" jdbcType="DECIMAL" property="fuseasstattrrelation" />
+    <result column="FISOUTSOURCEDPART" jdbcType="DECIMAL" property="fisoutsourcedpart" />
+    <result column="FEQUIPPROPERTY" jdbcType="DECIMAL" property="fequipproperty" />
+    <result column="FMATERIALTRADEMARK" jdbcType="VARCHAR" property="fmaterialtrademark" />
+    <result column="FOLDNUMBER" jdbcType="VARCHAR" property="foldnumber" />
+    <result column="FNUMBER4IDX" jdbcType="VARCHAR" property="fnumber4idx" />
+    <result column="FNAME4IDX" jdbcType="VARCHAR" property="fname4idx" />
+    <result column="FISSYNOCHRONOUS" jdbcType="DECIMAL" property="fissynochronous" />
+    <result column="FISGOODS" jdbcType="DECIMAL" property="fisgoods" />
+    <result column="FNAMEPINYIN" jdbcType="VARCHAR" property="fnamepinyin" />
+    <result column="FNAMESHORTPINYIN" jdbcType="VARCHAR" property="fnameshortpinyin" />
+    <result column="CFMATTYPE" jdbcType="VARCHAR" property="cfmattype" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    FID, FCREATORID, FCREATETIME, FLASTUPDATEUSERID, FLASTUPDATETIME, FCONTROLUNITID, 
+    FNAME_L1, FNAME_L2, FNAME_L3, FNUMBER, FDESCRIPTION_L1, FDESCRIPTION_L2, FDESCRIPTION_L3, 
+    FSIMPLENAME, FVERSION, FLONGNUMBER, FSHORTNAME, FMODEL, FBASEUNIT, FPRICEPRECISION, 
+    FHELPCODE, FBARCODE, FPICTURENUMBER, FASSISTATTR, FGROSSWEIGHT, FNETWEIGHT, FLENGTH, 
+    FWIDTH, FHEIGHT, FVOLUME, FWEIGHTUNIT, FLENGTHUNIT, FVOLUMNUNIT, FMATERIALGROUPID, 
+    FEFFECTEDSTATUS, FALIAS, FFOREIGNNAME, FREGISTEREDMARK, FWARRANTNUMBER, FSTATUS, 
+    FFREEZEORGUNIT, FADMINCUID, FASSISTUNIT, FSEQUNITID, FISWEIGHTED, FUSEASSTATTRRELATION, 
+    FISOUTSOURCEDPART, FEQUIPPROPERTY, FMATERIALTRADEMARK, FOLDNUMBER, FNUMBER4IDX, FNAME4IDX, 
+    FISSYNOCHRONOUS, FISGOODS, FNAMEPINYIN, FNAMESHORTPINYIN, CFMATTYPE
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from T_BD_MATERIAL
+    where FID = #{fid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from T_BD_MATERIAL
+    where FID = #{fid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" keyColumn="FID" keyProperty="fid" parameterType="entity.TBdMaterial" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into T_BD_MATERIAL (FCREATORID, FCREATETIME, FLASTUPDATEUSERID, 
+      FLASTUPDATETIME, FCONTROLUNITID, FNAME_L1, 
+      FNAME_L2, FNAME_L3, FNUMBER, 
+      FDESCRIPTION_L1, FDESCRIPTION_L2, FDESCRIPTION_L3, 
+      FSIMPLENAME, FVERSION, FLONGNUMBER, 
+      FSHORTNAME, FMODEL, FBASEUNIT, 
+      FPRICEPRECISION, FHELPCODE, FBARCODE, 
+      FPICTURENUMBER, FASSISTATTR, FGROSSWEIGHT, 
+      FNETWEIGHT, FLENGTH, FWIDTH, 
+      FHEIGHT, FVOLUME, FWEIGHTUNIT, 
+      FLENGTHUNIT, FVOLUMNUNIT, FMATERIALGROUPID, 
+      FEFFECTEDSTATUS, FALIAS, FFOREIGNNAME, 
+      FREGISTEREDMARK, FWARRANTNUMBER, FSTATUS, 
+      FFREEZEORGUNIT, FADMINCUID, FASSISTUNIT, 
+      FSEQUNITID, FISWEIGHTED, FUSEASSTATTRRELATION, 
+      FISOUTSOURCEDPART, FEQUIPPROPERTY, FMATERIALTRADEMARK, 
+      FOLDNUMBER, FNUMBER4IDX, FNAME4IDX, 
+      FISSYNOCHRONOUS, FISGOODS, FNAMEPINYIN, 
+      FNAMESHORTPINYIN, CFMATTYPE)
+    values (#{fcreatorid,jdbcType=VARCHAR}, #{fcreatetime,jdbcType=TIMESTAMP}, #{flastupdateuserid,jdbcType=VARCHAR}, 
+      #{flastupdatetime,jdbcType=TIMESTAMP}, #{fcontrolunitid,jdbcType=VARCHAR}, #{fnameL1,jdbcType=VARCHAR}, 
+      #{fnameL2,jdbcType=VARCHAR}, #{fnameL3,jdbcType=VARCHAR}, #{fnumber,jdbcType=VARCHAR}, 
+      #{fdescriptionL1,jdbcType=VARCHAR}, #{fdescriptionL2,jdbcType=VARCHAR}, #{fdescriptionL3,jdbcType=VARCHAR}, 
+      #{fsimplename,jdbcType=VARCHAR}, #{fversion,jdbcType=DECIMAL}, #{flongnumber,jdbcType=VARCHAR}, 
+      #{fshortname,jdbcType=VARCHAR}, #{fmodel,jdbcType=VARCHAR}, #{fbaseunit,jdbcType=VARCHAR}, 
+      #{fpriceprecision,jdbcType=DECIMAL}, #{fhelpcode,jdbcType=VARCHAR}, #{fbarcode,jdbcType=VARCHAR}, 
+      #{fpicturenumber,jdbcType=VARCHAR}, #{fassistattr,jdbcType=VARCHAR}, #{fgrossweight,jdbcType=DECIMAL}, 
+      #{fnetweight,jdbcType=DECIMAL}, #{flength,jdbcType=DECIMAL}, #{fwidth,jdbcType=DECIMAL}, 
+      #{fheight,jdbcType=DECIMAL}, #{fvolume,jdbcType=DECIMAL}, #{fweightunit,jdbcType=VARCHAR}, 
+      #{flengthunit,jdbcType=VARCHAR}, #{fvolumnunit,jdbcType=VARCHAR}, #{fmaterialgroupid,jdbcType=VARCHAR}, 
+      #{feffectedstatus,jdbcType=DECIMAL}, #{falias,jdbcType=VARCHAR}, #{fforeignname,jdbcType=VARCHAR}, 
+      #{fregisteredmark,jdbcType=VARCHAR}, #{fwarrantnumber,jdbcType=VARCHAR}, #{fstatus,jdbcType=DECIMAL}, 
+      #{ffreezeorgunit,jdbcType=VARCHAR}, #{fadmincuid,jdbcType=VARCHAR}, #{fassistunit,jdbcType=VARCHAR}, 
+      #{fsequnitid,jdbcType=VARCHAR}, #{fisweighted,jdbcType=DECIMAL}, #{fuseasstattrrelation,jdbcType=DECIMAL}, 
+      #{fisoutsourcedpart,jdbcType=DECIMAL}, #{fequipproperty,jdbcType=DECIMAL}, #{fmaterialtrademark,jdbcType=VARCHAR}, 
+      #{foldnumber,jdbcType=VARCHAR}, #{fnumber4idx,jdbcType=VARCHAR}, #{fname4idx,jdbcType=VARCHAR}, 
+      #{fissynochronous,jdbcType=DECIMAL}, #{fisgoods,jdbcType=DECIMAL}, #{fnamepinyin,jdbcType=VARCHAR}, 
+      #{fnameshortpinyin,jdbcType=VARCHAR}, #{cfmattype,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="FID" keyProperty="fid" parameterType="entity.TBdMaterial" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into T_BD_MATERIAL
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fcreatorid != null">
+        FCREATORID,
+      </if>
+      <if test="fcreatetime != null">
+        FCREATETIME,
+      </if>
+      <if test="flastupdateuserid != null">
+        FLASTUPDATEUSERID,
+      </if>
+      <if test="flastupdatetime != null">
+        FLASTUPDATETIME,
+      </if>
+      <if test="fcontrolunitid != null">
+        FCONTROLUNITID,
+      </if>
+      <if test="fnameL1 != null">
+        FNAME_L1,
+      </if>
+      <if test="fnameL2 != null">
+        FNAME_L2,
+      </if>
+      <if test="fnameL3 != null">
+        FNAME_L3,
+      </if>
+      <if test="fnumber != null">
+        FNUMBER,
+      </if>
+      <if test="fdescriptionL1 != null">
+        FDESCRIPTION_L1,
+      </if>
+      <if test="fdescriptionL2 != null">
+        FDESCRIPTION_L2,
+      </if>
+      <if test="fdescriptionL3 != null">
+        FDESCRIPTION_L3,
+      </if>
+      <if test="fsimplename != null">
+        FSIMPLENAME,
+      </if>
+      <if test="fversion != null">
+        FVERSION,
+      </if>
+      <if test="flongnumber != null">
+        FLONGNUMBER,
+      </if>
+      <if test="fshortname != null">
+        FSHORTNAME,
+      </if>
+      <if test="fmodel != null">
+        FMODEL,
+      </if>
+      <if test="fbaseunit != null">
+        FBASEUNIT,
+      </if>
+      <if test="fpriceprecision != null">
+        FPRICEPRECISION,
+      </if>
+      <if test="fhelpcode != null">
+        FHELPCODE,
+      </if>
+      <if test="fbarcode != null">
+        FBARCODE,
+      </if>
+      <if test="fpicturenumber != null">
+        FPICTURENUMBER,
+      </if>
+      <if test="fassistattr != null">
+        FASSISTATTR,
+      </if>
+      <if test="fgrossweight != null">
+        FGROSSWEIGHT,
+      </if>
+      <if test="fnetweight != null">
+        FNETWEIGHT,
+      </if>
+      <if test="flength != null">
+        FLENGTH,
+      </if>
+      <if test="fwidth != null">
+        FWIDTH,
+      </if>
+      <if test="fheight != null">
+        FHEIGHT,
+      </if>
+      <if test="fvolume != null">
+        FVOLUME,
+      </if>
+      <if test="fweightunit != null">
+        FWEIGHTUNIT,
+      </if>
+      <if test="flengthunit != null">
+        FLENGTHUNIT,
+      </if>
+      <if test="fvolumnunit != null">
+        FVOLUMNUNIT,
+      </if>
+      <if test="fmaterialgroupid != null">
+        FMATERIALGROUPID,
+      </if>
+      <if test="feffectedstatus != null">
+        FEFFECTEDSTATUS,
+      </if>
+      <if test="falias != null">
+        FALIAS,
+      </if>
+      <if test="fforeignname != null">
+        FFOREIGNNAME,
+      </if>
+      <if test="fregisteredmark != null">
+        FREGISTEREDMARK,
+      </if>
+      <if test="fwarrantnumber != null">
+        FWARRANTNUMBER,
+      </if>
+      <if test="fstatus != null">
+        FSTATUS,
+      </if>
+      <if test="ffreezeorgunit != null">
+        FFREEZEORGUNIT,
+      </if>
+      <if test="fadmincuid != null">
+        FADMINCUID,
+      </if>
+      <if test="fassistunit != null">
+        FASSISTUNIT,
+      </if>
+      <if test="fsequnitid != null">
+        FSEQUNITID,
+      </if>
+      <if test="fisweighted != null">
+        FISWEIGHTED,
+      </if>
+      <if test="fuseasstattrrelation != null">
+        FUSEASSTATTRRELATION,
+      </if>
+      <if test="fisoutsourcedpart != null">
+        FISOUTSOURCEDPART,
+      </if>
+      <if test="fequipproperty != null">
+        FEQUIPPROPERTY,
+      </if>
+      <if test="fmaterialtrademark != null">
+        FMATERIALTRADEMARK,
+      </if>
+      <if test="foldnumber != null">
+        FOLDNUMBER,
+      </if>
+      <if test="fnumber4idx != null">
+        FNUMBER4IDX,
+      </if>
+      <if test="fname4idx != null">
+        FNAME4IDX,
+      </if>
+      <if test="fissynochronous != null">
+        FISSYNOCHRONOUS,
+      </if>
+      <if test="fisgoods != null">
+        FISGOODS,
+      </if>
+      <if test="fnamepinyin != null">
+        FNAMEPINYIN,
+      </if>
+      <if test="fnameshortpinyin != null">
+        FNAMESHORTPINYIN,
+      </if>
+      <if test="cfmattype != null">
+        CFMATTYPE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fcreatorid != null">
+        #{fcreatorid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcreatetime != null">
+        #{fcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flastupdateuserid != null">
+        #{flastupdateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="flastupdatetime != null">
+        #{flastupdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fcontrolunitid != null">
+        #{fcontrolunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL1 != null">
+        #{fnameL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL2 != null">
+        #{fnameL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL3 != null">
+        #{fnameL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fnumber != null">
+        #{fnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL1 != null">
+        #{fdescriptionL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL2 != null">
+        #{fdescriptionL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL3 != null">
+        #{fdescriptionL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fsimplename != null">
+        #{fsimplename,jdbcType=VARCHAR},
+      </if>
+      <if test="fversion != null">
+        #{fversion,jdbcType=DECIMAL},
+      </if>
+      <if test="flongnumber != null">
+        #{flongnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fshortname != null">
+        #{fshortname,jdbcType=VARCHAR},
+      </if>
+      <if test="fmodel != null">
+        #{fmodel,jdbcType=VARCHAR},
+      </if>
+      <if test="fbaseunit != null">
+        #{fbaseunit,jdbcType=VARCHAR},
+      </if>
+      <if test="fpriceprecision != null">
+        #{fpriceprecision,jdbcType=DECIMAL},
+      </if>
+      <if test="fhelpcode != null">
+        #{fhelpcode,jdbcType=VARCHAR},
+      </if>
+      <if test="fbarcode != null">
+        #{fbarcode,jdbcType=VARCHAR},
+      </if>
+      <if test="fpicturenumber != null">
+        #{fpicturenumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fassistattr != null">
+        #{fassistattr,jdbcType=VARCHAR},
+      </if>
+      <if test="fgrossweight != null">
+        #{fgrossweight,jdbcType=DECIMAL},
+      </if>
+      <if test="fnetweight != null">
+        #{fnetweight,jdbcType=DECIMAL},
+      </if>
+      <if test="flength != null">
+        #{flength,jdbcType=DECIMAL},
+      </if>
+      <if test="fwidth != null">
+        #{fwidth,jdbcType=DECIMAL},
+      </if>
+      <if test="fheight != null">
+        #{fheight,jdbcType=DECIMAL},
+      </if>
+      <if test="fvolume != null">
+        #{fvolume,jdbcType=DECIMAL},
+      </if>
+      <if test="fweightunit != null">
+        #{fweightunit,jdbcType=VARCHAR},
+      </if>
+      <if test="flengthunit != null">
+        #{flengthunit,jdbcType=VARCHAR},
+      </if>
+      <if test="fvolumnunit != null">
+        #{fvolumnunit,jdbcType=VARCHAR},
+      </if>
+      <if test="fmaterialgroupid != null">
+        #{fmaterialgroupid,jdbcType=VARCHAR},
+      </if>
+      <if test="feffectedstatus != null">
+        #{feffectedstatus,jdbcType=DECIMAL},
+      </if>
+      <if test="falias != null">
+        #{falias,jdbcType=VARCHAR},
+      </if>
+      <if test="fforeignname != null">
+        #{fforeignname,jdbcType=VARCHAR},
+      </if>
+      <if test="fregisteredmark != null">
+        #{fregisteredmark,jdbcType=VARCHAR},
+      </if>
+      <if test="fwarrantnumber != null">
+        #{fwarrantnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fstatus != null">
+        #{fstatus,jdbcType=DECIMAL},
+      </if>
+      <if test="ffreezeorgunit != null">
+        #{ffreezeorgunit,jdbcType=VARCHAR},
+      </if>
+      <if test="fadmincuid != null">
+        #{fadmincuid,jdbcType=VARCHAR},
+      </if>
+      <if test="fassistunit != null">
+        #{fassistunit,jdbcType=VARCHAR},
+      </if>
+      <if test="fsequnitid != null">
+        #{fsequnitid,jdbcType=VARCHAR},
+      </if>
+      <if test="fisweighted != null">
+        #{fisweighted,jdbcType=DECIMAL},
+      </if>
+      <if test="fuseasstattrrelation != null">
+        #{fuseasstattrrelation,jdbcType=DECIMAL},
+      </if>
+      <if test="fisoutsourcedpart != null">
+        #{fisoutsourcedpart,jdbcType=DECIMAL},
+      </if>
+      <if test="fequipproperty != null">
+        #{fequipproperty,jdbcType=DECIMAL},
+      </if>
+      <if test="fmaterialtrademark != null">
+        #{fmaterialtrademark,jdbcType=VARCHAR},
+      </if>
+      <if test="foldnumber != null">
+        #{foldnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fnumber4idx != null">
+        #{fnumber4idx,jdbcType=VARCHAR},
+      </if>
+      <if test="fname4idx != null">
+        #{fname4idx,jdbcType=VARCHAR},
+      </if>
+      <if test="fissynochronous != null">
+        #{fissynochronous,jdbcType=DECIMAL},
+      </if>
+      <if test="fisgoods != null">
+        #{fisgoods,jdbcType=DECIMAL},
+      </if>
+      <if test="fnamepinyin != null">
+        #{fnamepinyin,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameshortpinyin != null">
+        #{fnameshortpinyin,jdbcType=VARCHAR},
+      </if>
+      <if test="cfmattype != null">
+        #{cfmattype,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="entity.TBdMaterial">
+    <!--@mbg.generated-->
+    update T_BD_MATERIAL
+    <set>
+      <if test="fcreatorid != null">
+        FCREATORID = #{fcreatorid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcreatetime != null">
+        FCREATETIME = #{fcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flastupdateuserid != null">
+        FLASTUPDATEUSERID = #{flastupdateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="flastupdatetime != null">
+        FLASTUPDATETIME = #{flastupdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fcontrolunitid != null">
+        FCONTROLUNITID = #{fcontrolunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL1 != null">
+        FNAME_L1 = #{fnameL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL2 != null">
+        FNAME_L2 = #{fnameL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL3 != null">
+        FNAME_L3 = #{fnameL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fnumber != null">
+        FNUMBER = #{fnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL1 != null">
+        FDESCRIPTION_L1 = #{fdescriptionL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL2 != null">
+        FDESCRIPTION_L2 = #{fdescriptionL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL3 != null">
+        FDESCRIPTION_L3 = #{fdescriptionL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fsimplename != null">
+        FSIMPLENAME = #{fsimplename,jdbcType=VARCHAR},
+      </if>
+      <if test="fversion != null">
+        FVERSION = #{fversion,jdbcType=DECIMAL},
+      </if>
+      <if test="flongnumber != null">
+        FLONGNUMBER = #{flongnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fshortname != null">
+        FSHORTNAME = #{fshortname,jdbcType=VARCHAR},
+      </if>
+      <if test="fmodel != null">
+        FMODEL = #{fmodel,jdbcType=VARCHAR},
+      </if>
+      <if test="fbaseunit != null">
+        FBASEUNIT = #{fbaseunit,jdbcType=VARCHAR},
+      </if>
+      <if test="fpriceprecision != null">
+        FPRICEPRECISION = #{fpriceprecision,jdbcType=DECIMAL},
+      </if>
+      <if test="fhelpcode != null">
+        FHELPCODE = #{fhelpcode,jdbcType=VARCHAR},
+      </if>
+      <if test="fbarcode != null">
+        FBARCODE = #{fbarcode,jdbcType=VARCHAR},
+      </if>
+      <if test="fpicturenumber != null">
+        FPICTURENUMBER = #{fpicturenumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fassistattr != null">
+        FASSISTATTR = #{fassistattr,jdbcType=VARCHAR},
+      </if>
+      <if test="fgrossweight != null">
+        FGROSSWEIGHT = #{fgrossweight,jdbcType=DECIMAL},
+      </if>
+      <if test="fnetweight != null">
+        FNETWEIGHT = #{fnetweight,jdbcType=DECIMAL},
+      </if>
+      <if test="flength != null">
+        FLENGTH = #{flength,jdbcType=DECIMAL},
+      </if>
+      <if test="fwidth != null">
+        FWIDTH = #{fwidth,jdbcType=DECIMAL},
+      </if>
+      <if test="fheight != null">
+        FHEIGHT = #{fheight,jdbcType=DECIMAL},
+      </if>
+      <if test="fvolume != null">
+        FVOLUME = #{fvolume,jdbcType=DECIMAL},
+      </if>
+      <if test="fweightunit != null">
+        FWEIGHTUNIT = #{fweightunit,jdbcType=VARCHAR},
+      </if>
+      <if test="flengthunit != null">
+        FLENGTHUNIT = #{flengthunit,jdbcType=VARCHAR},
+      </if>
+      <if test="fvolumnunit != null">
+        FVOLUMNUNIT = #{fvolumnunit,jdbcType=VARCHAR},
+      </if>
+      <if test="fmaterialgroupid != null">
+        FMATERIALGROUPID = #{fmaterialgroupid,jdbcType=VARCHAR},
+      </if>
+      <if test="feffectedstatus != null">
+        FEFFECTEDSTATUS = #{feffectedstatus,jdbcType=DECIMAL},
+      </if>
+      <if test="falias != null">
+        FALIAS = #{falias,jdbcType=VARCHAR},
+      </if>
+      <if test="fforeignname != null">
+        FFOREIGNNAME = #{fforeignname,jdbcType=VARCHAR},
+      </if>
+      <if test="fregisteredmark != null">
+        FREGISTEREDMARK = #{fregisteredmark,jdbcType=VARCHAR},
+      </if>
+      <if test="fwarrantnumber != null">
+        FWARRANTNUMBER = #{fwarrantnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fstatus != null">
+        FSTATUS = #{fstatus,jdbcType=DECIMAL},
+      </if>
+      <if test="ffreezeorgunit != null">
+        FFREEZEORGUNIT = #{ffreezeorgunit,jdbcType=VARCHAR},
+      </if>
+      <if test="fadmincuid != null">
+        FADMINCUID = #{fadmincuid,jdbcType=VARCHAR},
+      </if>
+      <if test="fassistunit != null">
+        FASSISTUNIT = #{fassistunit,jdbcType=VARCHAR},
+      </if>
+      <if test="fsequnitid != null">
+        FSEQUNITID = #{fsequnitid,jdbcType=VARCHAR},
+      </if>
+      <if test="fisweighted != null">
+        FISWEIGHTED = #{fisweighted,jdbcType=DECIMAL},
+      </if>
+      <if test="fuseasstattrrelation != null">
+        FUSEASSTATTRRELATION = #{fuseasstattrrelation,jdbcType=DECIMAL},
+      </if>
+      <if test="fisoutsourcedpart != null">
+        FISOUTSOURCEDPART = #{fisoutsourcedpart,jdbcType=DECIMAL},
+      </if>
+      <if test="fequipproperty != null">
+        FEQUIPPROPERTY = #{fequipproperty,jdbcType=DECIMAL},
+      </if>
+      <if test="fmaterialtrademark != null">
+        FMATERIALTRADEMARK = #{fmaterialtrademark,jdbcType=VARCHAR},
+      </if>
+      <if test="foldnumber != null">
+        FOLDNUMBER = #{foldnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fnumber4idx != null">
+        FNUMBER4IDX = #{fnumber4idx,jdbcType=VARCHAR},
+      </if>
+      <if test="fname4idx != null">
+        FNAME4IDX = #{fname4idx,jdbcType=VARCHAR},
+      </if>
+      <if test="fissynochronous != null">
+        FISSYNOCHRONOUS = #{fissynochronous,jdbcType=DECIMAL},
+      </if>
+      <if test="fisgoods != null">
+        FISGOODS = #{fisgoods,jdbcType=DECIMAL},
+      </if>
+      <if test="fnamepinyin != null">
+        FNAMEPINYIN = #{fnamepinyin,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameshortpinyin != null">
+        FNAMESHORTPINYIN = #{fnameshortpinyin,jdbcType=VARCHAR},
+      </if>
+      <if test="cfmattype != null">
+        CFMATTYPE = #{cfmattype,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where FID = #{fid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="entity.TBdMaterial">
+    <!--@mbg.generated-->
+    update T_BD_MATERIAL
+    set FCREATORID = #{fcreatorid,jdbcType=VARCHAR},
+      FCREATETIME = #{fcreatetime,jdbcType=TIMESTAMP},
+      FLASTUPDATEUSERID = #{flastupdateuserid,jdbcType=VARCHAR},
+      FLASTUPDATETIME = #{flastupdatetime,jdbcType=TIMESTAMP},
+      FCONTROLUNITID = #{fcontrolunitid,jdbcType=VARCHAR},
+      FNAME_L1 = #{fnameL1,jdbcType=VARCHAR},
+      FNAME_L2 = #{fnameL2,jdbcType=VARCHAR},
+      FNAME_L3 = #{fnameL3,jdbcType=VARCHAR},
+      FNUMBER = #{fnumber,jdbcType=VARCHAR},
+      FDESCRIPTION_L1 = #{fdescriptionL1,jdbcType=VARCHAR},
+      FDESCRIPTION_L2 = #{fdescriptionL2,jdbcType=VARCHAR},
+      FDESCRIPTION_L3 = #{fdescriptionL3,jdbcType=VARCHAR},
+      FSIMPLENAME = #{fsimplename,jdbcType=VARCHAR},
+      FVERSION = #{fversion,jdbcType=DECIMAL},
+      FLONGNUMBER = #{flongnumber,jdbcType=VARCHAR},
+      FSHORTNAME = #{fshortname,jdbcType=VARCHAR},
+      FMODEL = #{fmodel,jdbcType=VARCHAR},
+      FBASEUNIT = #{fbaseunit,jdbcType=VARCHAR},
+      FPRICEPRECISION = #{fpriceprecision,jdbcType=DECIMAL},
+      FHELPCODE = #{fhelpcode,jdbcType=VARCHAR},
+      FBARCODE = #{fbarcode,jdbcType=VARCHAR},
+      FPICTURENUMBER = #{fpicturenumber,jdbcType=VARCHAR},
+      FASSISTATTR = #{fassistattr,jdbcType=VARCHAR},
+      FGROSSWEIGHT = #{fgrossweight,jdbcType=DECIMAL},
+      FNETWEIGHT = #{fnetweight,jdbcType=DECIMAL},
+      FLENGTH = #{flength,jdbcType=DECIMAL},
+      FWIDTH = #{fwidth,jdbcType=DECIMAL},
+      FHEIGHT = #{fheight,jdbcType=DECIMAL},
+      FVOLUME = #{fvolume,jdbcType=DECIMAL},
+      FWEIGHTUNIT = #{fweightunit,jdbcType=VARCHAR},
+      FLENGTHUNIT = #{flengthunit,jdbcType=VARCHAR},
+      FVOLUMNUNIT = #{fvolumnunit,jdbcType=VARCHAR},
+      FMATERIALGROUPID = #{fmaterialgroupid,jdbcType=VARCHAR},
+      FEFFECTEDSTATUS = #{feffectedstatus,jdbcType=DECIMAL},
+      FALIAS = #{falias,jdbcType=VARCHAR},
+      FFOREIGNNAME = #{fforeignname,jdbcType=VARCHAR},
+      FREGISTEREDMARK = #{fregisteredmark,jdbcType=VARCHAR},
+      FWARRANTNUMBER = #{fwarrantnumber,jdbcType=VARCHAR},
+      FSTATUS = #{fstatus,jdbcType=DECIMAL},
+      FFREEZEORGUNIT = #{ffreezeorgunit,jdbcType=VARCHAR},
+      FADMINCUID = #{fadmincuid,jdbcType=VARCHAR},
+      FASSISTUNIT = #{fassistunit,jdbcType=VARCHAR},
+      FSEQUNITID = #{fsequnitid,jdbcType=VARCHAR},
+      FISWEIGHTED = #{fisweighted,jdbcType=DECIMAL},
+      FUSEASSTATTRRELATION = #{fuseasstattrrelation,jdbcType=DECIMAL},
+      FISOUTSOURCEDPART = #{fisoutsourcedpart,jdbcType=DECIMAL},
+      FEQUIPPROPERTY = #{fequipproperty,jdbcType=DECIMAL},
+      FMATERIALTRADEMARK = #{fmaterialtrademark,jdbcType=VARCHAR},
+      FOLDNUMBER = #{foldnumber,jdbcType=VARCHAR},
+      FNUMBER4IDX = #{fnumber4idx,jdbcType=VARCHAR},
+      FNAME4IDX = #{fname4idx,jdbcType=VARCHAR},
+      FISSYNOCHRONOUS = #{fissynochronous,jdbcType=DECIMAL},
+      FISGOODS = #{fisgoods,jdbcType=DECIMAL},
+      FNAMEPINYIN = #{fnamepinyin,jdbcType=VARCHAR},
+      FNAMESHORTPINYIN = #{fnameshortpinyin,jdbcType=VARCHAR},
+      CFMATTYPE = #{cfmattype,jdbcType=VARCHAR}
+    where FID = #{fid,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -1,0 +1,949 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.CtPigZpigflkDao">
+  <resultMap id="BaseResultMap" type="entity.CtPigZpigflk">
+    <!--@mbg.generated-->
+    <id column="FID" jdbcType="VARCHAR" property="fid" />
+    <result column="FCREATORID" jdbcType="VARCHAR" property="fcreatorid" />
+    <result column="FCREATETIME" jdbcType="TIMESTAMP" property="fcreatetime" />
+    <result column="FLASTUPDATEUSERID" jdbcType="VARCHAR" property="flastupdateuserid" />
+    <result column="FLASTUPDATETIME" jdbcType="TIMESTAMP" property="flastupdatetime" />
+    <result column="FCONTROLUNITID" jdbcType="VARCHAR" property="fcontrolunitid" />
+    <result column="FNUMBER" jdbcType="VARCHAR" property="fnumber" />
+    <result column="FBIZDATE" jdbcType="TIMESTAMP" property="fbizdate" />
+    <result column="FHANDLERID" jdbcType="VARCHAR" property="fhandlerid" />
+    <result column="FDESCRIPTION" jdbcType="VARCHAR" property="fdescription" />
+    <result column="FHASEFFECTED" jdbcType="DECIMAL" property="fhaseffected" />
+    <result column="FAUDITORID" jdbcType="VARCHAR" property="fauditorid" />
+    <result column="FSOURCEBILLID" jdbcType="VARCHAR" property="fsourcebillid" />
+    <result column="FSOURCEFUNCTION" jdbcType="VARCHAR" property="fsourcefunction" />
+    <result column="CFORGUNITID" jdbcType="VARCHAR" property="cforgunitid" />
+    <result column="CFERHAO" jdbcType="VARCHAR" property="cferhao" />
+    <result column="CFGENETICSID" jdbcType="VARCHAR" property="cfgeneticsid" />
+    <result column="CFSEX" jdbcType="VARCHAR" property="cfsex" />
+    <result column="CFQUNTIID" jdbcType="VARCHAR" property="cfquntiid" />
+    <result column="CFSHCHANLINEID" jdbcType="VARCHAR" property="cfshchanlineid" />
+    <result column="CFJINJIAOXISHU" jdbcType="DECIMAL" property="cfjinjiaoxishu" />
+    <result column="CFLAIYUANXZID" jdbcType="VARCHAR" property="cflaiyuanxzid" />
+    <result column="CFLAIYUANORGID" jdbcType="VARCHAR" property="cflaiyuanorgid" />
+    <result column="CFLAIYUANSHCHANLIN" jdbcType="VARCHAR" property="cflaiyuanshchanlin" />
+    <result column="CFWAIJINLAIYUANID" jdbcType="VARCHAR" property="cfwaijinlaiyuanid" />
+    <result column="CFDATE" jdbcType="TIMESTAMP" property="cfdate" />
+    <result column="CFBORNDATE" jdbcType="TIMESTAMP" property="cfborndate" />
+    <result column="CFBORNWT" jdbcType="DECIMAL" property="cfbornwt" />
+    <result column="CFDAYSWT" jdbcType="DECIMAL" property="cfdayswt" />
+    <result column="CFLICHANGDATE" jdbcType="TIMESTAMP" property="cflichangdate" />
+    <result column="CFLICHANGTYPEID" jdbcType="VARCHAR" property="cflichangtypeid" />
+    <result column="CFFIRSTCJDATE" jdbcType="TIMESTAMP" property="cffirstcjdate" />
+    <result column="CFFATHERERHAO" jdbcType="VARCHAR" property="cffathererhao" />
+    <result column="CFFUFUERHAO" jdbcType="VARCHAR" property="cffufuerhao" />
+    <result column="CFFUMUERHAO" jdbcType="VARCHAR" property="cffumuerhao" />
+    <result column="CFFATHERID" jdbcType="VARCHAR" property="cffatherid" />
+    <result column="CFFUFUID" jdbcType="VARCHAR" property="cffufuid" />
+    <result column="CFFUMUID" jdbcType="VARCHAR" property="cffumuid" />
+    <result column="CFMOTHERERHAO" jdbcType="VARCHAR" property="cfmothererhao" />
+    <result column="CFMUMUERHAO" jdbcType="VARCHAR" property="cfmumuerhao" />
+    <result column="CFMUFUERHAO" jdbcType="VARCHAR" property="cfmufuerhao" />
+    <result column="CFMOTHERID" jdbcType="VARCHAR" property="cfmotherid" />
+    <result column="CFMUMUID" jdbcType="VARCHAR" property="cfmumuid" />
+    <result column="CFMUFUID" jdbcType="VARCHAR" property="cfmufuid" />
+    <result column="CFNOWSTATUSID" jdbcType="VARCHAR" property="cfnowstatusid" />
+    <result column="CFZPIGXINGZHIID" jdbcType="VARCHAR" property="cfzpigxingzhiid" />
+    <result column="CFYUANERHAO" jdbcType="VARCHAR" property="cfyuanerhao" />
+    <result column="CFPINXIID" jdbcType="VARCHAR" property="cfpinxiid" />
+    <result column="CFNOWSTATUSDATE" jdbcType="TIMESTAMP" property="cfnowstatusdate" />
+    <result column="CFGETIHAO" jdbcType="VARCHAR" property="cfgetihao" />
+    <result column="CFERQUEHAO" jdbcType="VARCHAR" property="cferquehao" />
+    <result column="CFPICI" jdbcType="VARCHAR" property="cfpici" />
+    <result column="CFZHUSHEID" jdbcType="VARCHAR" property="cfzhusheid" />
+    <result column="CFIFYISALE" jdbcType="DECIMAL" property="cfifyisale" />
+    <result column="CFSUMZAIQTY" jdbcType="DECIMAL" property="cfsumzaiqty" />
+    <result column="CFHUOZAIQTY" jdbcType="DECIMAL" property="cfhuozaiqty" />
+    <result column="CFSUMCJCOUNT" jdbcType="DECIMAL" property="cfsumcjcount" />
+    <result column="CFNOWTAICI" jdbcType="DECIMAL" property="cfnowtaici" />
+    <result column="CFNOWQINGQI" jdbcType="DECIMAL" property="cfnowqingqi" />
+    <result column="CFZUORUQTY" jdbcType="DECIMAL" property="cfzuoruqty" />
+    <result column="CFYOURUQTY" jdbcType="DECIMAL" property="cfyouruqty" />
+    <result column="CFSOWPLANEQTY" jdbcType="DECIMAL" property="cfsowplaneqty" />
+    <result column="CFSUMHAOLIAOQTY" jdbcType="DECIMAL" property="cfsumhaoliaoqty" />
+    <result column="CFSUMHAOLIAOAMT" jdbcType="DECIMAL" property="cfsumhaoliaoamt" />
+    <result column="CFSUMHAOYAOAMT" jdbcType="DECIMAL" property="cfsumhaoyaoamt" />
+    <result column="CFSUMHAOJINGAMT" jdbcType="DECIMAL" property="cfsumhaojingamt" />
+    <result column="CFFANQINGQTY" jdbcType="DECIMAL" property="cffanqingqty" />
+    <result column="CFIFFAQING" jdbcType="DECIMAL" property="cfiffaqing" />
+    <result column="CFLIUCHANQTY" jdbcType="DECIMAL" property="cfliuchanqty" />
+    <result column="CFJINGYEQTY" jdbcType="DECIMAL" property="cfjingyeqty" />
+    <result column="CFPEIZHONGQTY" jdbcType="DECIMAL" property="cfpeizhongqty" />
+    <result column="CFFIRSTPEIZHONGDATE" jdbcType="TIMESTAMP" property="cffirstpeizhongdate" />
+    <result column="CFYUJIFENMIANDATE" jdbcType="TIMESTAMP" property="cfyujifenmiandate" />
+    <result column="CFLASTDDDATE" jdbcType="TIMESTAMP" property="cflastdddate" />
+    <result column="CFISDISABLE" jdbcType="DECIMAL" property="cfisdisable" />
+    <result column="CFZAIFLKID" jdbcType="VARCHAR" property="cfzaiflkid" />
+    <result column="FKAICHANDATE" jdbcType="TIMESTAMP" property="fkaichandate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    FID, FCREATORID, FCREATETIME, FLASTUPDATEUSERID, FLASTUPDATETIME, FCONTROLUNITID, 
+    FNUMBER, FBIZDATE, FHANDLERID, FDESCRIPTION, FHASEFFECTED, FAUDITORID, FSOURCEBILLID, 
+    FSOURCEFUNCTION, CFORGUNITID, CFERHAO, CFGENETICSID, CFSEX, CFQUNTIID, CFSHCHANLINEID, 
+    CFJINJIAOXISHU, CFLAIYUANXZID, CFLAIYUANORGID, CFLAIYUANSHCHANLIN, CFWAIJINLAIYUANID, 
+    CFDATE, CFBORNDATE, CFBORNWT, CFDAYSWT, CFLICHANGDATE, CFLICHANGTYPEID, CFFIRSTCJDATE, 
+    CFFATHERERHAO, CFFUFUERHAO, CFFUMUERHAO, CFFATHERID, CFFUFUID, CFFUMUID, CFMOTHERERHAO, 
+    CFMUMUERHAO, CFMUFUERHAO, CFMOTHERID, CFMUMUID, CFMUFUID, CFNOWSTATUSID, CFZPIGXINGZHIID, 
+    CFYUANERHAO, CFPINXIID, CFNOWSTATUSDATE, CFGETIHAO, CFERQUEHAO, CFPICI, CFZHUSHEID, 
+    CFIFYISALE, CFSUMZAIQTY, CFHUOZAIQTY, CFSUMCJCOUNT, CFNOWTAICI, CFNOWQINGQI, CFZUORUQTY, 
+    CFYOURUQTY, CFSOWPLANEQTY, CFSUMHAOLIAOQTY, CFSUMHAOLIAOAMT, CFSUMHAOYAOAMT, CFSUMHAOJINGAMT, 
+    CFFANQINGQTY, CFIFFAQING, CFLIUCHANQTY, CFJINGYEQTY, CFPEIZHONGQTY, CFFIRSTPEIZHONGDATE, 
+    CFYUJIFENMIANDATE, CFLASTDDDATE, CFISDISABLE, CFZAIFLKID, FKAICHANDATE
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from CT_PIG_ZPIGFLK
+    where FID = #{fid,jdbcType=VARCHAR}
+  </select>
+    <select id="selectByCfzhusheid" resultType="entity.CtPigZpigflk">
+      SELECT * FROM CT_PIG_ZPIGFLK p WHERE p.CFZHUSHEID = #{zhuSheid,jdbcType=VARCHAR}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from CT_PIG_ZPIGFLK
+    where FID = #{fid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" keyColumn="FID" keyProperty="fid" parameterType="entity.CtPigZpigflk" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into CT_PIG_ZPIGFLK (FCREATORID, FCREATETIME, FLASTUPDATEUSERID, 
+      FLASTUPDATETIME, FCONTROLUNITID, FNUMBER, 
+      FBIZDATE, FHANDLERID, FDESCRIPTION, 
+      FHASEFFECTED, FAUDITORID, FSOURCEBILLID, 
+      FSOURCEFUNCTION, CFORGUNITID, CFERHAO, 
+      CFGENETICSID, CFSEX, CFQUNTIID, 
+      CFSHCHANLINEID, CFJINJIAOXISHU, CFLAIYUANXZID, 
+      CFLAIYUANORGID, CFLAIYUANSHCHANLIN, CFWAIJINLAIYUANID, 
+      CFDATE, CFBORNDATE, CFBORNWT, 
+      CFDAYSWT, CFLICHANGDATE, CFLICHANGTYPEID, 
+      CFFIRSTCJDATE, CFFATHERERHAO, CFFUFUERHAO, 
+      CFFUMUERHAO, CFFATHERID, CFFUFUID, 
+      CFFUMUID, CFMOTHERERHAO, CFMUMUERHAO, 
+      CFMUFUERHAO, CFMOTHERID, CFMUMUID, 
+      CFMUFUID, CFNOWSTATUSID, CFZPIGXINGZHIID, 
+      CFYUANERHAO, CFPINXIID, CFNOWSTATUSDATE, 
+      CFGETIHAO, CFERQUEHAO, CFPICI, 
+      CFZHUSHEID, CFIFYISALE, CFSUMZAIQTY, 
+      CFHUOZAIQTY, CFSUMCJCOUNT, CFNOWTAICI, 
+      CFNOWQINGQI, CFZUORUQTY, CFYOURUQTY, 
+      CFSOWPLANEQTY, CFSUMHAOLIAOQTY, CFSUMHAOLIAOAMT, 
+      CFSUMHAOYAOAMT, CFSUMHAOJINGAMT, CFFANQINGQTY, 
+      CFIFFAQING, CFLIUCHANQTY, CFJINGYEQTY, 
+      CFPEIZHONGQTY, CFFIRSTPEIZHONGDATE, CFYUJIFENMIANDATE, 
+      CFLASTDDDATE, CFISDISABLE, CFZAIFLKID, 
+      FKAICHANDATE)
+    values (#{fcreatorid,jdbcType=VARCHAR}, #{fcreatetime,jdbcType=TIMESTAMP}, #{flastupdateuserid,jdbcType=VARCHAR}, 
+      #{flastupdatetime,jdbcType=TIMESTAMP}, #{fcontrolunitid,jdbcType=VARCHAR}, #{fnumber,jdbcType=VARCHAR}, 
+      #{fbizdate,jdbcType=TIMESTAMP}, #{fhandlerid,jdbcType=VARCHAR}, #{fdescription,jdbcType=VARCHAR}, 
+      #{fhaseffected,jdbcType=DECIMAL}, #{fauditorid,jdbcType=VARCHAR}, #{fsourcebillid,jdbcType=VARCHAR}, 
+      #{fsourcefunction,jdbcType=VARCHAR}, #{cforgunitid,jdbcType=VARCHAR}, #{cferhao,jdbcType=VARCHAR}, 
+      #{cfgeneticsid,jdbcType=VARCHAR}, #{cfsex,jdbcType=VARCHAR}, #{cfquntiid,jdbcType=VARCHAR}, 
+      #{cfshchanlineid,jdbcType=VARCHAR}, #{cfjinjiaoxishu,jdbcType=DECIMAL}, #{cflaiyuanxzid,jdbcType=VARCHAR}, 
+      #{cflaiyuanorgid,jdbcType=VARCHAR}, #{cflaiyuanshchanlin,jdbcType=VARCHAR}, #{cfwaijinlaiyuanid,jdbcType=VARCHAR}, 
+      #{cfdate,jdbcType=TIMESTAMP}, #{cfborndate,jdbcType=TIMESTAMP}, #{cfbornwt,jdbcType=DECIMAL}, 
+      #{cfdayswt,jdbcType=DECIMAL}, #{cflichangdate,jdbcType=TIMESTAMP}, #{cflichangtypeid,jdbcType=VARCHAR}, 
+      #{cffirstcjdate,jdbcType=TIMESTAMP}, #{cffathererhao,jdbcType=VARCHAR}, #{cffufuerhao,jdbcType=VARCHAR}, 
+      #{cffumuerhao,jdbcType=VARCHAR}, #{cffatherid,jdbcType=VARCHAR}, #{cffufuid,jdbcType=VARCHAR}, 
+      #{cffumuid,jdbcType=VARCHAR}, #{cfmothererhao,jdbcType=VARCHAR}, #{cfmumuerhao,jdbcType=VARCHAR}, 
+      #{cfmufuerhao,jdbcType=VARCHAR}, #{cfmotherid,jdbcType=VARCHAR}, #{cfmumuid,jdbcType=VARCHAR}, 
+      #{cfmufuid,jdbcType=VARCHAR}, #{cfnowstatusid,jdbcType=VARCHAR}, #{cfzpigxingzhiid,jdbcType=VARCHAR}, 
+      #{cfyuanerhao,jdbcType=VARCHAR}, #{cfpinxiid,jdbcType=VARCHAR}, #{cfnowstatusdate,jdbcType=TIMESTAMP}, 
+      #{cfgetihao,jdbcType=VARCHAR}, #{cferquehao,jdbcType=VARCHAR}, #{cfpici,jdbcType=VARCHAR}, 
+      #{cfzhusheid,jdbcType=VARCHAR}, #{cfifyisale,jdbcType=DECIMAL}, #{cfsumzaiqty,jdbcType=DECIMAL}, 
+      #{cfhuozaiqty,jdbcType=DECIMAL}, #{cfsumcjcount,jdbcType=DECIMAL}, #{cfnowtaici,jdbcType=DECIMAL}, 
+      #{cfnowqingqi,jdbcType=DECIMAL}, #{cfzuoruqty,jdbcType=DECIMAL}, #{cfyouruqty,jdbcType=DECIMAL}, 
+      #{cfsowplaneqty,jdbcType=DECIMAL}, #{cfsumhaoliaoqty,jdbcType=DECIMAL}, #{cfsumhaoliaoamt,jdbcType=DECIMAL}, 
+      #{cfsumhaoyaoamt,jdbcType=DECIMAL}, #{cfsumhaojingamt,jdbcType=DECIMAL}, #{cffanqingqty,jdbcType=DECIMAL}, 
+      #{cfiffaqing,jdbcType=DECIMAL}, #{cfliuchanqty,jdbcType=DECIMAL}, #{cfjingyeqty,jdbcType=DECIMAL}, 
+      #{cfpeizhongqty,jdbcType=DECIMAL}, #{cffirstpeizhongdate,jdbcType=TIMESTAMP}, #{cfyujifenmiandate,jdbcType=TIMESTAMP}, 
+      #{cflastdddate,jdbcType=TIMESTAMP}, #{cfisdisable,jdbcType=DECIMAL}, #{cfzaiflkid,jdbcType=VARCHAR}, 
+      #{fkaichandate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" keyColumn="FID" keyProperty="fid" parameterType="entity.CtPigZpigflk" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into CT_PIG_ZPIGFLK
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fcreatorid != null">
+        FCREATORID,
+      </if>
+      <if test="fcreatetime != null">
+        FCREATETIME,
+      </if>
+      <if test="flastupdateuserid != null">
+        FLASTUPDATEUSERID,
+      </if>
+      <if test="flastupdatetime != null">
+        FLASTUPDATETIME,
+      </if>
+      <if test="fcontrolunitid != null">
+        FCONTROLUNITID,
+      </if>
+      <if test="fnumber != null">
+        FNUMBER,
+      </if>
+      <if test="fbizdate != null">
+        FBIZDATE,
+      </if>
+      <if test="fhandlerid != null">
+        FHANDLERID,
+      </if>
+      <if test="fdescription != null">
+        FDESCRIPTION,
+      </if>
+      <if test="fhaseffected != null">
+        FHASEFFECTED,
+      </if>
+      <if test="fauditorid != null">
+        FAUDITORID,
+      </if>
+      <if test="fsourcebillid != null">
+        FSOURCEBILLID,
+      </if>
+      <if test="fsourcefunction != null">
+        FSOURCEFUNCTION,
+      </if>
+      <if test="cforgunitid != null">
+        CFORGUNITID,
+      </if>
+      <if test="cferhao != null">
+        CFERHAO,
+      </if>
+      <if test="cfgeneticsid != null">
+        CFGENETICSID,
+      </if>
+      <if test="cfsex != null">
+        CFSEX,
+      </if>
+      <if test="cfquntiid != null">
+        CFQUNTIID,
+      </if>
+      <if test="cfshchanlineid != null">
+        CFSHCHANLINEID,
+      </if>
+      <if test="cfjinjiaoxishu != null">
+        CFJINJIAOXISHU,
+      </if>
+      <if test="cflaiyuanxzid != null">
+        CFLAIYUANXZID,
+      </if>
+      <if test="cflaiyuanorgid != null">
+        CFLAIYUANORGID,
+      </if>
+      <if test="cflaiyuanshchanlin != null">
+        CFLAIYUANSHCHANLIN,
+      </if>
+      <if test="cfwaijinlaiyuanid != null">
+        CFWAIJINLAIYUANID,
+      </if>
+      <if test="cfdate != null">
+        CFDATE,
+      </if>
+      <if test="cfborndate != null">
+        CFBORNDATE,
+      </if>
+      <if test="cfbornwt != null">
+        CFBORNWT,
+      </if>
+      <if test="cfdayswt != null">
+        CFDAYSWT,
+      </if>
+      <if test="cflichangdate != null">
+        CFLICHANGDATE,
+      </if>
+      <if test="cflichangtypeid != null">
+        CFLICHANGTYPEID,
+      </if>
+      <if test="cffirstcjdate != null">
+        CFFIRSTCJDATE,
+      </if>
+      <if test="cffathererhao != null">
+        CFFATHERERHAO,
+      </if>
+      <if test="cffufuerhao != null">
+        CFFUFUERHAO,
+      </if>
+      <if test="cffumuerhao != null">
+        CFFUMUERHAO,
+      </if>
+      <if test="cffatherid != null">
+        CFFATHERID,
+      </if>
+      <if test="cffufuid != null">
+        CFFUFUID,
+      </if>
+      <if test="cffumuid != null">
+        CFFUMUID,
+      </if>
+      <if test="cfmothererhao != null">
+        CFMOTHERERHAO,
+      </if>
+      <if test="cfmumuerhao != null">
+        CFMUMUERHAO,
+      </if>
+      <if test="cfmufuerhao != null">
+        CFMUFUERHAO,
+      </if>
+      <if test="cfmotherid != null">
+        CFMOTHERID,
+      </if>
+      <if test="cfmumuid != null">
+        CFMUMUID,
+      </if>
+      <if test="cfmufuid != null">
+        CFMUFUID,
+      </if>
+      <if test="cfnowstatusid != null">
+        CFNOWSTATUSID,
+      </if>
+      <if test="cfzpigxingzhiid != null">
+        CFZPIGXINGZHIID,
+      </if>
+      <if test="cfyuanerhao != null">
+        CFYUANERHAO,
+      </if>
+      <if test="cfpinxiid != null">
+        CFPINXIID,
+      </if>
+      <if test="cfnowstatusdate != null">
+        CFNOWSTATUSDATE,
+      </if>
+      <if test="cfgetihao != null">
+        CFGETIHAO,
+      </if>
+      <if test="cferquehao != null">
+        CFERQUEHAO,
+      </if>
+      <if test="cfpici != null">
+        CFPICI,
+      </if>
+      <if test="cfzhusheid != null">
+        CFZHUSHEID,
+      </if>
+      <if test="cfifyisale != null">
+        CFIFYISALE,
+      </if>
+      <if test="cfsumzaiqty != null">
+        CFSUMZAIQTY,
+      </if>
+      <if test="cfhuozaiqty != null">
+        CFHUOZAIQTY,
+      </if>
+      <if test="cfsumcjcount != null">
+        CFSUMCJCOUNT,
+      </if>
+      <if test="cfnowtaici != null">
+        CFNOWTAICI,
+      </if>
+      <if test="cfnowqingqi != null">
+        CFNOWQINGQI,
+      </if>
+      <if test="cfzuoruqty != null">
+        CFZUORUQTY,
+      </if>
+      <if test="cfyouruqty != null">
+        CFYOURUQTY,
+      </if>
+      <if test="cfsowplaneqty != null">
+        CFSOWPLANEQTY,
+      </if>
+      <if test="cfsumhaoliaoqty != null">
+        CFSUMHAOLIAOQTY,
+      </if>
+      <if test="cfsumhaoliaoamt != null">
+        CFSUMHAOLIAOAMT,
+      </if>
+      <if test="cfsumhaoyaoamt != null">
+        CFSUMHAOYAOAMT,
+      </if>
+      <if test="cfsumhaojingamt != null">
+        CFSUMHAOJINGAMT,
+      </if>
+      <if test="cffanqingqty != null">
+        CFFANQINGQTY,
+      </if>
+      <if test="cfiffaqing != null">
+        CFIFFAQING,
+      </if>
+      <if test="cfliuchanqty != null">
+        CFLIUCHANQTY,
+      </if>
+      <if test="cfjingyeqty != null">
+        CFJINGYEQTY,
+      </if>
+      <if test="cfpeizhongqty != null">
+        CFPEIZHONGQTY,
+      </if>
+      <if test="cffirstpeizhongdate != null">
+        CFFIRSTPEIZHONGDATE,
+      </if>
+      <if test="cfyujifenmiandate != null">
+        CFYUJIFENMIANDATE,
+      </if>
+      <if test="cflastdddate != null">
+        CFLASTDDDATE,
+      </if>
+      <if test="cfisdisable != null">
+        CFISDISABLE,
+      </if>
+      <if test="cfzaiflkid != null">
+        CFZAIFLKID,
+      </if>
+      <if test="fkaichandate != null">
+        FKAICHANDATE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fcreatorid != null">
+        #{fcreatorid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcreatetime != null">
+        #{fcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flastupdateuserid != null">
+        #{flastupdateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="flastupdatetime != null">
+        #{flastupdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fcontrolunitid != null">
+        #{fcontrolunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="fnumber != null">
+        #{fnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fbizdate != null">
+        #{fbizdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fhandlerid != null">
+        #{fhandlerid,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescription != null">
+        #{fdescription,jdbcType=VARCHAR},
+      </if>
+      <if test="fhaseffected != null">
+        #{fhaseffected,jdbcType=DECIMAL},
+      </if>
+      <if test="fauditorid != null">
+        #{fauditorid,jdbcType=VARCHAR},
+      </if>
+      <if test="fsourcebillid != null">
+        #{fsourcebillid,jdbcType=VARCHAR},
+      </if>
+      <if test="fsourcefunction != null">
+        #{fsourcefunction,jdbcType=VARCHAR},
+      </if>
+      <if test="cforgunitid != null">
+        #{cforgunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="cferhao != null">
+        #{cferhao,jdbcType=VARCHAR},
+      </if>
+      <if test="cfgeneticsid != null">
+        #{cfgeneticsid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfsex != null">
+        #{cfsex,jdbcType=VARCHAR},
+      </if>
+      <if test="cfquntiid != null">
+        #{cfquntiid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfshchanlineid != null">
+        #{cfshchanlineid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfjinjiaoxishu != null">
+        #{cfjinjiaoxishu,jdbcType=DECIMAL},
+      </if>
+      <if test="cflaiyuanxzid != null">
+        #{cflaiyuanxzid,jdbcType=VARCHAR},
+      </if>
+      <if test="cflaiyuanorgid != null">
+        #{cflaiyuanorgid,jdbcType=VARCHAR},
+      </if>
+      <if test="cflaiyuanshchanlin != null">
+        #{cflaiyuanshchanlin,jdbcType=VARCHAR},
+      </if>
+      <if test="cfwaijinlaiyuanid != null">
+        #{cfwaijinlaiyuanid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfdate != null">
+        #{cfdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cfborndate != null">
+        #{cfborndate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cfbornwt != null">
+        #{cfbornwt,jdbcType=DECIMAL},
+      </if>
+      <if test="cfdayswt != null">
+        #{cfdayswt,jdbcType=DECIMAL},
+      </if>
+      <if test="cflichangdate != null">
+        #{cflichangdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cflichangtypeid != null">
+        #{cflichangtypeid,jdbcType=VARCHAR},
+      </if>
+      <if test="cffirstcjdate != null">
+        #{cffirstcjdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cffathererhao != null">
+        #{cffathererhao,jdbcType=VARCHAR},
+      </if>
+      <if test="cffufuerhao != null">
+        #{cffufuerhao,jdbcType=VARCHAR},
+      </if>
+      <if test="cffumuerhao != null">
+        #{cffumuerhao,jdbcType=VARCHAR},
+      </if>
+      <if test="cffatherid != null">
+        #{cffatherid,jdbcType=VARCHAR},
+      </if>
+      <if test="cffufuid != null">
+        #{cffufuid,jdbcType=VARCHAR},
+      </if>
+      <if test="cffumuid != null">
+        #{cffumuid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfmothererhao != null">
+        #{cfmothererhao,jdbcType=VARCHAR},
+      </if>
+      <if test="cfmumuerhao != null">
+        #{cfmumuerhao,jdbcType=VARCHAR},
+      </if>
+      <if test="cfmufuerhao != null">
+        #{cfmufuerhao,jdbcType=VARCHAR},
+      </if>
+      <if test="cfmotherid != null">
+        #{cfmotherid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfmumuid != null">
+        #{cfmumuid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfmufuid != null">
+        #{cfmufuid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfnowstatusid != null">
+        #{cfnowstatusid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfzpigxingzhiid != null">
+        #{cfzpigxingzhiid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfyuanerhao != null">
+        #{cfyuanerhao,jdbcType=VARCHAR},
+      </if>
+      <if test="cfpinxiid != null">
+        #{cfpinxiid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfnowstatusdate != null">
+        #{cfnowstatusdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cfgetihao != null">
+        #{cfgetihao,jdbcType=VARCHAR},
+      </if>
+      <if test="cferquehao != null">
+        #{cferquehao,jdbcType=VARCHAR},
+      </if>
+      <if test="cfpici != null">
+        #{cfpici,jdbcType=VARCHAR},
+      </if>
+      <if test="cfzhusheid != null">
+        #{cfzhusheid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfifyisale != null">
+        #{cfifyisale,jdbcType=DECIMAL},
+      </if>
+      <if test="cfsumzaiqty != null">
+        #{cfsumzaiqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfhuozaiqty != null">
+        #{cfhuozaiqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfsumcjcount != null">
+        #{cfsumcjcount,jdbcType=DECIMAL},
+      </if>
+      <if test="cfnowtaici != null">
+        #{cfnowtaici,jdbcType=DECIMAL},
+      </if>
+      <if test="cfnowqingqi != null">
+        #{cfnowqingqi,jdbcType=DECIMAL},
+      </if>
+      <if test="cfzuoruqty != null">
+        #{cfzuoruqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfyouruqty != null">
+        #{cfyouruqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfsowplaneqty != null">
+        #{cfsowplaneqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfsumhaoliaoqty != null">
+        #{cfsumhaoliaoqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfsumhaoliaoamt != null">
+        #{cfsumhaoliaoamt,jdbcType=DECIMAL},
+      </if>
+      <if test="cfsumhaoyaoamt != null">
+        #{cfsumhaoyaoamt,jdbcType=DECIMAL},
+      </if>
+      <if test="cfsumhaojingamt != null">
+        #{cfsumhaojingamt,jdbcType=DECIMAL},
+      </if>
+      <if test="cffanqingqty != null">
+        #{cffanqingqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfiffaqing != null">
+        #{cfiffaqing,jdbcType=DECIMAL},
+      </if>
+      <if test="cfliuchanqty != null">
+        #{cfliuchanqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfjingyeqty != null">
+        #{cfjingyeqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfpeizhongqty != null">
+        #{cfpeizhongqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cffirstpeizhongdate != null">
+        #{cffirstpeizhongdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cfyujifenmiandate != null">
+        #{cfyujifenmiandate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cflastdddate != null">
+        #{cflastdddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cfisdisable != null">
+        #{cfisdisable,jdbcType=DECIMAL},
+      </if>
+      <if test="cfzaiflkid != null">
+        #{cfzaiflkid,jdbcType=VARCHAR},
+      </if>
+      <if test="fkaichandate != null">
+        #{fkaichandate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="entity.CtPigZpigflk">
+    <!--@mbg.generated-->
+    update CT_PIG_ZPIGFLK
+    <set>
+      <if test="fcreatorid != null">
+        FCREATORID = #{fcreatorid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcreatetime != null">
+        FCREATETIME = #{fcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flastupdateuserid != null">
+        FLASTUPDATEUSERID = #{flastupdateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="flastupdatetime != null">
+        FLASTUPDATETIME = #{flastupdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fcontrolunitid != null">
+        FCONTROLUNITID = #{fcontrolunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="fnumber != null">
+        FNUMBER = #{fnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fbizdate != null">
+        FBIZDATE = #{fbizdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fhandlerid != null">
+        FHANDLERID = #{fhandlerid,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescription != null">
+        FDESCRIPTION = #{fdescription,jdbcType=VARCHAR},
+      </if>
+      <if test="fhaseffected != null">
+        FHASEFFECTED = #{fhaseffected,jdbcType=DECIMAL},
+      </if>
+      <if test="fauditorid != null">
+        FAUDITORID = #{fauditorid,jdbcType=VARCHAR},
+      </if>
+      <if test="fsourcebillid != null">
+        FSOURCEBILLID = #{fsourcebillid,jdbcType=VARCHAR},
+      </if>
+      <if test="fsourcefunction != null">
+        FSOURCEFUNCTION = #{fsourcefunction,jdbcType=VARCHAR},
+      </if>
+      <if test="cforgunitid != null">
+        CFORGUNITID = #{cforgunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="cferhao != null">
+        CFERHAO = #{cferhao,jdbcType=VARCHAR},
+      </if>
+      <if test="cfgeneticsid != null">
+        CFGENETICSID = #{cfgeneticsid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfsex != null">
+        CFSEX = #{cfsex,jdbcType=VARCHAR},
+      </if>
+      <if test="cfquntiid != null">
+        CFQUNTIID = #{cfquntiid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfshchanlineid != null">
+        CFSHCHANLINEID = #{cfshchanlineid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfjinjiaoxishu != null">
+        CFJINJIAOXISHU = #{cfjinjiaoxishu,jdbcType=DECIMAL},
+      </if>
+      <if test="cflaiyuanxzid != null">
+        CFLAIYUANXZID = #{cflaiyuanxzid,jdbcType=VARCHAR},
+      </if>
+      <if test="cflaiyuanorgid != null">
+        CFLAIYUANORGID = #{cflaiyuanorgid,jdbcType=VARCHAR},
+      </if>
+      <if test="cflaiyuanshchanlin != null">
+        CFLAIYUANSHCHANLIN = #{cflaiyuanshchanlin,jdbcType=VARCHAR},
+      </if>
+      <if test="cfwaijinlaiyuanid != null">
+        CFWAIJINLAIYUANID = #{cfwaijinlaiyuanid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfdate != null">
+        CFDATE = #{cfdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cfborndate != null">
+        CFBORNDATE = #{cfborndate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cfbornwt != null">
+        CFBORNWT = #{cfbornwt,jdbcType=DECIMAL},
+      </if>
+      <if test="cfdayswt != null">
+        CFDAYSWT = #{cfdayswt,jdbcType=DECIMAL},
+      </if>
+      <if test="cflichangdate != null">
+        CFLICHANGDATE = #{cflichangdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cflichangtypeid != null">
+        CFLICHANGTYPEID = #{cflichangtypeid,jdbcType=VARCHAR},
+      </if>
+      <if test="cffirstcjdate != null">
+        CFFIRSTCJDATE = #{cffirstcjdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cffathererhao != null">
+        CFFATHERERHAO = #{cffathererhao,jdbcType=VARCHAR},
+      </if>
+      <if test="cffufuerhao != null">
+        CFFUFUERHAO = #{cffufuerhao,jdbcType=VARCHAR},
+      </if>
+      <if test="cffumuerhao != null">
+        CFFUMUERHAO = #{cffumuerhao,jdbcType=VARCHAR},
+      </if>
+      <if test="cffatherid != null">
+        CFFATHERID = #{cffatherid,jdbcType=VARCHAR},
+      </if>
+      <if test="cffufuid != null">
+        CFFUFUID = #{cffufuid,jdbcType=VARCHAR},
+      </if>
+      <if test="cffumuid != null">
+        CFFUMUID = #{cffumuid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfmothererhao != null">
+        CFMOTHERERHAO = #{cfmothererhao,jdbcType=VARCHAR},
+      </if>
+      <if test="cfmumuerhao != null">
+        CFMUMUERHAO = #{cfmumuerhao,jdbcType=VARCHAR},
+      </if>
+      <if test="cfmufuerhao != null">
+        CFMUFUERHAO = #{cfmufuerhao,jdbcType=VARCHAR},
+      </if>
+      <if test="cfmotherid != null">
+        CFMOTHERID = #{cfmotherid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfmumuid != null">
+        CFMUMUID = #{cfmumuid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfmufuid != null">
+        CFMUFUID = #{cfmufuid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfnowstatusid != null">
+        CFNOWSTATUSID = #{cfnowstatusid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfzpigxingzhiid != null">
+        CFZPIGXINGZHIID = #{cfzpigxingzhiid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfyuanerhao != null">
+        CFYUANERHAO = #{cfyuanerhao,jdbcType=VARCHAR},
+      </if>
+      <if test="cfpinxiid != null">
+        CFPINXIID = #{cfpinxiid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfnowstatusdate != null">
+        CFNOWSTATUSDATE = #{cfnowstatusdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cfgetihao != null">
+        CFGETIHAO = #{cfgetihao,jdbcType=VARCHAR},
+      </if>
+      <if test="cferquehao != null">
+        CFERQUEHAO = #{cferquehao,jdbcType=VARCHAR},
+      </if>
+      <if test="cfpici != null">
+        CFPICI = #{cfpici,jdbcType=VARCHAR},
+      </if>
+      <if test="cfzhusheid != null">
+        CFZHUSHEID = #{cfzhusheid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfifyisale != null">
+        CFIFYISALE = #{cfifyisale,jdbcType=DECIMAL},
+      </if>
+      <if test="cfsumzaiqty != null">
+        CFSUMZAIQTY = #{cfsumzaiqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfhuozaiqty != null">
+        CFHUOZAIQTY = #{cfhuozaiqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfsumcjcount != null">
+        CFSUMCJCOUNT = #{cfsumcjcount,jdbcType=DECIMAL},
+      </if>
+      <if test="cfnowtaici != null">
+        CFNOWTAICI = #{cfnowtaici,jdbcType=DECIMAL},
+      </if>
+      <if test="cfnowqingqi != null">
+        CFNOWQINGQI = #{cfnowqingqi,jdbcType=DECIMAL},
+      </if>
+      <if test="cfzuoruqty != null">
+        CFZUORUQTY = #{cfzuoruqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfyouruqty != null">
+        CFYOURUQTY = #{cfyouruqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfsowplaneqty != null">
+        CFSOWPLANEQTY = #{cfsowplaneqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfsumhaoliaoqty != null">
+        CFSUMHAOLIAOQTY = #{cfsumhaoliaoqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfsumhaoliaoamt != null">
+        CFSUMHAOLIAOAMT = #{cfsumhaoliaoamt,jdbcType=DECIMAL},
+      </if>
+      <if test="cfsumhaoyaoamt != null">
+        CFSUMHAOYAOAMT = #{cfsumhaoyaoamt,jdbcType=DECIMAL},
+      </if>
+      <if test="cfsumhaojingamt != null">
+        CFSUMHAOJINGAMT = #{cfsumhaojingamt,jdbcType=DECIMAL},
+      </if>
+      <if test="cffanqingqty != null">
+        CFFANQINGQTY = #{cffanqingqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfiffaqing != null">
+        CFIFFAQING = #{cfiffaqing,jdbcType=DECIMAL},
+      </if>
+      <if test="cfliuchanqty != null">
+        CFLIUCHANQTY = #{cfliuchanqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfjingyeqty != null">
+        CFJINGYEQTY = #{cfjingyeqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfpeizhongqty != null">
+        CFPEIZHONGQTY = #{cfpeizhongqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cffirstpeizhongdate != null">
+        CFFIRSTPEIZHONGDATE = #{cffirstpeizhongdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cfyujifenmiandate != null">
+        CFYUJIFENMIANDATE = #{cfyujifenmiandate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cflastdddate != null">
+        CFLASTDDDATE = #{cflastdddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cfisdisable != null">
+        CFISDISABLE = #{cfisdisable,jdbcType=DECIMAL},
+      </if>
+      <if test="cfzaiflkid != null">
+        CFZAIFLKID = #{cfzaiflkid,jdbcType=VARCHAR},
+      </if>
+      <if test="fkaichandate != null">
+        FKAICHANDATE = #{fkaichandate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where FID = #{fid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="entity.CtPigZpigflk">
+    <!--@mbg.generated-->
+    update CT_PIG_ZPIGFLK
+    set FCREATORID = #{fcreatorid,jdbcType=VARCHAR},
+      FCREATETIME = #{fcreatetime,jdbcType=TIMESTAMP},
+      FLASTUPDATEUSERID = #{flastupdateuserid,jdbcType=VARCHAR},
+      FLASTUPDATETIME = #{flastupdatetime,jdbcType=TIMESTAMP},
+      FCONTROLUNITID = #{fcontrolunitid,jdbcType=VARCHAR},
+      FNUMBER = #{fnumber,jdbcType=VARCHAR},
+      FBIZDATE = #{fbizdate,jdbcType=TIMESTAMP},
+      FHANDLERID = #{fhandlerid,jdbcType=VARCHAR},
+      FDESCRIPTION = #{fdescription,jdbcType=VARCHAR},
+      FHASEFFECTED = #{fhaseffected,jdbcType=DECIMAL},
+      FAUDITORID = #{fauditorid,jdbcType=VARCHAR},
+      FSOURCEBILLID = #{fsourcebillid,jdbcType=VARCHAR},
+      FSOURCEFUNCTION = #{fsourcefunction,jdbcType=VARCHAR},
+      CFORGUNITID = #{cforgunitid,jdbcType=VARCHAR},
+      CFERHAO = #{cferhao,jdbcType=VARCHAR},
+      CFGENETICSID = #{cfgeneticsid,jdbcType=VARCHAR},
+      CFSEX = #{cfsex,jdbcType=VARCHAR},
+      CFQUNTIID = #{cfquntiid,jdbcType=VARCHAR},
+      CFSHCHANLINEID = #{cfshchanlineid,jdbcType=VARCHAR},
+      CFJINJIAOXISHU = #{cfjinjiaoxishu,jdbcType=DECIMAL},
+      CFLAIYUANXZID = #{cflaiyuanxzid,jdbcType=VARCHAR},
+      CFLAIYUANORGID = #{cflaiyuanorgid,jdbcType=VARCHAR},
+      CFLAIYUANSHCHANLIN = #{cflaiyuanshchanlin,jdbcType=VARCHAR},
+      CFWAIJINLAIYUANID = #{cfwaijinlaiyuanid,jdbcType=VARCHAR},
+      CFDATE = #{cfdate,jdbcType=TIMESTAMP},
+      CFBORNDATE = #{cfborndate,jdbcType=TIMESTAMP},
+      CFBORNWT = #{cfbornwt,jdbcType=DECIMAL},
+      CFDAYSWT = #{cfdayswt,jdbcType=DECIMAL},
+      CFLICHANGDATE = #{cflichangdate,jdbcType=TIMESTAMP},
+      CFLICHANGTYPEID = #{cflichangtypeid,jdbcType=VARCHAR},
+      CFFIRSTCJDATE = #{cffirstcjdate,jdbcType=TIMESTAMP},
+      CFFATHERERHAO = #{cffathererhao,jdbcType=VARCHAR},
+      CFFUFUERHAO = #{cffufuerhao,jdbcType=VARCHAR},
+      CFFUMUERHAO = #{cffumuerhao,jdbcType=VARCHAR},
+      CFFATHERID = #{cffatherid,jdbcType=VARCHAR},
+      CFFUFUID = #{cffufuid,jdbcType=VARCHAR},
+      CFFUMUID = #{cffumuid,jdbcType=VARCHAR},
+      CFMOTHERERHAO = #{cfmothererhao,jdbcType=VARCHAR},
+      CFMUMUERHAO = #{cfmumuerhao,jdbcType=VARCHAR},
+      CFMUFUERHAO = #{cfmufuerhao,jdbcType=VARCHAR},
+      CFMOTHERID = #{cfmotherid,jdbcType=VARCHAR},
+      CFMUMUID = #{cfmumuid,jdbcType=VARCHAR},
+      CFMUFUID = #{cfmufuid,jdbcType=VARCHAR},
+      CFNOWSTATUSID = #{cfnowstatusid,jdbcType=VARCHAR},
+      CFZPIGXINGZHIID = #{cfzpigxingzhiid,jdbcType=VARCHAR},
+      CFYUANERHAO = #{cfyuanerhao,jdbcType=VARCHAR},
+      CFPINXIID = #{cfpinxiid,jdbcType=VARCHAR},
+      CFNOWSTATUSDATE = #{cfnowstatusdate,jdbcType=TIMESTAMP},
+      CFGETIHAO = #{cfgetihao,jdbcType=VARCHAR},
+      CFERQUEHAO = #{cferquehao,jdbcType=VARCHAR},
+      CFPICI = #{cfpici,jdbcType=VARCHAR},
+      CFZHUSHEID = #{cfzhusheid,jdbcType=VARCHAR},
+      CFIFYISALE = #{cfifyisale,jdbcType=DECIMAL},
+      CFSUMZAIQTY = #{cfsumzaiqty,jdbcType=DECIMAL},
+      CFHUOZAIQTY = #{cfhuozaiqty,jdbcType=DECIMAL},
+      CFSUMCJCOUNT = #{cfsumcjcount,jdbcType=DECIMAL},
+      CFNOWTAICI = #{cfnowtaici,jdbcType=DECIMAL},
+      CFNOWQINGQI = #{cfnowqingqi,jdbcType=DECIMAL},
+      CFZUORUQTY = #{cfzuoruqty,jdbcType=DECIMAL},
+      CFYOURUQTY = #{cfyouruqty,jdbcType=DECIMAL},
+      CFSOWPLANEQTY = #{cfsowplaneqty,jdbcType=DECIMAL},
+      CFSUMHAOLIAOQTY = #{cfsumhaoliaoqty,jdbcType=DECIMAL},
+      CFSUMHAOLIAOAMT = #{cfsumhaoliaoamt,jdbcType=DECIMAL},
+      CFSUMHAOYAOAMT = #{cfsumhaoyaoamt,jdbcType=DECIMAL},
+      CFSUMHAOJINGAMT = #{cfsumhaojingamt,jdbcType=DECIMAL},
+      CFFANQINGQTY = #{cffanqingqty,jdbcType=DECIMAL},
+      CFIFFAQING = #{cfiffaqing,jdbcType=DECIMAL},
+      CFLIUCHANQTY = #{cfliuchanqty,jdbcType=DECIMAL},
+      CFJINGYEQTY = #{cfjingyeqty,jdbcType=DECIMAL},
+      CFPEIZHONGQTY = #{cfpeizhongqty,jdbcType=DECIMAL},
+      CFFIRSTPEIZHONGDATE = #{cffirstpeizhongdate,jdbcType=TIMESTAMP},
+      CFYUJIFENMIANDATE = #{cfyujifenmiandate,jdbcType=TIMESTAMP},
+      CFLASTDDDATE = #{cflastdddate,jdbcType=TIMESTAMP},
+      CFISDISABLE = #{cfisdisable,jdbcType=DECIMAL},
+      CFZAIFLKID = #{cfzaiflkid,jdbcType=VARCHAR},
+      FKAICHANDATE = #{fkaichandate,jdbcType=TIMESTAMP}
+    where FID = #{fid,jdbcType=VARCHAR}
+  </update>
+</mapper>

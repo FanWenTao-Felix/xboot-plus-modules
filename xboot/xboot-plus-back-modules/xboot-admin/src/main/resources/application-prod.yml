@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    dynamic:
+      p6spy: false
+      druid:
+        filters: stat
+      primary: master
+      strict: false
+      datasource:
+        master:
+          url: jdbc:mysql://192.168.1.69:3306/xboot?useUnicode=true&characterEncoding=utf-8&useSSL=false
+          username: root
+          type: com.alibaba.druid.pool.DruidDataSource
+          driverClassName: com.mysql.jdbc.Driver
+        slave1:
+          url: jdbc:oracle:thin:@192.168.0.84:1521/ORCL
+          username: lihua
+          password: LIHUA321
+          driverClassName: oracle.jdbc.driver.OracleDriver
+  redis:
+    host: 127.0.0.1
+    password:
+    # 数据库索引 默认0
+    database: 14
+    port: 6379
+    # 超时时间 Duration类型 3秒
+    timeout: 3S

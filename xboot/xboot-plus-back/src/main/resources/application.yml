@@ -15,10 +15,10 @@ server:
 spring:
   # 数据源
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/xboot?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://192.168.1.69:3306/xboot?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
-    # Jasypt加密 可到common-utils中找到JasyptUtil加解密工具类生成加密结果 格式为ENC(加密结果) 以下解密结果为123456
-    password: ENC(PYVnAYh+j5C3jkMV1d+myj6JzDaUk7pcfTWUaYsvQdEVkuvIVf7Y0mOU9XkffxT8)
+    # Jasypt加密 可到common-utils中找到JasyptUtil加解密工具类生成加密结果 格式为ENC(加密结果) 以下解密结果为root
+    password: root
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
     # Druid StatViewServlet配置
@@ -51,7 +51,7 @@ spring:
   jpa:
     # 显示sql
     show-sql: true
-    # 自动生成表结构 关闭设为none
+    # 自动生成表结构
     hibernate:
       ddl-auto: update
   # Redis
@@ -59,7 +59,7 @@ spring:
     host: 127.0.0.1
     password:
     # 数据库索引 默认0
-    database: 0
+    database: 1
     port: 6379
     # 超时时间 Duration类型 3秒
     timeout: 3S
@@ -131,7 +131,7 @@ xboot:
     redis: true
     # 是否开启单设备登陆 仅当token交互方式为redis时生效
     sdl: true
-    # token中存储用户权限数据 开启后可避免每次请求再获取用户权限，但有可能导致编辑权限菜单后无法读取到最新权限数据（需用户重新登录）
+    # token中存储用户权限数据 设为true开启后可避免每次请求再获取用户权限，但有可能导致编辑权限菜单后无法读取到最新权限数据（需用户重新登录）
     storePerms: true
     # token过期时间 redis模式有请求自动刷新（分钟）
     tokenExpireTime: 60
@@ -143,7 +143,7 @@ xboot:
     loginAfterTime: 10
   # app应用 token交互配置
   appToken:
-    # 是否开启同一平台单设备登陆（如安卓设备只允许登录一个相同账号，IOS设备可允许一个设备同时登陆）
+    # 是否开启同一平台单设备登陆（如安卓设备只允许登录一个相同账号，同时IOS设备可允许一个设备登陆）
     spl: true
     # token过期时间 有请求自动刷新（天）
     tokenExpireTime: 30
