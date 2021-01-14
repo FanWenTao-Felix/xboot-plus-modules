@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="dao.CtPigCompletestatusDao">
-  <resultMap id="BaseResultMap" type="entity.CtPigCompletestatus">
+<mapper namespace="dao.CtPigApplicationstatusDao">
+  <resultMap id="BaseResultMap" type="entity.CtPigApplicationstatus">
     <!--@mbg.generated-->
     <id column="FID" jdbcType="VARCHAR" property="fid" />
     <result column="FNUMBER" jdbcType="VARCHAR" property="fnumber" />
@@ -27,20 +27,17 @@
     <!--@mbg.generated-->
     select 
     <include refid="Base_Column_List" />
-    from CT_PIG_COMPLETESTATUS
+    from CT_PIG_APPLICATIONSTATUS
     where FID = #{fid,jdbcType=VARCHAR}
   </select>
-    <select id="selectAll" resultType="entity.CtPigCompletestatus">
-      select <include refid="Base_Column_List" /> from CT_PIG_COMPLETESTATUS
-    </select>
-    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     <!--@mbg.generated-->
-    delete from CT_PIG_COMPLETESTATUS
+    delete from CT_PIG_APPLICATIONSTATUS
     where FID = #{fid,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" keyColumn="FID" keyProperty="fid" parameterType="entity.CtPigCompletestatus" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="FID" keyProperty="fid" parameterType="entity.CtPigApplicationstatus" useGeneratedKeys="true">
     <!--@mbg.generated-->
-    insert into CT_PIG_COMPLETESTATUS (FNUMBER, FSIMPLENAME, FCREATORID, 
+    insert into CT_PIG_APPLICATIONSTATUS (FNUMBER, FSIMPLENAME, FCREATORID, 
       FCREATETIME, FLASTUPDATEUSERID, FLASTUPDATETIME, 
       FCONTROLUNITID, FNAME_L1, FNAME_L2, 
       FNAME_L3, FDESCRIPTION_L1, FDESCRIPTION_L2, 
@@ -51,9 +48,9 @@
       #{fnameL3,jdbcType=VARCHAR}, #{fdescriptionL1,jdbcType=VARCHAR}, #{fdescriptionL2,jdbcType=VARCHAR}, 
       #{fdescriptionL3,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" keyColumn="FID" keyProperty="fid" parameterType="entity.CtPigCompletestatus" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="FID" keyProperty="fid" parameterType="entity.CtPigApplicationstatus" useGeneratedKeys="true">
     <!--@mbg.generated-->
-    insert into CT_PIG_COMPLETESTATUS
+    insert into CT_PIG_APPLICATIONSTATUS
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="fnumber != null">
         FNUMBER,
@@ -137,9 +134,9 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="entity.CtPigCompletestatus">
+  <update id="updateByPrimaryKeySelective" parameterType="entity.CtPigApplicationstatus">
     <!--@mbg.generated-->
-    update CT_PIG_COMPLETESTATUS
+    update CT_PIG_APPLICATIONSTATUS
     <set>
       <if test="fnumber != null">
         FNUMBER = #{fnumber,jdbcType=VARCHAR},
@@ -183,9 +180,9 @@
     </set>
     where FID = #{fid,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="entity.CtPigCompletestatus">
+  <update id="updateByPrimaryKey" parameterType="entity.CtPigApplicationstatus">
     <!--@mbg.generated-->
-    update CT_PIG_COMPLETESTATUS
+    update CT_PIG_APPLICATIONSTATUS
     set FNUMBER = #{fnumber,jdbcType=VARCHAR},
       FSIMPLENAME = #{fsimplename,jdbcType=VARCHAR},
       FCREATORID = #{fcreatorid,jdbcType=VARCHAR},

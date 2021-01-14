@@ -12,4 +12,10 @@ public interface TPmUserService {
      * @return 用户String
      */
     String selectUser(String openId);
+
+    /**
+     * 获取组织信息
+     * @return 组织信息
+     */
+    String selectOrgUrl();
 }

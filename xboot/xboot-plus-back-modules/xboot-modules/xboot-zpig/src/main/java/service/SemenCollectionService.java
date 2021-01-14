@@ -15,4 +15,11 @@ public interface SemenCollectionService {
      * @return list
      */
     List<CtPigSemencollection> selectByCollectors(String executorID);
+
+    /**
+     * 采集计划状态改变
+     * @param fids 单据编号
+     * @return  list
+     */
+    List<Integer> updateByFidsInts(List<String> fids);
 }

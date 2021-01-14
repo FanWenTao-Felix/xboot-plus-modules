@@ -403,4 +403,9 @@
       CFISCOLLECTED = #{cfiscollected,jdbcType=DECIMAL}
     where FID = #{fid,jdbcType=VARCHAR}
   </update>
+  <update id="updatDesign">
+    update CT_PIG_SEMENCOLLECTION
+    set CFDESIGNSTATUSID = 'kvYAABM5rUentvOu'
+    where FID = #{fid,jdbcType=VARCHAR}
+  </update>
 </mapper>

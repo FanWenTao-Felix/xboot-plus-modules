@@ -48,6 +48,7 @@ public interface CollectionRecordService {
     /**
      * 批量审核
      * @param records 记录
+     * @param TPmUser 用户
      * @return list
      */
     List<Integer> updateIfAufits(List<CtPigCollectionrecord> records, TPmUser TPmUser);

@@ -2,6 +2,8 @@ package dao;
 
 import entity.CtPigCompletestatus;
 
+import java.util.List;
+
 /**
  * @Entity entity.CtPigCompletestatus
  */
@@ -35,4 +37,10 @@ public interface CtPigCompletestatusDao {
      * @mbg.generated
      */
     int updateByPrimaryKey(CtPigCompletestatus record);
+
+    /**
+     * 查询所有
+     * @return list
+     */
+    List<CtPigCompletestatus> selectAll();
 }

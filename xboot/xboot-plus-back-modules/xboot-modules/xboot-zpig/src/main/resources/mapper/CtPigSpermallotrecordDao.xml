@@ -56,13 +56,22 @@
     where FID = #{fid,jdbcType=VARCHAR}
   </select>
     <select id="selectAllByFbizdates" resultType="entity.CtPigSpermallotrecord">
-      select * from CT_PIG_SPERMALLOTRECORD s where s.CFORGUNITID = #{orgId} and s.FBIZDATE &lt;= #{endDate} and s.FBIZDATE >= #{startDate}
+      select * from CT_PIG_SPERMALLOTRECORD s where s.CFAPPLICATIONID = #{applicationId} and s.FBIZDATE &lt;= #{endDate} and s.FBIZDATE >= #{startDate}
     </select>
   <select id="selectAllByIntervaList" resultType="entity.CtPigSpermallotrecord">
     SELECT * FROM CT_PIG_SPERMALLOTRECORD s
                     LEFT JOIN (select to_char (sysdate- level + 1, 'yyyy-mm-dd hh24:mi:ss') today
                                FROM DUAL connect BY LEVEL &lt;= 7) days on days.today = s.FCREATETIME
-    WHERE s.CFORGUNITID = #{storageId,jdbcType=VARCHAR} ORDER BY s.FCREATETIME
+    WHERE s.CFAPPLICATIONID = #{applicationId,jdbcType=VARCHAR} ORDER BY s.FCREATETIME
+  </select>
+  <select id="selectAll" resultType="entity.CtPigSpermallotrecord">
+    select * from CT_PIG_SPERMALLOTRECORD s
+    left join CT_PIG_ZPIGFLK z on z.CFERHAO = s.CFEARNUMBERID
+    <where>
+      <!-- 使用 bind 标签,对字符串进行绑定,然后对绑定后的字符串使用 like 关键字进行模糊查询 -->
+      <bind name="pattern" value="'%'+fuzzy+'%'"/>
+        z.CFERHAO like #{pattern} or s.CFBATCHNUMBER like #{pattern}
+    </where>
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     <!--@mbg.generated-->
@@ -455,5 +464,9 @@
       CFSHCHANLINEID = #{cfshchanlineid,jdbcType=VARCHAR},
       CFSOURCEORGUNITID = #{cfsourceorgunitid,jdbcType=VARCHAR}
     where FID = #{fid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateIfAuditByFid">
+    update CT_PIG_SPERMALLOTRECORD c set c.CFIFAUDITING = '1', c.CFAUDITUSERID = #{userId,jdbcType=VARCHAR}
+    where c.FID = #{fid,jdbcType=VARCHAR}
   </update>
 </mapper>

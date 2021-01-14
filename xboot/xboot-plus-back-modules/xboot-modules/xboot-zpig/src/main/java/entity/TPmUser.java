@@ -2,17 +2,24 @@ package entity;
 
 import java.io.Serializable;
 import java.util.Date;
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+
+import com.baomidou.mybatisplus.annotation.TableName;
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 
 /**
  * @TableName T_PM_USER
  */
 @Table(name="T_PM_USER")
+@TableName("T_PM_USER")
 @Data
+@Entity
+@DynamicInsert
+@DynamicUpdate
+@ApiModel(value = "用户")
 public class TPmUser implements Serializable {
     /**
      * 

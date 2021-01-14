@@ -3,6 +3,28 @@
   <component name="PersistentConfig">
     <option name="historyConfigList">
       <map>
+        <entry key="CT_PIG_APPLICATIONSTATUS">
+          <value>
+            <Config>
+              <option name="annotation" value="true" />
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="CtPigApplicationstatusDao" />
+              <option name="daoPackage" value="dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="CtPigApplicationstatus" />
+              <option name="modelPackage" value="entity" />
+              <option name="name" value="CT_PIG_APPLICATIONSTATUS" />
+              <option name="primaryKey" value="FID" />
+              <option name="projectFolder" value="$PROJECT_DIR$/xboot/xboot-plus-back-modules/xboot-modules/xboot-zpig" />
+              <option name="tableName" value="CT_PIG_APPLICATIONSTATUS" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="mapper" />
+            </Config>
+          </value>
+        </entry>
         <entry key="CT_PIG_COLLECTIONRECORD">
           <value>
             <Config>
@@ -41,6 +63,50 @@
               <option name="primaryKey" value="FID" />
               <option name="projectFolder" value="$PROJECT_DIR$/xboot/xboot-plus-back-modules/xboot-modules/xboot-zpig" />
               <option name="tableName" value="CT_PIG_COMPLETESTATUS" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="CT_PIG_DEMANDAPPLICATION">
+          <value>
+            <Config>
+              <option name="annotation" value="true" />
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="CtPigDemandapplicationDao" />
+              <option name="daoPackage" value="dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="CtPigDemandapplication" />
+              <option name="modelPackage" value="entity" />
+              <option name="name" value="CT_PIG_DEMANDAPPLICATION" />
+              <option name="primaryKey" value="FID" />
+              <option name="projectFolder" value="$PROJECT_DIR$/xboot/xboot-plus-back-modules/xboot-modules/xboot-zpig" />
+              <option name="tableName" value="CT_PIG_DEMANDAPPLICATION" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="CT_PIG_JINYEARCHIVES">
+          <value>
+            <Config>
+              <option name="annotation" value="true" />
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="CtPigJinyearchivesDao" />
+              <option name="daoPackage" value="dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="CtPigJinyearchives" />
+              <option name="modelPackage" value="entity" />
+              <option name="name" value="CT_PIG_JINYEARCHIVES" />
+              <option name="primaryKey" value="FID" />
+              <option name="projectFolder" value="$PROJECT_DIR$/xboot/xboot-plus-back-modules/xboot-modules/xboot-zpig" />
+              <option name="tableName" value="CT_PIG_JINYEARCHIVES" />
               <option name="useLombokPlugin" value="true" />
               <option name="xmlMvnPath" value="src/main/resources" />
               <option name="xmlPackage" value="mapper" />

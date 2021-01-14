@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.CtPigJinyearchivesDao">
+  <resultMap id="BaseResultMap" type="entity.CtPigJinyearchives">
+    <!--@mbg.generated-->
+    <id column="FID" jdbcType="VARCHAR" property="fid" />
+    <result column="FCREATORID" jdbcType="VARCHAR" property="fcreatorid" />
+    <result column="FCREATETIME" jdbcType="TIMESTAMP" property="fcreatetime" />
+    <result column="FLASTUPDATEUSERID" jdbcType="VARCHAR" property="flastupdateuserid" />
+    <result column="FLASTUPDATETIME" jdbcType="TIMESTAMP" property="flastupdatetime" />
+    <result column="FCONTROLUNITID" jdbcType="VARCHAR" property="fcontrolunitid" />
+    <result column="FNUMBER" jdbcType="VARCHAR" property="fnumber" />
+    <result column="FBIZDATE" jdbcType="TIMESTAMP" property="fbizdate" />
+    <result column="FHANDLERID" jdbcType="VARCHAR" property="fhandlerid" />
+    <result column="FDESCRIPTION" jdbcType="VARCHAR" property="fdescription" />
+    <result column="FHASEFFECTED" jdbcType="DECIMAL" property="fhaseffected" />
+    <result column="FAUDITORID" jdbcType="VARCHAR" property="fauditorid" />
+    <result column="FSOURCEBILLID" jdbcType="VARCHAR" property="fsourcebillid" />
+    <result column="FSOURCEFUNCTION" jdbcType="VARCHAR" property="fsourcefunction" />
+    <result column="FFIVOUCHERED" jdbcType="DECIMAL" property="ffivouchered" />
+    <result column="CFGENETICSID" jdbcType="VARCHAR" property="cfgeneticsid" />
+    <result column="CFPEIJINPERSONID" jdbcType="VARCHAR" property="cfpeijinpersonid" />
+    <result column="CFJILIANG" jdbcType="DECIMAL" property="cfjiliang" />
+    <result column="CFJINYEAMOUNT" jdbcType="DECIMAL" property="cfjinyeamount" />
+    <result column="CFGONGZHUERHAO" jdbcType="VARCHAR" property="cfgongzhuerhao" />
+    <result column="CFJINGYETYPE" jdbcType="VARCHAR" property="cfjingyetype" />
+    <result column="CFOUTDATE" jdbcType="TIMESTAMP" property="cfoutdate" />
+    <result column="CFHUOLI" jdbcType="DECIMAL" property="cfhuoli" />
+    <result column="CFORGUNITID" jdbcType="VARCHAR" property="cforgunitid" />
+    <result column="CFIFUSED" jdbcType="DECIMAL" property="cfifused" />
+    <result column="CFWAIJINID" jdbcType="VARCHAR" property="cfwaijinid" />
+    <result column="CFPEIZHIID" jdbcType="VARCHAR" property="cfpeizhiid" />
+    <result column="CFGONGZHUID" jdbcType="VARCHAR" property="cfgongzhuid" />
+    <result column="CFBATCHNUMBER" jdbcType="VARCHAR" property="cfbatchnumber" />
+    <result column="CFDILUENTSPECIFICA" jdbcType="VARCHAR" property="cfdiluentspecifica" />
+    <result column="CFIFREIMBURSED" jdbcType="DECIMAL" property="cfifreimbursed" />
+    <result column="CFYOUXIAOJINGZIQTY" jdbcType="VARCHAR" property="cfyouxiaojingziqty" />
+    <result column="CFGONGZHUERHAOID" jdbcType="VARCHAR" property="cfgongzhuerhaoid" />
+    <result column="CFDOSEID" jdbcType="VARCHAR" property="cfdoseid" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    FID, FCREATORID, FCREATETIME, FLASTUPDATEUSERID, FLASTUPDATETIME, FCONTROLUNITID, 
+    FNUMBER, FBIZDATE, FHANDLERID, FDESCRIPTION, FHASEFFECTED, FAUDITORID, FSOURCEBILLID, 
+    FSOURCEFUNCTION, FFIVOUCHERED, CFGENETICSID, CFPEIJINPERSONID, CFJILIANG, CFJINYEAMOUNT, 
+    CFGONGZHUERHAO, CFJINGYETYPE, CFOUTDATE, CFHUOLI, CFORGUNITID, CFIFUSED, CFWAIJINID, 
+    CFPEIZHIID, CFGONGZHUID, CFBATCHNUMBER, CFDILUENTSPECIFICA, CFIFREIMBURSED, CFYOUXIAOJINGZIQTY, 
+    CFGONGZHUERHAOID, CFDOSEID
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from CT_PIG_JINYEARCHIVES
+    where FID = #{fid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from CT_PIG_JINYEARCHIVES
+    where FID = #{fid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" keyColumn="FID" keyProperty="fid" parameterType="entity.CtPigJinyearchives" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into CT_PIG_JINYEARCHIVES (FCREATORID, FCREATETIME, FLASTUPDATEUSERID, 
+      FLASTUPDATETIME, FCONTROLUNITID, FNUMBER, 
+      FBIZDATE, FHANDLERID, FDESCRIPTION, 
+      FHASEFFECTED, FAUDITORID, FSOURCEBILLID, 
+      FSOURCEFUNCTION, FFIVOUCHERED, CFGENETICSID, 
+      CFPEIJINPERSONID, CFJILIANG, CFJINYEAMOUNT, 
+      CFGONGZHUERHAO, CFJINGYETYPE, CFOUTDATE, 
+      CFHUOLI, CFORGUNITID, CFIFUSED, 
+      CFWAIJINID, CFPEIZHIID, CFGONGZHUID, 
+      CFBATCHNUMBER, CFDILUENTSPECIFICA, CFIFREIMBURSED, 
+      CFYOUXIAOJINGZIQTY, CFGONGZHUERHAOID, CFDOSEID
+      )
+    values (#{fcreatorid,jdbcType=VARCHAR}, #{fcreatetime,jdbcType=TIMESTAMP}, #{flastupdateuserid,jdbcType=VARCHAR}, 
+      #{flastupdatetime,jdbcType=TIMESTAMP}, #{fcontrolunitid,jdbcType=VARCHAR}, #{fnumber,jdbcType=VARCHAR}, 
+      #{fbizdate,jdbcType=TIMESTAMP}, #{fhandlerid,jdbcType=VARCHAR}, #{fdescription,jdbcType=VARCHAR}, 
+      #{fhaseffected,jdbcType=DECIMAL}, #{fauditorid,jdbcType=VARCHAR}, #{fsourcebillid,jdbcType=VARCHAR}, 
+      #{fsourcefunction,jdbcType=VARCHAR}, #{ffivouchered,jdbcType=DECIMAL}, #{cfgeneticsid,jdbcType=VARCHAR}, 
+      #{cfpeijinpersonid,jdbcType=VARCHAR}, #{cfjiliang,jdbcType=DECIMAL}, #{cfjinyeamount,jdbcType=DECIMAL}, 
+      #{cfgongzhuerhao,jdbcType=VARCHAR}, #{cfjingyetype,jdbcType=VARCHAR}, #{cfoutdate,jdbcType=TIMESTAMP}, 
+      #{cfhuoli,jdbcType=DECIMAL}, #{cforgunitid,jdbcType=VARCHAR}, #{cfifused,jdbcType=DECIMAL}, 
+      #{cfwaijinid,jdbcType=VARCHAR}, #{cfpeizhiid,jdbcType=VARCHAR}, #{cfgongzhuid,jdbcType=VARCHAR}, 
+      #{cfbatchnumber,jdbcType=VARCHAR}, #{cfdiluentspecifica,jdbcType=VARCHAR}, #{cfifreimbursed,jdbcType=DECIMAL}, 
+      #{cfyouxiaojingziqty,jdbcType=VARCHAR}, #{cfgongzhuerhaoid,jdbcType=VARCHAR}, #{cfdoseid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="FID" keyProperty="fid" parameterType="entity.CtPigJinyearchives" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into CT_PIG_JINYEARCHIVES
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fcreatorid != null">
+        FCREATORID,
+      </if>
+      <if test="fcreatetime != null">
+        FCREATETIME,
+      </if>
+      <if test="flastupdateuserid != null">
+        FLASTUPDATEUSERID,
+      </if>
+      <if test="flastupdatetime != null">
+        FLASTUPDATETIME,
+      </if>
+      <if test="fcontrolunitid != null">
+        FCONTROLUNITID,
+      </if>
+      <if test="fnumber != null">
+        FNUMBER,
+      </if>
+      <if test="fbizdate != null">
+        FBIZDATE,
+      </if>
+      <if test="fhandlerid != null">
+        FHANDLERID,
+      </if>
+      <if test="fdescription != null">
+        FDESCRIPTION,
+      </if>
+      <if test="fhaseffected != null">
+        FHASEFFECTED,
+      </if>
+      <if test="fauditorid != null">
+        FAUDITORID,
+      </if>
+      <if test="fsourcebillid != null">
+        FSOURCEBILLID,
+      </if>
+      <if test="fsourcefunction != null">
+        FSOURCEFUNCTION,
+      </if>
+      <if test="ffivouchered != null">
+        FFIVOUCHERED,
+      </if>
+      <if test="cfgeneticsid != null">
+        CFGENETICSID,
+      </if>
+      <if test="cfpeijinpersonid != null">
+        CFPEIJINPERSONID,
+      </if>
+      <if test="cfjiliang != null">
+        CFJILIANG,
+      </if>
+      <if test="cfjinyeamount != null">
+        CFJINYEAMOUNT,
+      </if>
+      <if test="cfgongzhuerhao != null">
+        CFGONGZHUERHAO,
+      </if>
+      <if test="cfjingyetype != null">
+        CFJINGYETYPE,
+      </if>
+      <if test="cfoutdate != null">
+        CFOUTDATE,
+      </if>
+      <if test="cfhuoli != null">
+        CFHUOLI,
+      </if>
+      <if test="cforgunitid != null">
+        CFORGUNITID,
+      </if>
+      <if test="cfifused != null">
+        CFIFUSED,
+      </if>
+      <if test="cfwaijinid != null">
+        CFWAIJINID,
+      </if>
+      <if test="cfpeizhiid != null">
+        CFPEIZHIID,
+      </if>
+      <if test="cfgongzhuid != null">
+        CFGONGZHUID,
+      </if>
+      <if test="cfbatchnumber != null">
+        CFBATCHNUMBER,
+      </if>
+      <if test="cfdiluentspecifica != null">
+        CFDILUENTSPECIFICA,
+      </if>
+      <if test="cfifreimbursed != null">
+        CFIFREIMBURSED,
+      </if>
+      <if test="cfyouxiaojingziqty != null">
+        CFYOUXIAOJINGZIQTY,
+      </if>
+      <if test="cfgongzhuerhaoid != null">
+        CFGONGZHUERHAOID,
+      </if>
+      <if test="cfdoseid != null">
+        CFDOSEID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fcreatorid != null">
+        #{fcreatorid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcreatetime != null">
+        #{fcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flastupdateuserid != null">
+        #{flastupdateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="flastupdatetime != null">
+        #{flastupdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fcontrolunitid != null">
+        #{fcontrolunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="fnumber != null">
+        #{fnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fbizdate != null">
+        #{fbizdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fhandlerid != null">
+        #{fhandlerid,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescription != null">
+        #{fdescription,jdbcType=VARCHAR},
+      </if>
+      <if test="fhaseffected != null">
+        #{fhaseffected,jdbcType=DECIMAL},
+      </if>
+      <if test="fauditorid != null">
+        #{fauditorid,jdbcType=VARCHAR},
+      </if>
+      <if test="fsourcebillid != null">
+        #{fsourcebillid,jdbcType=VARCHAR},
+      </if>
+      <if test="fsourcefunction != null">
+        #{fsourcefunction,jdbcType=VARCHAR},
+      </if>
+      <if test="ffivouchered != null">
+        #{ffivouchered,jdbcType=DECIMAL},
+      </if>
+      <if test="cfgeneticsid != null">
+        #{cfgeneticsid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfpeijinpersonid != null">
+        #{cfpeijinpersonid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfjiliang != null">
+        #{cfjiliang,jdbcType=DECIMAL},
+      </if>
+      <if test="cfjinyeamount != null">
+        #{cfjinyeamount,jdbcType=DECIMAL},
+      </if>
+      <if test="cfgongzhuerhao != null">
+        #{cfgongzhuerhao,jdbcType=VARCHAR},
+      </if>
+      <if test="cfjingyetype != null">
+        #{cfjingyetype,jdbcType=VARCHAR},
+      </if>
+      <if test="cfoutdate != null">
+        #{cfoutdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cfhuoli != null">
+        #{cfhuoli,jdbcType=DECIMAL},
+      </if>
+      <if test="cforgunitid != null">
+        #{cforgunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfifused != null">
+        #{cfifused,jdbcType=DECIMAL},
+      </if>
+      <if test="cfwaijinid != null">
+        #{cfwaijinid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfpeizhiid != null">
+        #{cfpeizhiid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfgongzhuid != null">
+        #{cfgongzhuid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfbatchnumber != null">
+        #{cfbatchnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="cfdiluentspecifica != null">
+        #{cfdiluentspecifica,jdbcType=VARCHAR},
+      </if>
+      <if test="cfifreimbursed != null">
+        #{cfifreimbursed,jdbcType=DECIMAL},
+      </if>
+      <if test="cfyouxiaojingziqty != null">
+        #{cfyouxiaojingziqty,jdbcType=VARCHAR},
+      </if>
+      <if test="cfgongzhuerhaoid != null">
+        #{cfgongzhuerhaoid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfdoseid != null">
+        #{cfdoseid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="entity.CtPigJinyearchives">
+    <!--@mbg.generated-->
+    update CT_PIG_JINYEARCHIVES
+    <set>
+      <if test="fcreatorid != null">
+        FCREATORID = #{fcreatorid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcreatetime != null">
+        FCREATETIME = #{fcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flastupdateuserid != null">
+        FLASTUPDATEUSERID = #{flastupdateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="flastupdatetime != null">
+        FLASTUPDATETIME = #{flastupdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fcontrolunitid != null">
+        FCONTROLUNITID = #{fcontrolunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="fnumber != null">
+        FNUMBER = #{fnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fbizdate != null">
+        FBIZDATE = #{fbizdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fhandlerid != null">
+        FHANDLERID = #{fhandlerid,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescription != null">
+        FDESCRIPTION = #{fdescription,jdbcType=VARCHAR},
+      </if>
+      <if test="fhaseffected != null">
+        FHASEFFECTED = #{fhaseffected,jdbcType=DECIMAL},
+      </if>
+      <if test="fauditorid != null">
+        FAUDITORID = #{fauditorid,jdbcType=VARCHAR},
+      </if>
+      <if test="fsourcebillid != null">
+        FSOURCEBILLID = #{fsourcebillid,jdbcType=VARCHAR},
+      </if>
+      <if test="fsourcefunction != null">
+        FSOURCEFUNCTION = #{fsourcefunction,jdbcType=VARCHAR},
+      </if>
+      <if test="ffivouchered != null">
+        FFIVOUCHERED = #{ffivouchered,jdbcType=DECIMAL},
+      </if>
+      <if test="cfgeneticsid != null">
+        CFGENETICSID = #{cfgeneticsid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfpeijinpersonid != null">
+        CFPEIJINPERSONID = #{cfpeijinpersonid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfjiliang != null">
+        CFJILIANG = #{cfjiliang,jdbcType=DECIMAL},
+      </if>
+      <if test="cfjinyeamount != null">
+        CFJINYEAMOUNT = #{cfjinyeamount,jdbcType=DECIMAL},
+      </if>
+      <if test="cfgongzhuerhao != null">
+        CFGONGZHUERHAO = #{cfgongzhuerhao,jdbcType=VARCHAR},
+      </if>
+      <if test="cfjingyetype != null">
+        CFJINGYETYPE = #{cfjingyetype,jdbcType=VARCHAR},
+      </if>
+      <if test="cfoutdate != null">
+        CFOUTDATE = #{cfoutdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cfhuoli != null">
+        CFHUOLI = #{cfhuoli,jdbcType=DECIMAL},
+      </if>
+      <if test="cforgunitid != null">
+        CFORGUNITID = #{cforgunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfifused != null">
+        CFIFUSED = #{cfifused,jdbcType=DECIMAL},
+      </if>
+      <if test="cfwaijinid != null">
+        CFWAIJINID = #{cfwaijinid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfpeizhiid != null">
+        CFPEIZHIID = #{cfpeizhiid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfgongzhuid != null">
+        CFGONGZHUID = #{cfgongzhuid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfbatchnumber != null">
+        CFBATCHNUMBER = #{cfbatchnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="cfdiluentspecifica != null">
+        CFDILUENTSPECIFICA = #{cfdiluentspecifica,jdbcType=VARCHAR},
+      </if>
+      <if test="cfifreimbursed != null">
+        CFIFREIMBURSED = #{cfifreimbursed,jdbcType=DECIMAL},
+      </if>
+      <if test="cfyouxiaojingziqty != null">
+        CFYOUXIAOJINGZIQTY = #{cfyouxiaojingziqty,jdbcType=VARCHAR},
+      </if>
+      <if test="cfgongzhuerhaoid != null">
+        CFGONGZHUERHAOID = #{cfgongzhuerhaoid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfdoseid != null">
+        CFDOSEID = #{cfdoseid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where FID = #{fid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="entity.CtPigJinyearchives">
+    <!--@mbg.generated-->
+    update CT_PIG_JINYEARCHIVES
+    set FCREATORID = #{fcreatorid,jdbcType=VARCHAR},
+      FCREATETIME = #{fcreatetime,jdbcType=TIMESTAMP},
+      FLASTUPDATEUSERID = #{flastupdateuserid,jdbcType=VARCHAR},
+      FLASTUPDATETIME = #{flastupdatetime,jdbcType=TIMESTAMP},
+      FCONTROLUNITID = #{fcontrolunitid,jdbcType=VARCHAR},
+      FNUMBER = #{fnumber,jdbcType=VARCHAR},
+      FBIZDATE = #{fbizdate,jdbcType=TIMESTAMP},
+      FHANDLERID = #{fhandlerid,jdbcType=VARCHAR},
+      FDESCRIPTION = #{fdescription,jdbcType=VARCHAR},
+      FHASEFFECTED = #{fhaseffected,jdbcType=DECIMAL},
+      FAUDITORID = #{fauditorid,jdbcType=VARCHAR},
+      FSOURCEBILLID = #{fsourcebillid,jdbcType=VARCHAR},
+      FSOURCEFUNCTION = #{fsourcefunction,jdbcType=VARCHAR},
+      FFIVOUCHERED = #{ffivouchered,jdbcType=DECIMAL},
+      CFGENETICSID = #{cfgeneticsid,jdbcType=VARCHAR},
+      CFPEIJINPERSONID = #{cfpeijinpersonid,jdbcType=VARCHAR},
+      CFJILIANG = #{cfjiliang,jdbcType=DECIMAL},
+      CFJINYEAMOUNT = #{cfjinyeamount,jdbcType=DECIMAL},
+      CFGONGZHUERHAO = #{cfgongzhuerhao,jdbcType=VARCHAR},
+      CFJINGYETYPE = #{cfjingyetype,jdbcType=VARCHAR},
+      CFOUTDATE = #{cfoutdate,jdbcType=TIMESTAMP},
+      CFHUOLI = #{cfhuoli,jdbcType=DECIMAL},
+      CFORGUNITID = #{cforgunitid,jdbcType=VARCHAR},
+      CFIFUSED = #{cfifused,jdbcType=DECIMAL},
+      CFWAIJINID = #{cfwaijinid,jdbcType=VARCHAR},
+      CFPEIZHIID = #{cfpeizhiid,jdbcType=VARCHAR},
+      CFGONGZHUID = #{cfgongzhuid,jdbcType=VARCHAR},
+      CFBATCHNUMBER = #{cfbatchnumber,jdbcType=VARCHAR},
+      CFDILUENTSPECIFICA = #{cfdiluentspecifica,jdbcType=VARCHAR},
+      CFIFREIMBURSED = #{cfifreimbursed,jdbcType=DECIMAL},
+      CFYOUXIAOJINGZIQTY = #{cfyouxiaojingziqty,jdbcType=VARCHAR},
+      CFGONGZHUERHAOID = #{cfgongzhuerhaoid,jdbcType=VARCHAR},
+      CFDOSEID = #{cfdoseid,jdbcType=VARCHAR}
+    where FID = #{fid,jdbcType=VARCHAR}
+  </update>
+</mapper>

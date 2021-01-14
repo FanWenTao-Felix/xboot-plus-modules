@@ -14,4 +14,11 @@ public interface OrgStorageService {
      * @return list
      */
     List<TOrgStorage> findAllByType();
+
+    /**
+     * 根据fid查找猪场
+     * @param fid 猪场id
+     * @return list
+     */
+    TOrgStorage findAllByFid(String fid);
 }

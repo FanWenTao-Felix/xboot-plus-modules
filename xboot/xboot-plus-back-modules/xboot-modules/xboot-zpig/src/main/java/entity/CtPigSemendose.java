@@ -2,17 +2,22 @@ package entity;
 
 import java.io.Serializable;
 import java.util.Date;
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 
 /**
  * @TableName CT_PIG_SEMENDOSE
  */
 @Table(name="CT_PIG_SEMENDOSE")
 @Data
+@Entity
+@DynamicInsert
+@DynamicUpdate
+@ApiModel(value = "精液规格")
 public class CtPigSemendose implements Serializable {
     /**
      * 

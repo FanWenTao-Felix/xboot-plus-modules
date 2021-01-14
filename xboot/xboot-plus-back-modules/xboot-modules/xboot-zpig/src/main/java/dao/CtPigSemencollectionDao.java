@@ -44,4 +44,11 @@ public interface CtPigSemencollectionDao {
      * @return list
      */
     List<CtPigSemencollection> selectAll(String executorID);
+
+    /**
+     * 更新计划状态
+     * @param fid 编号
+     * @return
+     */
+    int updatDesign(String fid);
 }

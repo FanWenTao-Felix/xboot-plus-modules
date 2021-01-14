@@ -3,17 +3,24 @@ package entity;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+
+import com.baomidou.mybatisplus.annotation.TableName;
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 
 /**
  * @TableName T_BD_PERSON
  */
 @Table(name="T_BD_PERSON")
+@TableName("T_BD_PERSON")
 @Data
+@Entity
+@DynamicInsert
+@DynamicUpdate
+@ApiModel(value = "职员信息")
 public class TBdPerson implements Serializable {
     /**
      * 

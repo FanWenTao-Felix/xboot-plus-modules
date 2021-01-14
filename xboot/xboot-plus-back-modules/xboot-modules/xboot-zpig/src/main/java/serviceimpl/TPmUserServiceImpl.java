@@ -41,4 +41,22 @@ public class TPmUserServiceImpl implements TPmUserService {
         }
         return selectUser;
     }
+
+    @Override
+    public String selectOrgUrl(){
+        //获取组织(云之家基本信息)
+        String url = "http://192.168.0.61:8888/doc.html#/中台接口/云之家基本接口/getYzjOrganizationsUsingGET";
+        RequestBody body = new FormBody.Builder().build();
+        Request request = new Request.Builder().url(url).post(body).build();
+        Response response = null;
+        String org = null;
+        try {
+            response = okHttpClient.newCall(request).execute();
+            org = response.body().string();
+            response.close();
+        } catch (IOException e) {
+            org = "获取组织信息出错";
+        }
+        return org;
+    }
 }
