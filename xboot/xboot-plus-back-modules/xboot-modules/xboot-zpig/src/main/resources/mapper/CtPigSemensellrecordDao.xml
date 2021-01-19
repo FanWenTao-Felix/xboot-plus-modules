@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="dao.CtPigSpermallotrecordDao">
-  <resultMap id="BaseResultMap" type="entity.CtPigSpermallotrecord">
+<mapper namespace="dao.CtPigSemensellrecordDao">
+  <resultMap id="BaseResultMap" type="entity.CtPigSemensellrecord">
     <!--@mbg.generated-->
     <id column="FID" jdbcType="VARCHAR" property="fid" />
     <result column="FCREATORID" jdbcType="VARCHAR" property="fcreatorid" />
@@ -20,97 +20,91 @@
     <result column="FFIVOUCHERED" jdbcType="DECIMAL" property="ffivouchered" />
     <result column="CFORGUNITID" jdbcType="VARCHAR" property="cforgunitid" />
     <result column="CFWEEKHAO" jdbcType="VARCHAR" property="cfweekhao" />
-    <result column="CFTOORGUNITID" jdbcType="VARCHAR" property="cftoorgunitid" />
+    <result column="CFBUYERS" jdbcType="VARCHAR" property="cfbuyers" />
+    <result column="CFPEIJINGPERSONID" jdbcType="VARCHAR" property="cfpeijingpersonid" />
+    <result column="CFQTY" jdbcType="DECIMAL" property="cfqty" />
+    <result column="CFJINGYEAMT" jdbcType="DECIMAL" property="cfjingyeamt" />
+    <result column="CFEARNUMBERID" jdbcType="VARCHAR" property="cfearnumberid" />
+    <result column="CFWRITEQTY" jdbcType="DECIMAL" property="cfwriteqty" />
+    <result column="CFNOWRITEQTY" jdbcType="DECIMAL" property="cfnowriteqty" />
+    <result column="CFWRITEAMT" jdbcType="DECIMAL" property="cfwriteamt" />
+    <result column="CFNOWRITEAMT" jdbcType="DECIMAL" property="cfnowriteamt" />
     <result column="CFGENETICSID" jdbcType="VARCHAR" property="cfgeneticsid" />
+    <result column="CFDOSEID" jdbcType="VARCHAR" property="cfdoseid" />
+    <result column="CFHUOLI" jdbcType="VARCHAR" property="cfhuoli" />
+    <result column="CFYOUXIAOQTY" jdbcType="DECIMAL" property="cfyouxiaoqty" />
+    <result column="CFDILUENTSPECIFICA" jdbcType="VARCHAR" property="cfdiluentspecifica" />
+    <result column="CFBATCHNUMBER" jdbcType="VARCHAR" property="cfbatchnumber" />
+    <result column="CFPRICE" jdbcType="DECIMAL" property="cfprice" />
+    <result column="CFBIRTHDATE" jdbcType="TIMESTAMP" property="cfbirthdate" />
+    <result column="CFSHELF" jdbcType="DECIMAL" property="cfshelf" />
+    <result column="CFENDDATE" jdbcType="TIMESTAMP" property="cfenddate" />
+    <result column="CFSEMENNUMBERID" jdbcType="VARCHAR" property="cfsemennumberid" />
+    <result column="CFISCHECKED" jdbcType="DECIMAL" property="cfischecked" />
     <result column="CFIFAUDITING" jdbcType="DECIMAL" property="cfifauditing" />
     <result column="CFAUDITUSERID" jdbcType="VARCHAR" property="cfaudituserid" />
-    <result column="CFBOARID" jdbcType="VARCHAR" property="cfboarid" />
-    <result column="CFBATCHNUMBER" jdbcType="VARCHAR" property="cfbatchnumber" />
-    <result column="CFAPPLICATIONID" jdbcType="VARCHAR" property="cfapplicationid" />
-    <result column="CFBIRTHDATE" jdbcType="TIMESTAMP" property="cfbirthdate" />
-    <result column="CFSEMENNUMBERID" jdbcType="VARCHAR" property="cfsemennumberid" />
     <result column="CFNOTE" jdbcType="VARCHAR" property="cfnote" />
-    <result column="CFEARNUMBERID" jdbcType="VARCHAR" property="cfearnumberid" />
-    <result column="CFENDDATE" jdbcType="TIMESTAMP" property="cfenddate" />
-    <result column="CFZHUSHEID" jdbcType="VARCHAR" property="cfzhusheid" />
-    <result column="CFDOSEID" jdbcType="VARCHAR" property="cfdoseid" />
+    <result column="CFAPPLICATIONID" jdbcType="VARCHAR" property="cfapplicationid" />
     <result column="CFCOMPLETESTATUSID" jdbcType="VARCHAR" property="cfcompletestatusid" />
-    <result column="CFSHELFDATE" jdbcType="DECIMAL" property="cfshelfdate" />
-    <result column="CFSHCHANLINEID" jdbcType="VARCHAR" property="cfshchanlineid" />
-    <result column="CFSOURCEORGUNITID" jdbcType="VARCHAR" property="cfsourceorgunitid" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
     FID, FCREATORID, FCREATETIME, FLASTUPDATEUSERID, FLASTUPDATETIME, FCONTROLUNITID, 
     FNUMBER, FBIZDATE, FHANDLERID, FDESCRIPTION, FHASEFFECTED, FAUDITORID, FSOURCEBILLID, 
-    FSOURCEFUNCTION, FFIVOUCHERED, CFORGUNITID, CFWEEKHAO, CFTOORGUNITID, CFGENETICSID, 
-    CFIFAUDITING, CFAUDITUSERID, CFBOARID, CFBATCHNUMBER, CFAPPLICATIONID, CFBIRTHDATE, 
-    CFSEMENNUMBERID, CFNOTE, CFEARNUMBERID, CFENDDATE, CFZHUSHEID, CFDOSEID, CFCOMPLETESTATUSID, 
-    CFSHELFDATE, CFSHCHANLINEID, CFSOURCEORGUNITID
+    FSOURCEFUNCTION, FFIVOUCHERED, CFORGUNITID, CFWEEKHAO, CFBUYERS, CFPEIJINGPERSONID, 
+    CFQTY, CFJINGYEAMT, CFEARNUMBERID, CFWRITEQTY, CFNOWRITEQTY, CFWRITEAMT, CFNOWRITEAMT, 
+    CFGENETICSID, CFDOSEID, CFHUOLI, CFYOUXIAOQTY, CFDILUENTSPECIFICA, CFBATCHNUMBER, 
+    CFPRICE, CFBIRTHDATE, CFSHELF, CFENDDATE, CFSEMENNUMBERID, CFISCHECKED, CFIFAUDITING, 
+    CFAUDITUSERID, CFNOTE, CFAPPLICATIONID, CFCOMPLETESTATUSID
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     <!--@mbg.generated-->
     select 
     <include refid="Base_Column_List" />
-    from CT_PIG_SPERMALLOTRECORD
+    from CT_PIG_SEMENSELLRECORD
     where FID = #{fid,jdbcType=VARCHAR}
   </select>
-    <select id="selectAllByFbizdates" resultType="entity.CtPigSpermallotrecord">
-      select * from CT_PIG_SPERMALLOTRECORD s where s.CFAPPLICATIONID = #{applicationId} and s.FBIZDATE &lt;= #{endDate} and s.FBIZDATE >= #{startDate}
-    </select>
-  <select id="selectAllByIntervaList" resultType="entity.CtPigSpermallotrecord">
-    SELECT * FROM CT_PIG_SPERMALLOTRECORD s
-                    LEFT JOIN (select to_char (sysdate- level + 1, 'yyyy-mm-dd hh24:mi:ss') today
-                               FROM DUAL connect BY LEVEL &lt;= 7) days on days.today = s.FCREATETIME
-    WHERE s.CFAPPLICATIONID = #{applicationId,jdbcType=VARCHAR} ORDER BY s.FCREATETIME
-  </select>
-  <select id="selectAll" resultType="entity.CtPigSpermallotrecord">
-    select * from CT_PIG_SPERMALLOTRECORD s
-    left join CT_PIG_ZPIGFLK z on z.CFERHAO = s.CFEARNUMBERID
-    <where>
-      <!-- 使用 bind 标签,对字符串进行绑定,然后对绑定后的字符串使用 like 关键字进行模糊查询 -->
-      <bind name="pattern" value="'%'+fuzzy+'%'"/>
-        z.CFERHAO like #{pattern} or s.CFBATCHNUMBER like #{pattern}
-    </where>
-  </select>
-    <select id="createFid" resultType="java.lang.String">
-      select NEWBOSID('FF341BCF') from dual;
-    </select>
-    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     <!--@mbg.generated-->
-    delete from CT_PIG_SPERMALLOTRECORD
+    delete from CT_PIG_SEMENSELLRECORD
     where FID = #{fid,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" keyColumn="FID" keyProperty="fid" parameterType="entity.CtPigSpermallotrecord" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="FID" keyProperty="fid" parameterType="entity.CtPigSemensellrecord" useGeneratedKeys="true">
     <!--@mbg.generated-->
-    insert into CT_PIG_SPERMALLOTRECORD (FCREATORID, FCREATETIME, FLASTUPDATEUSERID, 
+    insert into CT_PIG_SEMENSELLRECORD (FCREATORID, FCREATETIME, FLASTUPDATEUSERID, 
       FLASTUPDATETIME, FCONTROLUNITID, FNUMBER, 
       FBIZDATE, FHANDLERID, FDESCRIPTION, 
       FHASEFFECTED, FAUDITORID, FSOURCEBILLID, 
       FSOURCEFUNCTION, FFIVOUCHERED, CFORGUNITID, 
-      CFWEEKHAO, CFTOORGUNITID, CFGENETICSID, 
-      CFIFAUDITING, CFAUDITUSERID, CFBOARID, 
-      CFBATCHNUMBER, CFAPPLICATIONID, CFBIRTHDATE, 
-      CFSEMENNUMBERID, CFNOTE, CFEARNUMBERID, 
-      CFENDDATE, CFZHUSHEID, CFDOSEID, 
-      CFCOMPLETESTATUSID, CFSHELFDATE, CFSHCHANLINEID, 
-      CFSOURCEORGUNITID)
+      CFWEEKHAO, CFBUYERS, CFPEIJINGPERSONID, 
+      CFQTY, CFJINGYEAMT, CFEARNUMBERID, 
+      CFWRITEQTY, CFNOWRITEQTY, CFWRITEAMT, 
+      CFNOWRITEAMT, CFGENETICSID, CFDOSEID, 
+      CFHUOLI, CFYOUXIAOQTY, CFDILUENTSPECIFICA, 
+      CFBATCHNUMBER, CFPRICE, CFBIRTHDATE, 
+      CFSHELF, CFENDDATE, CFSEMENNUMBERID, 
+      CFISCHECKED, CFIFAUDITING, CFAUDITUSERID, 
+      CFNOTE, CFAPPLICATIONID, CFCOMPLETESTATUSID
+      )
     values (#{fcreatorid,jdbcType=VARCHAR}, #{fcreatetime,jdbcType=TIMESTAMP}, #{flastupdateuserid,jdbcType=VARCHAR}, 
       #{flastupdatetime,jdbcType=TIMESTAMP}, #{fcontrolunitid,jdbcType=VARCHAR}, #{fnumber,jdbcType=VARCHAR}, 
       #{fbizdate,jdbcType=TIMESTAMP}, #{fhandlerid,jdbcType=VARCHAR}, #{fdescription,jdbcType=VARCHAR}, 
       #{fhaseffected,jdbcType=DECIMAL}, #{fauditorid,jdbcType=VARCHAR}, #{fsourcebillid,jdbcType=VARCHAR}, 
       #{fsourcefunction,jdbcType=VARCHAR}, #{ffivouchered,jdbcType=DECIMAL}, #{cforgunitid,jdbcType=VARCHAR}, 
-      #{cfweekhao,jdbcType=VARCHAR}, #{cftoorgunitid,jdbcType=VARCHAR}, #{cfgeneticsid,jdbcType=VARCHAR}, 
-      #{cfifauditing,jdbcType=DECIMAL}, #{cfaudituserid,jdbcType=VARCHAR}, #{cfboarid,jdbcType=VARCHAR}, 
-      #{cfbatchnumber,jdbcType=VARCHAR}, #{cfapplicationid,jdbcType=VARCHAR}, #{cfbirthdate,jdbcType=TIMESTAMP}, 
-      #{cfsemennumberid,jdbcType=VARCHAR}, #{cfnote,jdbcType=VARCHAR}, #{cfearnumberid,jdbcType=VARCHAR}, 
-      #{cfenddate,jdbcType=TIMESTAMP}, #{cfzhusheid,jdbcType=VARCHAR}, #{cfdoseid,jdbcType=VARCHAR}, 
-      #{cfcompletestatusid,jdbcType=VARCHAR}, #{cfshelfdate,jdbcType=DECIMAL}, #{cfshchanlineid,jdbcType=VARCHAR}, 
-      #{cfsourceorgunitid,jdbcType=VARCHAR})
+      #{cfweekhao,jdbcType=VARCHAR}, #{cfbuyers,jdbcType=VARCHAR}, #{cfpeijingpersonid,jdbcType=VARCHAR}, 
+      #{cfqty,jdbcType=DECIMAL}, #{cfjingyeamt,jdbcType=DECIMAL}, #{cfearnumberid,jdbcType=VARCHAR}, 
+      #{cfwriteqty,jdbcType=DECIMAL}, #{cfnowriteqty,jdbcType=DECIMAL}, #{cfwriteamt,jdbcType=DECIMAL}, 
+      #{cfnowriteamt,jdbcType=DECIMAL}, #{cfgeneticsid,jdbcType=VARCHAR}, #{cfdoseid,jdbcType=VARCHAR}, 
+      #{cfhuoli,jdbcType=VARCHAR}, #{cfyouxiaoqty,jdbcType=DECIMAL}, #{cfdiluentspecifica,jdbcType=VARCHAR}, 
+      #{cfbatchnumber,jdbcType=VARCHAR}, #{cfprice,jdbcType=DECIMAL}, #{cfbirthdate,jdbcType=TIMESTAMP}, 
+      #{cfshelf,jdbcType=DECIMAL}, #{cfenddate,jdbcType=TIMESTAMP}, #{cfsemennumberid,jdbcType=VARCHAR}, 
+      #{cfischecked,jdbcType=DECIMAL}, #{cfifauditing,jdbcType=DECIMAL}, #{cfaudituserid,jdbcType=VARCHAR}, 
+      #{cfnote,jdbcType=VARCHAR}, #{cfapplicationid,jdbcType=VARCHAR}, #{cfcompletestatusid,jdbcType=VARCHAR}
+      )
   </insert>
-  <insert id="insertSelective" keyColumn="FID" keyProperty="fid" parameterType="entity.CtPigSpermallotrecord" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="FID" keyProperty="fid" parameterType="entity.CtPigSemensellrecord" useGeneratedKeys="true">
     <!--@mbg.generated-->
-    insert into CT_PIG_SPERMALLOTRECORD
+    insert into CT_PIG_SEMENSELLRECORD
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="fcreatorid != null">
         FCREATORID,
@@ -160,11 +154,68 @@
       <if test="cfweekhao != null">
         CFWEEKHAO,
       </if>
-      <if test="cftoorgunitid != null">
-        CFTOORGUNITID,
+      <if test="cfbuyers != null">
+        CFBUYERS,
+      </if>
+      <if test="cfpeijingpersonid != null">
+        CFPEIJINGPERSONID,
+      </if>
+      <if test="cfqty != null">
+        CFQTY,
+      </if>
+      <if test="cfjingyeamt != null">
+        CFJINGYEAMT,
+      </if>
+      <if test="cfearnumberid != null">
+        CFEARNUMBERID,
+      </if>
+      <if test="cfwriteqty != null">
+        CFWRITEQTY,
+      </if>
+      <if test="cfnowriteqty != null">
+        CFNOWRITEQTY,
+      </if>
+      <if test="cfwriteamt != null">
+        CFWRITEAMT,
+      </if>
+      <if test="cfnowriteamt != null">
+        CFNOWRITEAMT,
       </if>
       <if test="cfgeneticsid != null">
         CFGENETICSID,
+      </if>
+      <if test="cfdoseid != null">
+        CFDOSEID,
+      </if>
+      <if test="cfhuoli != null">
+        CFHUOLI,
+      </if>
+      <if test="cfyouxiaoqty != null">
+        CFYOUXIAOQTY,
+      </if>
+      <if test="cfdiluentspecifica != null">
+        CFDILUENTSPECIFICA,
+      </if>
+      <if test="cfbatchnumber != null">
+        CFBATCHNUMBER,
+      </if>
+      <if test="cfprice != null">
+        CFPRICE,
+      </if>
+      <if test="cfbirthdate != null">
+        CFBIRTHDATE,
+      </if>
+      <if test="cfshelf != null">
+        CFSHELF,
+      </if>
+      <if test="cfenddate != null">
+        CFENDDATE,
+      </if>
+      <if test="cfsemennumberid != null">
+        CFSEMENNUMBERID,
+      </if>
+      <if test="cfischecked != null">
+        CFISCHECKED,
       </if>
       <if test="cfifauditing != null">
         CFIFAUDITING,
@@ -172,47 +223,14 @@
       <if test="cfaudituserid != null">
         CFAUDITUSERID,
       </if>
-      <if test="cfboarid != null">
-        CFBOARID,
-      </if>
-      <if test="cfbatchnumber != null">
-        CFBATCHNUMBER,
+      <if test="cfnote != null">
+        CFNOTE,
       </if>
       <if test="cfapplicationid != null">
         CFAPPLICATIONID,
       </if>
-      <if test="cfbirthdate != null">
-        CFBIRTHDATE,
-      </if>
-      <if test="cfsemennumberid != null">
-        CFSEMENNUMBERID,
-      </if>
-      <if test="cfnote != null">
-        CFNOTE,
-      </if>
-      <if test="cfearnumberid != null">
-        CFEARNUMBERID,
-      </if>
-      <if test="cfenddate != null">
-        CFENDDATE,
-      </if>
-      <if test="cfzhusheid != null">
-        CFZHUSHEID,
-      </if>
-      <if test="cfdoseid != null">
-        CFDOSEID,
-      </if>
       <if test="cfcompletestatusid != null">
         CFCOMPLETESTATUSID,
-      </if>
-      <if test="cfshelfdate != null">
-        CFSHELFDATE,
-      </if>
-      <if test="cfshchanlineid != null">
-        CFSHCHANLINEID,
-      </if>
-      <if test="cfsourceorgunitid != null">
-        CFSOURCEORGUNITID,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -264,11 +282,68 @@
       <if test="cfweekhao != null">
         #{cfweekhao,jdbcType=VARCHAR},
       </if>
-      <if test="cftoorgunitid != null">
-        #{cftoorgunitid,jdbcType=VARCHAR},
+      <if test="cfbuyers != null">
+        #{cfbuyers,jdbcType=VARCHAR},
+      </if>
+      <if test="cfpeijingpersonid != null">
+        #{cfpeijingpersonid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfqty != null">
+        #{cfqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfjingyeamt != null">
+        #{cfjingyeamt,jdbcType=DECIMAL},
+      </if>
+      <if test="cfearnumberid != null">
+        #{cfearnumberid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfwriteqty != null">
+        #{cfwriteqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfnowriteqty != null">
+        #{cfnowriteqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfwriteamt != null">
+        #{cfwriteamt,jdbcType=DECIMAL},
+      </if>
+      <if test="cfnowriteamt != null">
+        #{cfnowriteamt,jdbcType=DECIMAL},
       </if>
       <if test="cfgeneticsid != null">
         #{cfgeneticsid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfdoseid != null">
+        #{cfdoseid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfhuoli != null">
+        #{cfhuoli,jdbcType=VARCHAR},
+      </if>
+      <if test="cfyouxiaoqty != null">
+        #{cfyouxiaoqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfdiluentspecifica != null">
+        #{cfdiluentspecifica,jdbcType=VARCHAR},
+      </if>
+      <if test="cfbatchnumber != null">
+        #{cfbatchnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="cfprice != null">
+        #{cfprice,jdbcType=DECIMAL},
+      </if>
+      <if test="cfbirthdate != null">
+        #{cfbirthdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cfshelf != null">
+        #{cfshelf,jdbcType=DECIMAL},
+      </if>
+      <if test="cfenddate != null">
+        #{cfenddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cfsemennumberid != null">
+        #{cfsemennumberid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfischecked != null">
+        #{cfischecked,jdbcType=DECIMAL},
       </if>
       <if test="cfifauditing != null">
         #{cfifauditing,jdbcType=DECIMAL},
@@ -276,53 +351,20 @@
       <if test="cfaudituserid != null">
         #{cfaudituserid,jdbcType=VARCHAR},
       </if>
-      <if test="cfboarid != null">
-        #{cfboarid,jdbcType=VARCHAR},
-      </if>
-      <if test="cfbatchnumber != null">
-        #{cfbatchnumber,jdbcType=VARCHAR},
+      <if test="cfnote != null">
+        #{cfnote,jdbcType=VARCHAR},
       </if>
       <if test="cfapplicationid != null">
         #{cfapplicationid,jdbcType=VARCHAR},
       </if>
-      <if test="cfbirthdate != null">
-        #{cfbirthdate,jdbcType=TIMESTAMP},
-      </if>
-      <if test="cfsemennumberid != null">
-        #{cfsemennumberid,jdbcType=VARCHAR},
-      </if>
-      <if test="cfnote != null">
-        #{cfnote,jdbcType=VARCHAR},
-      </if>
-      <if test="cfearnumberid != null">
-        #{cfearnumberid,jdbcType=VARCHAR},
-      </if>
-      <if test="cfenddate != null">
-        #{cfenddate,jdbcType=TIMESTAMP},
-      </if>
-      <if test="cfzhusheid != null">
-        #{cfzhusheid,jdbcType=VARCHAR},
-      </if>
-      <if test="cfdoseid != null">
-        #{cfdoseid,jdbcType=VARCHAR},
-      </if>
       <if test="cfcompletestatusid != null">
         #{cfcompletestatusid,jdbcType=VARCHAR},
       </if>
-      <if test="cfshelfdate != null">
-        #{cfshelfdate,jdbcType=DECIMAL},
-      </if>
-      <if test="cfshchanlineid != null">
-        #{cfshchanlineid,jdbcType=VARCHAR},
-      </if>
-      <if test="cfsourceorgunitid != null">
-        #{cfsourceorgunitid,jdbcType=VARCHAR},
-      </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="entity.CtPigSpermallotrecord">
+  <update id="updateByPrimaryKeySelective" parameterType="entity.CtPigSemensellrecord">
     <!--@mbg.generated-->
-    update CT_PIG_SPERMALLOTRECORD
+    update CT_PIG_SEMENSELLRECORD
     <set>
       <if test="fcreatorid != null">
         FCREATORID = #{fcreatorid,jdbcType=VARCHAR},
@@ -372,11 +414,68 @@
       <if test="cfweekhao != null">
         CFWEEKHAO = #{cfweekhao,jdbcType=VARCHAR},
       </if>
-      <if test="cftoorgunitid != null">
-        CFTOORGUNITID = #{cftoorgunitid,jdbcType=VARCHAR},
+      <if test="cfbuyers != null">
+        CFBUYERS = #{cfbuyers,jdbcType=VARCHAR},
+      </if>
+      <if test="cfpeijingpersonid != null">
+        CFPEIJINGPERSONID = #{cfpeijingpersonid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfqty != null">
+        CFQTY = #{cfqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfjingyeamt != null">
+        CFJINGYEAMT = #{cfjingyeamt,jdbcType=DECIMAL},
+      </if>
+      <if test="cfearnumberid != null">
+        CFEARNUMBERID = #{cfearnumberid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfwriteqty != null">
+        CFWRITEQTY = #{cfwriteqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfnowriteqty != null">
+        CFNOWRITEQTY = #{cfnowriteqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfwriteamt != null">
+        CFWRITEAMT = #{cfwriteamt,jdbcType=DECIMAL},
+      </if>
+      <if test="cfnowriteamt != null">
+        CFNOWRITEAMT = #{cfnowriteamt,jdbcType=DECIMAL},
       </if>
       <if test="cfgeneticsid != null">
         CFGENETICSID = #{cfgeneticsid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfdoseid != null">
+        CFDOSEID = #{cfdoseid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfhuoli != null">
+        CFHUOLI = #{cfhuoli,jdbcType=VARCHAR},
+      </if>
+      <if test="cfyouxiaoqty != null">
+        CFYOUXIAOQTY = #{cfyouxiaoqty,jdbcType=DECIMAL},
+      </if>
+      <if test="cfdiluentspecifica != null">
+        CFDILUENTSPECIFICA = #{cfdiluentspecifica,jdbcType=VARCHAR},
+      </if>
+      <if test="cfbatchnumber != null">
+        CFBATCHNUMBER = #{cfbatchnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="cfprice != null">
+        CFPRICE = #{cfprice,jdbcType=DECIMAL},
+      </if>
+      <if test="cfbirthdate != null">
+        CFBIRTHDATE = #{cfbirthdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cfshelf != null">
+        CFSHELF = #{cfshelf,jdbcType=DECIMAL},
+      </if>
+      <if test="cfenddate != null">
+        CFENDDATE = #{cfenddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cfsemennumberid != null">
+        CFSEMENNUMBERID = #{cfsemennumberid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfischecked != null">
+        CFISCHECKED = #{cfischecked,jdbcType=DECIMAL},
       </if>
       <if test="cfifauditing != null">
         CFIFAUDITING = #{cfifauditing,jdbcType=DECIMAL},
@@ -384,54 +483,21 @@
       <if test="cfaudituserid != null">
         CFAUDITUSERID = #{cfaudituserid,jdbcType=VARCHAR},
       </if>
-      <if test="cfboarid != null">
-        CFBOARID = #{cfboarid,jdbcType=VARCHAR},
-      </if>
-      <if test="cfbatchnumber != null">
-        CFBATCHNUMBER = #{cfbatchnumber,jdbcType=VARCHAR},
+      <if test="cfnote != null">
+        CFNOTE = #{cfnote,jdbcType=VARCHAR},
       </if>
       <if test="cfapplicationid != null">
         CFAPPLICATIONID = #{cfapplicationid,jdbcType=VARCHAR},
       </if>
-      <if test="cfbirthdate != null">
-        CFBIRTHDATE = #{cfbirthdate,jdbcType=TIMESTAMP},
-      </if>
-      <if test="cfsemennumberid != null">
-        CFSEMENNUMBERID = #{cfsemennumberid,jdbcType=VARCHAR},
-      </if>
-      <if test="cfnote != null">
-        CFNOTE = #{cfnote,jdbcType=VARCHAR},
-      </if>
-      <if test="cfearnumberid != null">
-        CFEARNUMBERID = #{cfearnumberid,jdbcType=VARCHAR},
-      </if>
-      <if test="cfenddate != null">
-        CFENDDATE = #{cfenddate,jdbcType=TIMESTAMP},
-      </if>
-      <if test="cfzhusheid != null">
-        CFZHUSHEID = #{cfzhusheid,jdbcType=VARCHAR},
-      </if>
-      <if test="cfdoseid != null">
-        CFDOSEID = #{cfdoseid,jdbcType=VARCHAR},
-      </if>
       <if test="cfcompletestatusid != null">
         CFCOMPLETESTATUSID = #{cfcompletestatusid,jdbcType=VARCHAR},
-      </if>
-      <if test="cfshelfdate != null">
-        CFSHELFDATE = #{cfshelfdate,jdbcType=DECIMAL},
-      </if>
-      <if test="cfshchanlineid != null">
-        CFSHCHANLINEID = #{cfshchanlineid,jdbcType=VARCHAR},
-      </if>
-      <if test="cfsourceorgunitid != null">
-        CFSOURCEORGUNITID = #{cfsourceorgunitid,jdbcType=VARCHAR},
       </if>
     </set>
     where FID = #{fid,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="entity.CtPigSpermallotrecord">
+  <update id="updateByPrimaryKey" parameterType="entity.CtPigSemensellrecord">
     <!--@mbg.generated-->
-    update CT_PIG_SPERMALLOTRECORD
+    update CT_PIG_SEMENSELLRECORD
     set FCREATORID = #{fcreatorid,jdbcType=VARCHAR},
       FCREATETIME = #{fcreatetime,jdbcType=TIMESTAMP},
       FLASTUPDATEUSERID = #{flastupdateuserid,jdbcType=VARCHAR},
@@ -448,28 +514,32 @@
       FFIVOUCHERED = #{ffivouchered,jdbcType=DECIMAL},
       CFORGUNITID = #{cforgunitid,jdbcType=VARCHAR},
       CFWEEKHAO = #{cfweekhao,jdbcType=VARCHAR},
-      CFTOORGUNITID = #{cftoorgunitid,jdbcType=VARCHAR},
+      CFBUYERS = #{cfbuyers,jdbcType=VARCHAR},
+      CFPEIJINGPERSONID = #{cfpeijingpersonid,jdbcType=VARCHAR},
+      CFQTY = #{cfqty,jdbcType=DECIMAL},
+      CFJINGYEAMT = #{cfjingyeamt,jdbcType=DECIMAL},
+      CFEARNUMBERID = #{cfearnumberid,jdbcType=VARCHAR},
+      CFWRITEQTY = #{cfwriteqty,jdbcType=DECIMAL},
+      CFNOWRITEQTY = #{cfnowriteqty,jdbcType=DECIMAL},
+      CFWRITEAMT = #{cfwriteamt,jdbcType=DECIMAL},
+      CFNOWRITEAMT = #{cfnowriteamt,jdbcType=DECIMAL},
       CFGENETICSID = #{cfgeneticsid,jdbcType=VARCHAR},
+      CFDOSEID = #{cfdoseid,jdbcType=VARCHAR},
+      CFHUOLI = #{cfhuoli,jdbcType=VARCHAR},
+      CFYOUXIAOQTY = #{cfyouxiaoqty,jdbcType=DECIMAL},
+      CFDILUENTSPECIFICA = #{cfdiluentspecifica,jdbcType=VARCHAR},
+      CFBATCHNUMBER = #{cfbatchnumber,jdbcType=VARCHAR},
+      CFPRICE = #{cfprice,jdbcType=DECIMAL},
+      CFBIRTHDATE = #{cfbirthdate,jdbcType=TIMESTAMP},
+      CFSHELF = #{cfshelf,jdbcType=DECIMAL},
+      CFENDDATE = #{cfenddate,jdbcType=TIMESTAMP},
+      CFSEMENNUMBERID = #{cfsemennumberid,jdbcType=VARCHAR},
+      CFISCHECKED = #{cfischecked,jdbcType=DECIMAL},
       CFIFAUDITING = #{cfifauditing,jdbcType=DECIMAL},
       CFAUDITUSERID = #{cfaudituserid,jdbcType=VARCHAR},
-      CFBOARID = #{cfboarid,jdbcType=VARCHAR},
-      CFBATCHNUMBER = #{cfbatchnumber,jdbcType=VARCHAR},
-      CFAPPLICATIONID = #{cfapplicationid,jdbcType=VARCHAR},
-      CFBIRTHDATE = #{cfbirthdate,jdbcType=TIMESTAMP},
-      CFSEMENNUMBERID = #{cfsemennumberid,jdbcType=VARCHAR},
       CFNOTE = #{cfnote,jdbcType=VARCHAR},
-      CFEARNUMBERID = #{cfearnumberid,jdbcType=VARCHAR},
-      CFENDDATE = #{cfenddate,jdbcType=TIMESTAMP},
-      CFZHUSHEID = #{cfzhusheid,jdbcType=VARCHAR},
-      CFDOSEID = #{cfdoseid,jdbcType=VARCHAR},
-      CFCOMPLETESTATUSID = #{cfcompletestatusid,jdbcType=VARCHAR},
-      CFSHELFDATE = #{cfshelfdate,jdbcType=DECIMAL},
-      CFSHCHANLINEID = #{cfshchanlineid,jdbcType=VARCHAR},
-      CFSOURCEORGUNITID = #{cfsourceorgunitid,jdbcType=VARCHAR}
+      CFAPPLICATIONID = #{cfapplicationid,jdbcType=VARCHAR},
+      CFCOMPLETESTATUSID = #{cfcompletestatusid,jdbcType=VARCHAR}
     where FID = #{fid,jdbcType=VARCHAR}
-  </update>
-  <update id="updateIfAuditByFid">
-    update CT_PIG_SPERMALLOTRECORD c set c.CFIFAUDITING = '1', c.CFAUDITUSERID = #{userId,jdbcType=VARCHAR}
-    where c.FID = #{fid,jdbcType=VARCHAR}
   </update>
 </mapper>

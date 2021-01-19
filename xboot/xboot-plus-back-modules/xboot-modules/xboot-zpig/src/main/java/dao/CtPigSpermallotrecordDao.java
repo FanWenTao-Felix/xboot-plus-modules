@@ -73,4 +73,10 @@ public interface CtPigSpermallotrecordDao {
      */
     int updateIfAuditByFid(@Param("fid") String fid , @Param("userId") String userId);
 
+    /**
+     * 创建fid
+     * @return String
+     */
+    String createFid();
+
 }

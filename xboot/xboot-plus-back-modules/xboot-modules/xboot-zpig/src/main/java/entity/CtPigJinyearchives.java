@@ -3,17 +3,25 @@ package entity;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+
+import com.baomidou.mybatisplus.annotation.TableName;
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 
 /**
+ * @author AIERXUAN
  * @TableName CT_PIG_JINYEARCHIVES
  */
 @Table(name="CT_PIG_JINYEARCHIVES")
+@TableName("CT_PIG_JINYEARCHIVES")
 @Data
+@Entity
+@DynamicInsert
+@DynamicUpdate
+@ApiModel(value = "精液档案")
 public class CtPigJinyearchives implements Serializable {
     /**
      * 

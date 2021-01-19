@@ -135,6 +135,52 @@
             </Config>
           </value>
         </entry>
+        <entry key="CT_PIG_SEMENDEMANDTYPE">
+          <value>
+            <Config>
+              <option name="annotation" value="true" />
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="CtPigSemendemandtypeDao" />
+              <option name="daoPackage" value="dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="CtPigSemendemandtype" />
+              <option name="modelPackage" value="entity" />
+              <option name="name" value="CT_PIG_SEMENDEMANDTYPE" />
+              <option name="primaryKey" value="FID" />
+              <option name="projectFolder" value="$PROJECT_DIR$/xboot/xboot-plus-back-modules/xboot-modules/xboot-zpig" />
+              <option name="tableName" value="CT_PIG_SEMENDEMANDTYPE" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="CT_PIG_SEMENDISTRIBUTION">
+          <value>
+            <Config>
+              <option name="annotation" value="true" />
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="CtPigSemendistributionDao" />
+              <option name="daoPackage" value="dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="CtPigSemendistribution" />
+              <option name="modelPackage" value="entity" />
+              <option name="name" value="CT_PIG_SEMENDISTRIBUTION" />
+              <option name="primaryKey" value="FID" />
+              <option name="projectFolder" value="$PROJECT_DIR$/xboot/xboot-plus-back-modules/xboot-modules/xboot-zpig" />
+              <option name="tableName" value="CT_PIG_SEMENDISTRIBUTION" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="mapper" />
+            </Config>
+          </value>
+        </entry>
         <entry key="CT_PIG_SEMENDOSE">
           <value>
             <Config>
@@ -152,6 +198,51 @@
               <option name="projectFolder" value="$PROJECT_DIR$/xboot/xboot-plus-back-modules/xboot-modules/xboot-zpig" />
               <option name="tableName" value="CT_PIG_SEMENDOSE" />
               <option name="useLombokPlugin" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="CT_PIG_SEMENREIMBURSERECOED">
+          <value>
+            <Config>
+              <option name="annotation" value="true" />
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="CtPigSemenreimburserecoedDao" />
+              <option name="daoPackage" value="dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="CtPigSemenreimburserecoed" />
+              <option name="modelPackage" value="entity" />
+              <option name="name" value="CT_PIG_SEMENREIMBURSERECOED" />
+              <option name="primaryKey" value="FID" />
+              <option name="projectFolder" value="$PROJECT_DIR$/xboot/xboot-plus-back-modules/xboot-modules/xboot-zpig" />
+              <option name="tableName" value="CT_PIG_SEMENREIMBURSERECOED" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="CT_PIG_SEMENSELLRECORD">
+          <value>
+            <Config>
+              <option name="annotation" value="true" />
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="CtPigSemensellrecordDao" />
+              <option name="daoPackage" value="dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="CtPigSemensellrecord" />
+              <option name="modelPackage" value="entity" />
+              <option name="name" value="CT_PIG_SEMENSELLRECORD" />
+              <option name="primaryKey" value="FID" />
+              <option name="projectFolder" value="$PROJECT_DIR$/xboot/xboot-plus-back-modules/xboot-modules/xboot-zpig" />
+              <option name="tableName" value="CT_PIG_SEMENSELLRECORD" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="useSchemaPrefix" value="true" />
               <option name="xmlMvnPath" value="src/main/resources" />
               <option name="xmlPackage" value="mapper" />
             </Config>
@@ -352,6 +443,25 @@
               <option name="useLombokPlugin" value="true" />
               <option name="xmlMvnPath" value="src/main/resources" />
               <option name="xmlPackage" value="mapper" />
+            </Config>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="initConfig">
+      <map>
+        <entry key="initConfig">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoPackage" value="generator" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelPackage" value="generator" />
+              <option name="name" value="initConfig" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlPackage" value="generator" />
             </Config>
           </value>
         </entry>

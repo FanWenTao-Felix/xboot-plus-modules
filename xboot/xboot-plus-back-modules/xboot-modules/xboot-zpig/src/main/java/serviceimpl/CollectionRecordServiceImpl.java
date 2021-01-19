@@ -33,6 +33,7 @@ public class CollectionRecordServiceImpl implements CollectionRecordService {
 
     @Override
     public int insertCollectionRecord(CtPigCollectionrecord record) {
+        record.setFid(ctPigCollectionrecordDao.createFid());
         return ctPigCollectionrecordDao.insert(record);
     }
 

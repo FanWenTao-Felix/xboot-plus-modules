@@ -93,4 +93,10 @@ public interface CtPigCollectionrecordDao {
      * @return 1||0
      */
     int updateIfAuditByFid(@Param("fid") String fid ,@Param("userId") String userId);
+
+    /**
+     * 创建fid
+     * @return Fid
+     */
+    String createFid();
 }

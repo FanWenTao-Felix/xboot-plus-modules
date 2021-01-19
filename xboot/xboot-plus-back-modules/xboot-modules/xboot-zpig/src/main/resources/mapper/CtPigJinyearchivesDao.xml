@@ -54,6 +54,18 @@
     from CT_PIG_JINYEARCHIVES
     where FID = #{fid,jdbcType=VARCHAR}
   </select>
+  <select id="createFid" resultType="java.lang.String">
+    select NEWBOSID('24FD3AD1') from dual
+  </select>
+    <select id="selectByConditions" resultType="entity.CtPigJinyearchives">
+     <!-- 条件查询 -->
+    select * from CT_PIG_JINYEARCHIVES j where j.CFGONGZHUERHAO = #{earNumber,jdbcType=VARCHAR} and
+    j.CFIFUSED = '0' and j.CFIFREIMBURSED = '0'
+    </select>
+  <select id="selectByNumber" resultType="entity.CtPigJinyearchives">
+    select * from CT_PIG_JINYEARCHIVES j where j.FNUMBER = #{semenNumber,jdbcType=VARCHAR} and
+    j.CFIFUSED = '0' and j.CFIFREIMBURSED = '0'
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     <!--@mbg.generated-->
     delete from CT_PIG_JINYEARCHIVES
@@ -436,4 +448,11 @@
       CFDOSEID = #{cfdoseid,jdbcType=VARCHAR}
     where FID = #{fid,jdbcType=VARCHAR}
   </update>
+    <update id="updateIfUsed">
+    update CT_PIG_JINYEARCHIVES
+    set CFIFUSED = '1' where FID = #{fid}
+    </update>
+    <update id="updateIfReimbursed">
+      update CT_PIG_JINYEARCHIVES set CFIFREIMBURSED = '1'where CFORGUNITID = #{orgUnit} and CFIFUSED != '1' and FNUMBER = #{semenNumber}
+    </update>
 </mapper>

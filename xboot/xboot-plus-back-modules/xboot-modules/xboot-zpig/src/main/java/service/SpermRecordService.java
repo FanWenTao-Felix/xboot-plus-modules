@@ -26,6 +26,7 @@ public interface SpermRecordService {
      * @return list
      */
     List<CtPigDemandapplication> selectAllDemand(String orgId);
+
     /**
      * 插入调拨记录
      * @param ctPigSpermallotrecord 调拨记录

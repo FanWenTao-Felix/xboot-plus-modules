@@ -4,12 +4,14 @@ import com.baomidou.dynamic.datasource.annotation.DS;
 import dao.CtPigDemandapplicationDao;
 import dao.CtPigSpermallotrecordDao;
 import entity.CtPigDemandapplication;
+import entity.CtPigJinyearchives;
 import entity.CtPigSpermallotrecord;
 import entity.TPmUser;
 import lombok.extern.slf4j.Slf4j;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import service.JinyeArchivesService;
 import service.PigDemandService;
 import service.SpermRecordService;
 
@@ -25,12 +27,14 @@ import java.util.List;
 @DS("slave1")
 public class SpermRecordServiceImpl implements SpermRecordService {
     private final PigDemandService pigDemandService;
+    private final JinyeArchivesService jinyeArchivesService;
     private final CtPigSpermallotrecordDao ctPigSpermallotrecordDao;
     private final CtPigDemandapplicationDao ctPigDemandapplicationDao;
     
     @Autowired
-    public SpermRecordServiceImpl(PigDemandService pigDemandService, CtPigSpermallotrecordDao ctPigSpermallotrecordDao, CtPigDemandapplicationDao ctPigDemandapplicationDao) {
+    public SpermRecordServiceImpl(PigDemandService pigDemandService, JinyeArchivesService jinyeArchivesService, CtPigSpermallotrecordDao ctPigSpermallotrecordDao, CtPigDemandapplicationDao ctPigDemandapplicationDao) {
         this.pigDemandService = pigDemandService;
+        this.jinyeArchivesService = jinyeArchivesService;
         this.ctPigSpermallotrecordDao = ctPigSpermallotrecordDao;
         this.ctPigDemandapplicationDao = ctPigDemandapplicationDao;
     }
@@ -57,6 +61,8 @@ public class SpermRecordServiceImpl implements SpermRecordService {
 
     @Override
     public int insertSpermRecord(CtPigSpermallotrecord ctPigSpermallotrecord) {
+        String fid = ctPigSpermallotrecordDao.createFid();
+        ctPigSpermallotrecord.setFid(fid);
         return ctPigSpermallotrecordDao.insert(ctPigSpermallotrecord);
     }
 
@@ -95,6 +101,18 @@ public class SpermRecordServiceImpl implements SpermRecordService {
             //修改需求申请单完成状态
             ctPigDemandapplicationDao.updateByPrimaryKey(applicationFid,cfapplicationstatu,completeId);
             result.add(ctPigSpermallotrecordDao.updateIfAuditByFid(fid, userId));
+
+            //2.修改精液档案
+            //调拨入库，增加新的记录
+            String orgId = ctPigSpermallotrecord.getCftoorgunitid();
+            String jId = ctPigSpermallotrecord.getCfsemennumberid();
+            CtPigJinyearchives ctpigJinyearchives = jinyeArchivesService.selectByPrimaryKey(jId);
+            ctpigJinyearchives.setCforgunitid(orgId);
+            String newId = jinyeArchivesService.createFid();
+            ctpigJinyearchives.setFid(newId);
+            jinyeArchivesService.insertArchive(ctpigJinyearchives);
+            //修改精液状态为已使用
+            jinyeArchivesService.updateIfUsed(jId);
         }
         return result;
     }

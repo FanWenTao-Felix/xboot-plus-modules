@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.CtPigSemendemandtypeDao">
+  <resultMap id="BaseResultMap" type="entity.CtPigSemendemandtype">
+    <!--@mbg.generated-->
+    <id column="FID" jdbcType="VARCHAR" property="fid" />
+    <result column="FNUMBER" jdbcType="VARCHAR" property="fnumber" />
+    <result column="FSIMPLENAME" jdbcType="VARCHAR" property="fsimplename" />
+    <result column="FCREATORID" jdbcType="VARCHAR" property="fcreatorid" />
+    <result column="FCREATETIME" jdbcType="TIMESTAMP" property="fcreatetime" />
+    <result column="FLASTUPDATEUSERID" jdbcType="VARCHAR" property="flastupdateuserid" />
+    <result column="FLASTUPDATETIME" jdbcType="TIMESTAMP" property="flastupdatetime" />
+    <result column="FCONTROLUNITID" jdbcType="VARCHAR" property="fcontrolunitid" />
+    <result column="FNAME_L1" jdbcType="VARCHAR" property="fnameL1" />
+    <result column="FNAME_L2" jdbcType="VARCHAR" property="fnameL2" />
+    <result column="FNAME_L3" jdbcType="VARCHAR" property="fnameL3" />
+    <result column="FDESCRIPTION_L1" jdbcType="VARCHAR" property="fdescriptionL1" />
+    <result column="FDESCRIPTION_L2" jdbcType="VARCHAR" property="fdescriptionL2" />
+    <result column="FDESCRIPTION_L3" jdbcType="VARCHAR" property="fdescriptionL3" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    FID, FNUMBER, FSIMPLENAME, FCREATORID, FCREATETIME, FLASTUPDATEUSERID, FLASTUPDATETIME, 
+    FCONTROLUNITID, FNAME_L1, FNAME_L2, FNAME_L3, FDESCRIPTION_L1, FDESCRIPTION_L2, FDESCRIPTION_L3
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from CT_PIG_SEMENDEMANDTYPE
+    where FID = #{fid,jdbcType=VARCHAR}
+  </select>
+    <select id="selectFidByName" resultType="java.lang.String">
+      select FID from CT_PIG_SEMENDEMANDTYPE where FNAME_L2 = #{fNameL2,jdbcType = VARCHAR}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from CT_PIG_SEMENDEMANDTYPE
+    where FID = #{fid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" keyColumn="FID" keyProperty="fid" parameterType="entity.CtPigSemendemandtype" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into CT_PIG_SEMENDEMANDTYPE (FNUMBER, FSIMPLENAME, FCREATORID, 
+      FCREATETIME, FLASTUPDATEUSERID, FLASTUPDATETIME, 
+      FCONTROLUNITID, FNAME_L1, FNAME_L2, 
+      FNAME_L3, FDESCRIPTION_L1, FDESCRIPTION_L2, 
+      FDESCRIPTION_L3)
+    values (#{fnumber,jdbcType=VARCHAR}, #{fsimplename,jdbcType=VARCHAR}, #{fcreatorid,jdbcType=VARCHAR}, 
+      #{fcreatetime,jdbcType=TIMESTAMP}, #{flastupdateuserid,jdbcType=VARCHAR}, #{flastupdatetime,jdbcType=TIMESTAMP}, 
+      #{fcontrolunitid,jdbcType=VARCHAR}, #{fnameL1,jdbcType=VARCHAR}, #{fnameL2,jdbcType=VARCHAR}, 
+      #{fnameL3,jdbcType=VARCHAR}, #{fdescriptionL1,jdbcType=VARCHAR}, #{fdescriptionL2,jdbcType=VARCHAR}, 
+      #{fdescriptionL3,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="FID" keyProperty="fid" parameterType="entity.CtPigSemendemandtype" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into CT_PIG_SEMENDEMANDTYPE
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fnumber != null">
+        FNUMBER,
+      </if>
+      <if test="fsimplename != null">
+        FSIMPLENAME,
+      </if>
+      <if test="fcreatorid != null">
+        FCREATORID,
+      </if>
+      <if test="fcreatetime != null">
+        FCREATETIME,
+      </if>
+      <if test="flastupdateuserid != null">
+        FLASTUPDATEUSERID,
+      </if>
+      <if test="flastupdatetime != null">
+        FLASTUPDATETIME,
+      </if>
+      <if test="fcontrolunitid != null">
+        FCONTROLUNITID,
+      </if>
+      <if test="fnameL1 != null">
+        FNAME_L1,
+      </if>
+      <if test="fnameL2 != null">
+        FNAME_L2,
+      </if>
+      <if test="fnameL3 != null">
+        FNAME_L3,
+      </if>
+      <if test="fdescriptionL1 != null">
+        FDESCRIPTION_L1,
+      </if>
+      <if test="fdescriptionL2 != null">
+        FDESCRIPTION_L2,
+      </if>
+      <if test="fdescriptionL3 != null">
+        FDESCRIPTION_L3,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fnumber != null">
+        #{fnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fsimplename != null">
+        #{fsimplename,jdbcType=VARCHAR},
+      </if>
+      <if test="fcreatorid != null">
+        #{fcreatorid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcreatetime != null">
+        #{fcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flastupdateuserid != null">
+        #{flastupdateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="flastupdatetime != null">
+        #{flastupdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fcontrolunitid != null">
+        #{fcontrolunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL1 != null">
+        #{fnameL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL2 != null">
+        #{fnameL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL3 != null">
+        #{fnameL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL1 != null">
+        #{fdescriptionL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL2 != null">
+        #{fdescriptionL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL3 != null">
+        #{fdescriptionL3,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="entity.CtPigSemendemandtype">
+    <!--@mbg.generated-->
+    update CT_PIG_SEMENDEMANDTYPE
+    <set>
+      <if test="fnumber != null">
+        FNUMBER = #{fnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="fsimplename != null">
+        FSIMPLENAME = #{fsimplename,jdbcType=VARCHAR},
+      </if>
+      <if test="fcreatorid != null">
+        FCREATORID = #{fcreatorid,jdbcType=VARCHAR},
+      </if>
+      <if test="fcreatetime != null">
+        FCREATETIME = #{fcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="flastupdateuserid != null">
+        FLASTUPDATEUSERID = #{flastupdateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="flastupdatetime != null">
+        FLASTUPDATETIME = #{flastupdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fcontrolunitid != null">
+        FCONTROLUNITID = #{fcontrolunitid,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL1 != null">
+        FNAME_L1 = #{fnameL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL2 != null">
+        FNAME_L2 = #{fnameL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fnameL3 != null">
+        FNAME_L3 = #{fnameL3,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL1 != null">
+        FDESCRIPTION_L1 = #{fdescriptionL1,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL2 != null">
+        FDESCRIPTION_L2 = #{fdescriptionL2,jdbcType=VARCHAR},
+      </if>
+      <if test="fdescriptionL3 != null">
+        FDESCRIPTION_L3 = #{fdescriptionL3,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where FID = #{fid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="entity.CtPigSemendemandtype">
+    <!--@mbg.generated-->
+    update CT_PIG_SEMENDEMANDTYPE
+    set FNUMBER = #{fnumber,jdbcType=VARCHAR},
+      FSIMPLENAME = #{fsimplename,jdbcType=VARCHAR},
+      FCREATORID = #{fcreatorid,jdbcType=VARCHAR},
+      FCREATETIME = #{fcreatetime,jdbcType=TIMESTAMP},
+      FLASTUPDATEUSERID = #{flastupdateuserid,jdbcType=VARCHAR},
+      FLASTUPDATETIME = #{flastupdatetime,jdbcType=TIMESTAMP},
+      FCONTROLUNITID = #{fcontrolunitid,jdbcType=VARCHAR},
+      FNAME_L1 = #{fnameL1,jdbcType=VARCHAR},
+      FNAME_L2 = #{fnameL2,jdbcType=VARCHAR},
+      FNAME_L3 = #{fnameL3,jdbcType=VARCHAR},
+      FDESCRIPTION_L1 = #{fdescriptionL1,jdbcType=VARCHAR},
+      FDESCRIPTION_L2 = #{fdescriptionL2,jdbcType=VARCHAR},
+      FDESCRIPTION_L3 = #{fdescriptionL3,jdbcType=VARCHAR}
+    where FID = #{fid,jdbcType=VARCHAR}
+  </update>
+</mapper>
