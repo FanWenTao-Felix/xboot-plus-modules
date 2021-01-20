@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.CtPigStoragesreDao">
+  <resultMap id="BaseResultMap" type="entity.CtPigStoragesre">
+    <!--@mbg.generated-->
+    <id column="FID" jdbcType="VARCHAR" property="fid" />
+    <result column="FSEQ" jdbcType="DECIMAL" property="fseq" />
+    <result column="FPARENTID" jdbcType="VARCHAR" property="fparentid" />
+    <result column="CFSEMENNUMBERID" jdbcType="VARCHAR" property="cfsemennumberid" />
+    <result column="CFVARIETYID" jdbcType="VARCHAR" property="cfvarietyid" />
+    <result column="CFEARNUMBERID" jdbcType="VARCHAR" property="cfearnumberid" />
+    <result column="CFDOSEID" jdbcType="VARCHAR" property="cfdoseid" />
+    <result column="CFPEIJINGPERSONID" jdbcType="VARCHAR" property="cfpeijingpersonid" />
+    <result column="CFCONFIGURATIONDATE" jdbcType="TIMESTAMP" property="cfconfigurationdate" />
+    <result column="CFENDDATE" jdbcType="TIMESTAMP" property="cfenddate" />
+    <result column="CFBATCHNUMBER" jdbcType="VARCHAR" property="cfbatchnumber" />
+    <result column="CFBIMUDF0001" jdbcType="DECIMAL" property="cfbimudf0001" />
+    <result column="CFTHEORICALNUMBER" jdbcType="DECIMAL" property="cftheoricalnumber" />
+    <result column="CFFACTNUMBER" jdbcType="DECIMAL" property="cffactnumber" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    FID, FSEQ, FPARENTID, CFSEMENNUMBERID, CFVARIETYID, CFEARNUMBERID, CFDOSEID, CFPEIJINGPERSONID, 
+    CFCONFIGURATIONDATE, CFENDDATE, CFBATCHNUMBER, CFBIMUDF0001, CFTHEORICALNUMBER, CFFACTNUMBER
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from CT_PIG_STORAGESRE
+    where FID = #{fid,jdbcType=VARCHAR}
+  </select>
+    <select id="selectByFparentids" resultType="entity.CtPigStoragesre">
+      select s.FSEQ, FID, FPARENTID, CFSEMENNUMBERID, CFVARIETYID, CFEARNUMBERID, CFDOSEID, CFPEIJINGPERSONID, CFCONFIGURATIONDATE, CFENDDATE, CFBATCHNUMBER, CFBIMUDF0001, CFTHEORICALNUMBER, CFFACTNUMBER from CT_PIG_STORAGESRE s
+      where FPARENTID = #{parentId}
+    </select>
+  <select id="createFid" resultType="java.lang.String">
+    select NEWBOSID('08BE6835') from DUAL
+  </select>
+  <select id="selectByConditions" resultType="entity.CtPigStoragesre">
+    SELECT s.FSEQ, s.FID, s.FPARENTID, s.CFSEMENNUMBERID, s.CFVARIETYID, s.CFEARNUMBERID, s.CFDOSEID, s.CFPEIJINGPERSONID, s.CFCONFIGURATIONDATE, s.CFENDDATE, s.CFBATCHNUMBER, s.CFBIMUDF0001, s.CFTHEORICALNUMBER, s.CFFACTNUMBER FROM CT_PIG_STORAGESRE s
+    LEFT JOIN CT_PIG_STORAGESTOCKINGRECORD t ON t.FID = s.FPARENTID
+    LEFT JOIN T_BD_PERSON p ON p.FID = s.CFPEIJINGPERSONID
+    LEFT JOIN CT_PIG_ZPIGFLK z ON z.FID = s.CFEARNUMBERID
+    <where>
+      <if test="name != null and name != ''">
+        s.CFEARNUMBERID = #{name} OR s.CFBATCHNUMBER = #{name} OR p.FNAME_L2 = #{name} OR z.CFERHAO = #{name}
+      </if>
+      <if test="beforeDate != null and beforeDate != ''">
+        OR t.FBIZDATE &lt;= #{endDate} 
+      </if>
+      <if test="endDate != null and endDate != ''">
+        OR t.FBIZDATE >= #{beforeDate}
+      </if>
+    </where>
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from CT_PIG_STORAGESRE
+    where FID = #{fid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" keyColumn="FID" keyProperty="fid" parameterType="entity.CtPigStoragesre" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into CT_PIG_STORAGESRE (FSEQ, FPARENTID, CFSEMENNUMBERID, 
+      CFVARIETYID, CFEARNUMBERID, CFDOSEID, 
+      CFPEIJINGPERSONID, CFCONFIGURATIONDATE, 
+      CFENDDATE, CFBATCHNUMBER, CFBIMUDF0001, 
+      CFTHEORICALNUMBER, CFFACTNUMBER)
+    values (#{fseq,jdbcType=DECIMAL}, #{fparentid,jdbcType=VARCHAR}, #{cfsemennumberid,jdbcType=VARCHAR}, 
+      #{cfvarietyid,jdbcType=VARCHAR}, #{cfearnumberid,jdbcType=VARCHAR}, #{cfdoseid,jdbcType=VARCHAR}, 
+      #{cfpeijingpersonid,jdbcType=VARCHAR}, #{cfconfigurationdate,jdbcType=TIMESTAMP}, 
+      #{cfenddate,jdbcType=TIMESTAMP}, #{cfbatchnumber,jdbcType=VARCHAR}, #{cfbimudf0001,jdbcType=DECIMAL}, 
+      #{cftheoricalnumber,jdbcType=DECIMAL}, #{cffactnumber,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" keyColumn="FID" keyProperty="fid" parameterType="entity.CtPigStoragesre" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into CT_PIG_STORAGESRE
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fseq != null">
+        FSEQ,
+      </if>
+      <if test="fparentid != null">
+        FPARENTID,
+      </if>
+      <if test="cfsemennumberid != null">
+        CFSEMENNUMBERID,
+      </if>
+      <if test="cfvarietyid != null">
+        CFVARIETYID,
+      </if>
+      <if test="cfearnumberid != null">
+        CFEARNUMBERID,
+      </if>
+      <if test="cfdoseid != null">
+        CFDOSEID,
+      </if>
+      <if test="cfpeijingpersonid != null">
+        CFPEIJINGPERSONID,
+      </if>
+      <if test="cfconfigurationdate != null">
+        CFCONFIGURATIONDATE,
+      </if>
+      <if test="cfenddate != null">
+        CFENDDATE,
+      </if>
+      <if test="cfbatchnumber != null">
+        CFBATCHNUMBER,
+      </if>
+      <if test="cfbimudf0001 != null">
+        CFBIMUDF0001,
+      </if>
+      <if test="cftheoricalnumber != null">
+        CFTHEORICALNUMBER,
+      </if>
+      <if test="cffactnumber != null">
+        CFFACTNUMBER,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fseq != null">
+        #{fseq,jdbcType=DECIMAL},
+      </if>
+      <if test="fparentid != null">
+        #{fparentid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfsemennumberid != null">
+        #{cfsemennumberid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfvarietyid != null">
+        #{cfvarietyid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfearnumberid != null">
+        #{cfearnumberid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfdoseid != null">
+        #{cfdoseid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfpeijingpersonid != null">
+        #{cfpeijingpersonid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfconfigurationdate != null">
+        #{cfconfigurationdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cfenddate != null">
+        #{cfenddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cfbatchnumber != null">
+        #{cfbatchnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="cfbimudf0001 != null">
+        #{cfbimudf0001,jdbcType=DECIMAL},
+      </if>
+      <if test="cftheoricalnumber != null">
+        #{cftheoricalnumber,jdbcType=DECIMAL},
+      </if>
+      <if test="cffactnumber != null">
+        #{cffactnumber,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="entity.CtPigStoragesre">
+    <!--@mbg.generated-->
+    update CT_PIG_STORAGESRE
+    <set>
+      <if test="fseq != null">
+        FSEQ = #{fseq,jdbcType=DECIMAL},
+      </if>
+      <if test="fparentid != null">
+        FPARENTID = #{fparentid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfsemennumberid != null">
+        CFSEMENNUMBERID = #{cfsemennumberid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfvarietyid != null">
+        CFVARIETYID = #{cfvarietyid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfearnumberid != null">
+        CFEARNUMBERID = #{cfearnumberid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfdoseid != null">
+        CFDOSEID = #{cfdoseid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfpeijingpersonid != null">
+        CFPEIJINGPERSONID = #{cfpeijingpersonid,jdbcType=VARCHAR},
+      </if>
+      <if test="cfconfigurationdate != null">
+        CFCONFIGURATIONDATE = #{cfconfigurationdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cfenddate != null">
+        CFENDDATE = #{cfenddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cfbatchnumber != null">
+        CFBATCHNUMBER = #{cfbatchnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="cfbimudf0001 != null">
+        CFBIMUDF0001 = #{cfbimudf0001,jdbcType=DECIMAL},
+      </if>
+      <if test="cftheoricalnumber != null">
+        CFTHEORICALNUMBER = #{cftheoricalnumber,jdbcType=DECIMAL},
+      </if>
+      <if test="cffactnumber != null">
+        CFFACTNUMBER = #{cffactnumber,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where FID = #{fid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="entity.CtPigStoragesre">
+    <!--@mbg.generated-->
+    update CT_PIG_STORAGESRE
+    set FSEQ = #{fseq,jdbcType=DECIMAL},
+      FPARENTID = #{fparentid,jdbcType=VARCHAR},
+      CFSEMENNUMBERID = #{cfsemennumberid,jdbcType=VARCHAR},
+      CFVARIETYID = #{cfvarietyid,jdbcType=VARCHAR},
+      CFEARNUMBERID = #{cfearnumberid,jdbcType=VARCHAR},
+      CFDOSEID = #{cfdoseid,jdbcType=VARCHAR},
+      CFPEIJINGPERSONID = #{cfpeijingpersonid,jdbcType=VARCHAR},
+      CFCONFIGURATIONDATE = #{cfconfigurationdate,jdbcType=TIMESTAMP},
+      CFENDDATE = #{cfenddate,jdbcType=TIMESTAMP},
+      CFBATCHNUMBER = #{cfbatchnumber,jdbcType=VARCHAR},
+      CFBIMUDF0001 = #{cfbimudf0001,jdbcType=DECIMAL},
+      CFTHEORICALNUMBER = #{cftheoricalnumber,jdbcType=DECIMAL},
+      CFFACTNUMBER = #{cffactnumber,jdbcType=DECIMAL}
+    where FID = #{fid,jdbcType=VARCHAR}
+  </update>
+</mapper>

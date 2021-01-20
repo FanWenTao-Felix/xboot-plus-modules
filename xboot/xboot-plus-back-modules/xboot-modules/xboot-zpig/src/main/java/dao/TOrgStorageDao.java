@@ -44,4 +44,11 @@ public interface TOrgStorageDao {
      * @return list
      */
     List<TOrgStorage> findAllByType();
+
+    /**
+     * 模糊查询
+     * @param name name
+     * @return  list
+     */
+    List<TOrgStorage> findAllByName(String name);
 }

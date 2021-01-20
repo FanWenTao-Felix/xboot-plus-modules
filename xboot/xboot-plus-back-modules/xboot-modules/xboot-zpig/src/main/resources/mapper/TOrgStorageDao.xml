@@ -76,9 +76,12 @@
     where FID = #{fid,jdbcType=VARCHAR}
   </select>
     <select id="findAllByType" resultType="entity.TOrgStorage">
-      SELECT * FROM T_ORG_STORAGE t WHERE t.FTYPE = '1301';
+      SELECT * FROM T_ORG_STORAGE t WHERE t.FTYPE = '1301'
     </select>
-    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+  <select id="findAllByName" resultType="entity.TOrgStorage">
+    SELECT * FROM T_ORG_STORAGE t WHERE t.FTYPE = '1301' and t.FNAME_L2 like '%${name}%'
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     <!--@mbg.generated-->
     delete from T_ORG_STORAGE
     where FID = #{fid,jdbcType=VARCHAR}

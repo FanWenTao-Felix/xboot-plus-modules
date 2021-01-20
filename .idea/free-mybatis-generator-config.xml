@@ -314,6 +314,52 @@
             </Config>
           </value>
         </entry>
+        <entry key="CT_PIG_STORAGESRE">
+          <value>
+            <Config>
+              <option name="annotation" value="true" />
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="CtPigStoragesreDao" />
+              <option name="daoPackage" value="dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="CtPigStoragesre" />
+              <option name="modelPackage" value="entity" />
+              <option name="name" value="CT_PIG_STORAGESRE" />
+              <option name="primaryKey" value="FID" />
+              <option name="projectFolder" value="$PROJECT_DIR$/xboot/xboot-plus-back-modules/xboot-modules/xboot-zpig" />
+              <option name="tableName" value="CT_PIG_STORAGESRE" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="mapper" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="CT_PIG_STORAGESTOCKINGRECORD">
+          <value>
+            <Config>
+              <option name="annotation" value="true" />
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="CtPigStoragestockingrecordDao" />
+              <option name="daoPackage" value="dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="CtPigStoragestockingrecord" />
+              <option name="modelPackage" value="entity" />
+              <option name="name" value="CT_PIG_STORAGESTOCKINGRECORD" />
+              <option name="primaryKey" value="FID" />
+              <option name="projectFolder" value="$PROJECT_DIR$/xboot/xboot-plus-back-modules/xboot-modules/xboot-zpig" />
+              <option name="tableName" value="CT_PIG_STORAGESTOCKINGRECORD" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="mapper" />
+            </Config>
+          </value>
+        </entry>
         <entry key="CT_PIG_ZHUSHE">
           <value>
             <Config>

@@ -31,6 +31,20 @@ public interface JinyeArchivesService {
     List<CtPigJinyearchives> selectByConditions(String earNumber);
 
     /**
+     * 查询当前猪舍下符合要求的精液档案
+     * @param orgId orgId
+     * @return list
+     */
+    List<CtPigJinyearchives> selectByOrg(String orgId);
+
+    /**
+     * 查询档案信息
+     * @param fid fid
+     * @return CtPigJinyearchives
+     */
+    CtPigJinyearchives selectByPrimary(String fid);
+
+    /**
      * 根据精液编号查询精液档案
      * @param semenNumber 精液编号
      * @return list

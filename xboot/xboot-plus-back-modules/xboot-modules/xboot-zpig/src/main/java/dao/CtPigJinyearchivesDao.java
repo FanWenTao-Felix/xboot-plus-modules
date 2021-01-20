@@ -73,4 +73,12 @@ public interface CtPigJinyearchivesDao {
      * @return list
      */
     List<CtPigJinyearchives> selectByNumber(String semenNumber);
+
+    /**
+     * 查询未被使用且未被报销的当前组织下的一段时间内的精液记录
+     * @param orgUnit 组织机构
+     * @return list
+     */
+    List<CtPigJinyearchives> selectByOrgId(String orgUnit);
+
 }

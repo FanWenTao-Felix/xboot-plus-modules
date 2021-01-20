@@ -25,7 +25,7 @@ public class TPmUserServiceImpl implements TPmUserService {
     @Override
     public String selectUser(String openId) {
         //1.获取用户（云之家基本接口）
-        String url = "http://192.168.0.61:8888/doc.html#/中台接口/云之家基本接口/getPmIdByEidUsingPOST";
+        String url = "https://mp.lihuamuye.com/centerapi/api/yzjCenter/getPmIdByEid";
         RequestBody body = new FormBody.Builder()
                 .add("openId",openId)
                 .build();
@@ -45,7 +45,7 @@ public class TPmUserServiceImpl implements TPmUserService {
     @Override
     public String selectOrgUrl(){
         //获取组织(云之家基本信息)
-        String url = "http://192.168.0.61:8888/doc.html#/中台接口/云之家基本接口/getYzjOrganizationsUsingGET";
+        String url = "https://mp.lihuamuye.com/centerapi/api/yzjCenter/getYzjOrganizations";
         RequestBody body = new FormBody.Builder().build();
         Request request = new Request.Builder().url(url).post(body).build();
         Response response = null;

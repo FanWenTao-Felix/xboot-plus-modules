@@ -34,4 +34,9 @@ public class OrgStorageServiceImpl implements OrgStorageService {
         return tOrgStorageDao.selectByPrimaryKey(fid);
     }
 
+    @Override
+    public List<TOrgStorage> findByName(String name) {
+        return tOrgStorageDao.findAllByName(name);
+    }
+
 }

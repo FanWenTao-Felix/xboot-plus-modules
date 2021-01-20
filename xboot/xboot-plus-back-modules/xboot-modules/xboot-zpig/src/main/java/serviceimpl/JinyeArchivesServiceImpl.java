@@ -42,6 +42,16 @@ public class JinyeArchivesServiceImpl implements JinyeArchivesService {
     }
 
     @Override
+    public List<CtPigJinyearchives> selectByOrg(String orgId) {
+        return ctPigJinyearchivesDao.selectByOrgId(orgId);
+    }
+
+    @Override
+    public CtPigJinyearchives selectByPrimary(String fid) {
+        return ctPigJinyearchivesDao.selectByPrimaryKey(fid);
+    }
+
+    @Override
     public List<CtPigJinyearchives> selectByNumbers(String semenNumber) {
         return ctPigJinyearchivesDao.selectByNumber(semenNumber);
     }

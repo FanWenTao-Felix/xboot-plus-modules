@@ -66,7 +66,21 @@
     select * from CT_PIG_JINYEARCHIVES j where j.FNUMBER = #{semenNumber,jdbcType=VARCHAR} and
     j.CFIFUSED = '0' and j.CFIFREIMBURSED = '0'
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <select id="selectByOrgId" resultType="entity.CtPigJinyearchives">
+      SELECT * FROM CT_PIG_JINYEARCHIVES J
+      LEFT JOIN (SELECT
+      t.CFFACTNUMBER 最近一次盘点数目 ,
+      t.FBIZDATE 最近一次盘点日期 ,
+      t.CFORGUNITID 种猪场
+      FROM
+      ( SELECT * FROM CT_PIG_STORAGESTOCKINGRECORD s ORDER BY s.FBIZDATE DESC ) t
+      WHERE
+      ROWNUM = 1
+      AND t.CFORGUNITID = #{orgUnit}) S  ON S.种猪场 = J.CFORGUNITID
+      WHERE J.FBIZDATE &lt;= SYSDATE AND J.FBIZDATE >= S.最近一次盘点日期
+      AND J.CFIFUSED != '1' AND J.CFIFREIMBURSED != '1'
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     <!--@mbg.generated-->
     delete from CT_PIG_JINYEARCHIVES
     where FID = #{fid,jdbcType=VARCHAR}

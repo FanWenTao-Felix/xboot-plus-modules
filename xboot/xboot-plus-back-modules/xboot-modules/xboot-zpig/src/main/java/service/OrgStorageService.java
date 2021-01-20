@@ -21,4 +21,11 @@ public interface OrgStorageService {
      * @return list
      */
     TOrgStorage findAllByFid(String fid);
+
+    /**
+     * 模糊查询
+     * @param name name
+     * @return  list
+     */
+    List<TOrgStorage> findByName(String name);
 }
