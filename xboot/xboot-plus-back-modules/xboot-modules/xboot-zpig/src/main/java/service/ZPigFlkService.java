@@ -15,4 +15,11 @@ public interface ZPigFlkService {
      * @return list
      */
     List<CtPigZpigflk> selectByCfzhusheid(String zhuSheid);
+
+    /**
+     * 根据耳号查询记录
+     * @param erHao 耳号
+     * @return CtPigZpigflk
+     */
+    CtPigZpigflk selectByErHao(String erHao);
 }

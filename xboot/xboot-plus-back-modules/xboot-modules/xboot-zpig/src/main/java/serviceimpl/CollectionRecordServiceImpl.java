@@ -38,8 +38,18 @@ public class CollectionRecordServiceImpl implements CollectionRecordService {
     }
 
     @Override
-    public List<CtPigCollectionrecord> selectAll(String earNUmber) {
-        return ctPigCollectionrecordDao.selectAll(earNUmber);
+    public List<CtPigCollectionrecord> selectAll(String zhuSheId) {
+        return ctPigCollectionrecordDao.selectAll(zhuSheId);
+    }
+
+    @Override
+    public List<CtPigCollectionrecord> selectSelective(String zhuSheId, String selection) {
+        return ctPigCollectionrecordDao.selectSelective(zhuSheId, selection);
+    }
+
+    @Override
+    public List<CtPigCollectionrecord> selectByDate(String zhuSheId, Date startDate, Date endDate) {
+        return ctPigCollectionrecordDao.selectByDate(zhuSheId, startDate, endDate);
     }
 
     @Override
@@ -82,8 +92,10 @@ public class CollectionRecordServiceImpl implements CollectionRecordService {
         for (CtPigCollectionrecord ctPigCollectionrecord : records) {
             String fid = ctPigCollectionrecord.getFid();
             String appFid = ctPigCollectionrecord.getCfdesignnumberid();
-            //审核时更新精液采集计划状态
-            ctPigSemencollectionDao.updatDesign(appFid);
+            if (appFid != null){
+                //审核时更新精液采集计划状态
+                ctPigSemencollectionDao.updatDesign(appFid);
+            }
             results.add(ctPigCollectionrecordDao.updateIfAuditByFid(fid , userId));
         }
         return results;

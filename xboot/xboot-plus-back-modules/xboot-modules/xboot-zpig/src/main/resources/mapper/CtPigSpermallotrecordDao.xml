@@ -57,6 +57,7 @@
   </select>
     <select id="selectAllByFbizdates" resultType="entity.CtPigSpermallotrecord">
       select * from CT_PIG_SPERMALLOTRECORD s where s.CFAPPLICATIONID = #{applicationId} and s.FBIZDATE &lt;= #{endDate} and s.FBIZDATE >= #{startDate}
+      and s.CFIFAUDITING != '1'
     </select>
   <select id="selectAllByIntervaList" resultType="entity.CtPigSpermallotrecord">
     SELECT * FROM CT_PIG_SPERMALLOTRECORD s
@@ -70,13 +71,17 @@
     <where>
       <!-- 使用 bind 标签,对字符串进行绑定,然后对绑定后的字符串使用 like 关键字进行模糊查询 -->
       <bind name="pattern" value="'%'+fuzzy+'%'"/>
-        z.CFERHAO like #{pattern} or s.CFBATCHNUMBER like #{pattern}
+        z.CFERHAO like #{pattern} or s.CFBATCHNUMBER like #{pattern} and s.CFIFAUDITING != '1' and s.CFAPPLICATIONID = #{applicationId,jdbcType=VARCHAR}
     </where>
   </select>
-    <select id="createFid" resultType="java.lang.String">
+  <select id="createFid" resultType="java.lang.String">
       select NEWBOSID('FF341BCF') from dual;
-    </select>
-    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+  </select>
+  <select id="selectAllRecord" resultType="entity.CtPigSpermallotrecord">
+    SELECT * FROM CT_PIG_SPERMALLOTRECORD s
+    WHERE s.CFAPPLICATIONID = #{applicationId,jdbcType=VARCHAR} AND s.CFIFAUDITING != '1' ORDER BY s.FCREATETIME
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     <!--@mbg.generated-->
     delete from CT_PIG_SPERMALLOTRECORD
     where FID = #{fid,jdbcType=VARCHAR}

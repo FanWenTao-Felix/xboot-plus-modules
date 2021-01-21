@@ -106,7 +106,10 @@
     <select id="selectByCfzhusheid" resultType="entity.CtPigZpigflk">
       SELECT * FROM CT_PIG_ZPIGFLK p WHERE p.CFZHUSHEID = #{zhuSheid,jdbcType=VARCHAR}
     </select>
-    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+  <select id="selectByErHao" resultType="entity.CtPigZpigflk">
+    SELECT * FROM CT_PIG_ZPIGFLK p WHERE p.CFERHAO = #{erHao,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     <!--@mbg.generated-->
     delete from CT_PIG_ZPIGFLK
     where FID = #{fid,jdbcType=VARCHAR}

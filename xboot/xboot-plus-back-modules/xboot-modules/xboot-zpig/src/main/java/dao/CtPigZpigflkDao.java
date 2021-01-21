@@ -29,6 +29,13 @@ public interface CtPigZpigflkDao {
     CtPigZpigflk selectByPrimaryKey(String fid);
 
     /**
+     * 根据耳号查询
+     * @param erHao 耳号
+     * @return CtPigZpigflk
+     */
+    CtPigZpigflk selectByErHao(String erHao);
+
+    /**
      * @mbg.generated
      */
     int updateByPrimaryKeySelective(CtPigZpigflk record);

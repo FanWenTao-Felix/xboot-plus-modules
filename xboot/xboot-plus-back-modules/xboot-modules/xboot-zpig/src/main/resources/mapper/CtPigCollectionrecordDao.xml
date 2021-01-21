@@ -53,23 +53,23 @@
   </select>
   <select id="selectAll" resultType="entity.CtPigCollectionrecord">
     SELECT * FROM CT_PIG_COLLECTIONRECORD c
-        LEFT JOIN (select to_char (sysdate- level + 1, 'yyyy-mm-dd hh24:mi:ss') today
-        FROM DUAL connect BY LEVEL &lt;= 7) days on days.today = c.FCREATETIME
-        WHERE c.CFORGUNITID = #{storageId,jdbcType=VARCHAR} ORDER BY c.FCREATETIME
+        WHERE c.CFZHUSHEID = #{zhuSheId} AND c.CFIFAUDITING != '1'
+    ORDER BY c.FCREATETIME
   </select>
     <select id="selectSelective" resultType="entity.CtPigCollectionrecord">
       SELECT * FROM CT_PIG_COLLECTIONRECORD c
       left join T_BD_PERSON p on p.FID = c.CFCOLLECTORID
         <where>
           <!-- 使用 bind 标签,对字符串进行绑定,然后对绑定后的字符串使用 like 关键字进行模糊查询 -->
-          c.CFORGUNITID = #{orgId,jdbcType=VARCHAR} AND
+          c.CFZHUSHEID = #{zhuSheId,jdbcType=VARCHAR} AND c.CFIFAUDITING != '1' AND
           <bind name="pattern" value="'%'+selection+'%'"/>
             c.CFEARNUMBERID LIKE #{pattern} or p.FNAME_L2 LIKE #{pattern}
         </where>
     </select>
   <select id="selectByDate" resultType="entity.CtPigCollectionrecord">
-    SELECT * FROM CT_PIG_COLLECTIONRECORD c WHERE c.CFORGUNITID = #{storageId,jdbcType=VARCHAR}
+    SELECT * FROM CT_PIG_COLLECTIONRECORD c WHERE c.CFZHUSHEID = #{zhuSheId,jdbcType=VARCHAR}
     AND c.CFCOLLECTIONTIME &lt;= #{endDate} AND c.CFCOLLECTIONTIME >= #{startDate}
+    AND c.CFIFAUDITING != '1'
     ORDER BY c.CFCOLLECTIONTIME
   </select>
     <select id="selectIfAuditByFid" resultType="java.lang.Integer">

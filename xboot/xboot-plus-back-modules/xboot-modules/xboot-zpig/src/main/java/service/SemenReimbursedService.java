@@ -13,7 +13,7 @@ public interface SemenReimbursedService {
     /**
      * 查询所有未审核的记录
      * @param zhuSheId 猪舍
-     * @return 李斯特
+     * @return list
      */
     List<CtPigSemenreimburserecoed> selectAll(String zhuSheId);
 

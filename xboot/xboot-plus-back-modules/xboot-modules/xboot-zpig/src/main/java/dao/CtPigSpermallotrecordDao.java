@@ -43,7 +43,7 @@ public interface CtPigSpermallotrecordDao {
 
     /**
      * 查询当前需求下的操作记录
-     * @param applicationId 猪场Id
+     * @param applicationId 需求Id
      * @param startDate 开始日期
      * @param endDate 结束日期
      * @return list
@@ -58,12 +58,19 @@ public interface CtPigSpermallotrecordDao {
     List<CtPigSpermallotrecord> selectAllByIntervaList(String applicationId);
 
     /**
+     * 查询当前需求下未审核的数据
+     * @param applicationId 猪场Id
+     * @return list
+     */
+    List<CtPigSpermallotrecord> selectAllRecord(String applicationId);
+
+    /**
      * 根据字段模糊查询
-     * @param orgId 猪场ID
+     * @param applicationId 需求ID
      * @param fuzzy 模糊字段
      * @return list
      */
-    List<CtPigSpermallotrecord> selectAll(String orgId,String fuzzy);
+    List<CtPigSpermallotrecord> selectAll(String applicationId,String fuzzy);
 
     /**
      * 批量审核

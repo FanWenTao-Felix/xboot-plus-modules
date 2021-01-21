@@ -57,27 +57,27 @@ public interface CtPigCollectionrecordDao {
 
     /**
      * 查询猪场近7天采集记录
-     * @param storageId 猪场Id
+     * @param zhuSheId 猪舍
      * @return list
      */
-    List<CtPigCollectionrecord> selectAll(String storageId);
+    List<CtPigCollectionrecord> selectAll(String zhuSheId);
 
     /**
      * 查询指定日期的记录
-     * @param storageId 猪场Id
+     * @param zhuSheId 猪场Id
      * @param startDate 开始日期
      * @param endDate   结束日期
      * @return list
      */
-    List<CtPigCollectionrecord> selectByDate(String storageId , Date startDate, Date endDate);
+    List<CtPigCollectionrecord> selectByDate(String zhuSheId , Date startDate, Date endDate);
 
     /**
      * 模糊查询记录
-     * @param orgId 猪场
+     * @param zhuSheId 猪舍
      * @param selection 查询条件
      * @return list
      */
-    List<CtPigCollectionrecord> selectSelective(String orgId , String selection);
+    List<CtPigCollectionrecord> selectSelective(String zhuSheId , String selection);
 
     /**
      * 查询是否已审核CFIFAUDITING

@@ -28,4 +28,9 @@ public class ZPigFlkServiceImpl implements ZPigFlkService {
     public List<CtPigZpigflk> selectByCfzhusheid(String zhuSheid) {
         return ctPigflkDao.selectByCfzhusheid(zhuSheid);
     }
+
+    @Override
+    public CtPigZpigflk selectByErHao(String erHao) {
+        return ctPigflkDao.selectByErHao(erHao);
+    }
 }

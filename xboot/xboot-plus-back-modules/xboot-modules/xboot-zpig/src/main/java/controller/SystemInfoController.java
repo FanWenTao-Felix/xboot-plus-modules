@@ -21,7 +21,7 @@ import javax.validation.constraints.NotNull;
 
 @Slf4j
 @RestController
-@Api(description = "系统信息")
+@Api(description = "云之家信息")
 @RequestMapping("/xboot/ZpigManager/System")
 @CacheConfig(cacheNames = "system")
 @CrossOrigin

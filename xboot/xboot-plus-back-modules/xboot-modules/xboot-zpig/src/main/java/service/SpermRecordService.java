@@ -49,12 +49,20 @@ public interface SpermRecordService {
     int updateSpermRecord(CtPigSpermallotrecord ctPigSpermallotrecord);
 
     /**
+     * 查询所有记录
+     * @param applicationId 需求
+     * @return list
+     */
+    List<CtPigSpermallotrecord> selectAllRecord(String applicationId);
+
+    /**
      * 根据日期查询调拨记录
      * @param start 开始日期
      * @param end 结束日期
+     * @param appId 需求申请
      * @return list
      */
-    List<CtPigSpermallotrecord> selectSpermallotrecord(String orgId,Date start,Date end);
+    List<CtPigSpermallotrecord> selectSpermallotrecord(String appId,Date start,Date end);
 
     /**
      * 模糊查询

@@ -77,8 +77,13 @@ public class SpermRecordServiceImpl implements SpermRecordService {
     }
 
     @Override
-    public List<CtPigSpermallotrecord> selectSpermallotrecord(String orgId,Date start, Date end) {
-        return ctPigSpermallotrecordDao.selectAllByFbizdates(orgId, start, end);
+    public List<CtPigSpermallotrecord> selectAllRecord(String applicationId) {
+        return ctPigSpermallotrecordDao.selectAllRecord(applicationId);
+    }
+
+    @Override
+    public List<CtPigSpermallotrecord> selectSpermallotrecord(String appId,Date start, Date end) {
+        return ctPigSpermallotrecordDao.selectAllByFbizdates(appId, start, end);
     }
 
     @Override
